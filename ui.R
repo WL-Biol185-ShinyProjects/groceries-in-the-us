@@ -1,6 +1,6 @@
 library(shinydashboard)
 library(shiny)
-
+outputstates <- read.csv("outputstates.csv")
 dashboardPage(
   dashboardHeader(title = "Groceries in the US"),
   dashboardSidebar(
@@ -12,7 +12,7 @@ dashboardPage(
     tabItems(
       tabItem(tabName = "Dollars spent by state per category",
               fluidPage(
-                titlePanel("outputstates.csv"),
+                titlePanel("Dollars spent by state per category"),
                 sidebarLayout(
                   sidebarPanel(
                     selectInput(
@@ -23,11 +23,11 @@ dashboardPage(
                     )
                   ),
                   mainPanel(
-                    plotOutput("BarByState")
+                    plotOutput("Dollars spent per state per category")
                   )
                 )
               )    
-              )
+             )
     )
   )
 )
