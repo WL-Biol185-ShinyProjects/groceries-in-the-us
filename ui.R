@@ -1,17 +1,19 @@
 library(shiny)
 
-# Define UI for application that draws a histogram
 fluidPage(
   
-  # Application title
   titlePanel("outputstates.csv"),
   
-  # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
+      selectInput(
+        inputId  = "state",
+        label    = "Select a State:",
+        choices  = sort(unique(outputstates$State)),
+        selected = "California"
+      )
     ),
     
-    # Show a plot of the generated distribution
     mainPanel(
       plotOutput("BarByState")
     )
