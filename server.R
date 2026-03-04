@@ -1,6 +1,6 @@
 library(tidyverse)
 library(shiny)
-
+outputstates <- read.csv("outputstates.csv")
 # Define server logic required to draw a histogram
 function(input, output) {
   
