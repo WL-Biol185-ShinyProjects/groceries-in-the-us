@@ -25,7 +25,10 @@ dashboardPage(
                   mainPanel(
                     plotOutput("BarByState")
                   )
-                )
+                ),
+                p("Choose a state to view a bar graph displaying the total amount 
+                  of money spent per grocery category over time. Select multiple
+                  states and see how these trends vary geographically.")
               )    
              )
     )
