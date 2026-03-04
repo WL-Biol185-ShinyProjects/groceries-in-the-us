@@ -5,11 +5,16 @@ dashboardPage(
   dashboardHeader(title = "Groceries in the US"),
   dashboardSidebar(
     sidebarMenu(
+      menuItem("About the project", tabName = "IntroPage"),
       menuItem("Dollars spent by state per category", tabName = "BarByState")
     )
   ),
   dashboardBody(
     tabItems(
+      tabItem(tabName = "IntroPage",
+              h2("About the project"),
+                p("hello")
+              ),
       tabItem(tabName = "BarByState",
               fluidPage(
                 titlePanel("Dollars spent by state per category"),
