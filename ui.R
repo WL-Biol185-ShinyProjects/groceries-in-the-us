@@ -5,12 +5,19 @@ dashboardPage(
   dashboardHeader(title = "Groceries in the US"),
   dashboardSidebar(
     sidebarMenu(
-      menuItem("Dollars spent by state per category", tabName = "BarByState"),
+      
+  menuItem("About the project", tabName = "IntroPage"),  
+    menuItem("Dollars spent by state per category", tabName = "BarByState"),
       menuItem("The Covid Pantry", tabName = "SalesDuringCovid")
+      
     )
   ),
   dashboardBody(
     tabItems(
+      tabItem(tabName = "IntroPage",
+              h2("About the project"),
+                p("hello")
+              ),
       tabItem(tabName = "BarByState",
               fluidPage(
                 titlePanel("Dollars spent by state per category"),
@@ -26,7 +33,10 @@ dashboardPage(
                   mainPanel(
                     plotOutput("BarByState")
                   )
-                )
+                ),
+                p("Choose a state to view a bar graph displaying the total amount 
+                  of money spent per grocery category over time. Select multiple
+                  states and see how these trends vary geographically.")
               )    
              ),
       tabItem(tabName = "SalesDuringCovid",
