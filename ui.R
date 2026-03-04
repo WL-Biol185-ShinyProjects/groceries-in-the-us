@@ -10,7 +10,7 @@ dashboardPage(
   ),
   dashboardBody(
     tabItems(
-      tabItem(tabName = "Dollars spent by state per category",
+      tabItem(tabName = "BarByState",
               fluidPage(
                 titlePanel("Dollars spent by state per category"),
                 sidebarLayout(
@@ -23,7 +23,7 @@ dashboardPage(
                     )
                   ),
                   mainPanel(
-                    plotOutput("Dollars spent per state per category")
+                    plotOutput("BarByState")
                   )
                 )
               )    
