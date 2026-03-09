@@ -161,7 +161,7 @@ dashboardPage(
                 sidebarLayout(
                   sidebarPanel(
                     selectInput(
-                      inputId = "category",
+                      inputId = "Category",
                       label = "Select a Category:",
                       choices = sort(unique(outputstates$Category)),
                       selected = "Alcohol"
@@ -172,7 +172,7 @@ dashboardPage(
                   )
                 ),
               ),
-              ),
+              )
   )
   )
 )

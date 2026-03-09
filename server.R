@@ -247,10 +247,10 @@ function(input, output) {
   })
   
   output$BarByCategory <- renderPlot({
-    req(input$category)
+    req(input$Category)
     
     outputstates %>%
-      filter(category == input$category) %>%                        # ← was "California"
+      filter(Category == input$Category) %>%                        # ← was "California"
       group_by(State) %>%
       summarise(avg_unit_sales = mean(`Unit price`, na.rm = TRUE)) %>%
       ggplot(aes(x = reorder(State, avg_unit_sales),
@@ -258,7 +258,7 @@ function(input, output) {
                  fill = State)) +
       geom_col() +
       labs(
-        title = paste("Average Unit Sales per State -", input$category),  # ← dynamic title
+        title = paste("Average Unit Sales per State -", input$Category),  # ← dynamic title
         x = "State",
         y = "Average Unit Sales"
       ) +
