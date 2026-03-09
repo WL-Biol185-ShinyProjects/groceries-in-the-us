@@ -149,7 +149,7 @@ function(input, output) {
       arrange(Date)
   })
   
-  # --- Main chart ---
+  # --- The Covid Pantry ---
   output$CovidPantry <- renderPlot({
     
     df          <- filtered_data()

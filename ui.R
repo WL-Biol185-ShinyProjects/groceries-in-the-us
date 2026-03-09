@@ -120,7 +120,7 @@ dashboardPage(
       tabItem(tabName = "SalesDuringCovid",
               fluidPage(
                 
-                titlePanel("🧺 The COVID Pantry — Before/After Explorer"),
+                titlePanel("The COVID Pantry — Before/After Explorer"),
                 
                 sidebarLayout(
                   sidebarPanel(
