@@ -113,7 +113,7 @@ dashboardPage(
                     
                     sliderInput(
                       inputId = "covid_marker",
-                      label   = "📍 Drag the COVID Marker:",
+                      label   = "Drag the COVID Marker:",
                       min     = as.Date("2019-10-06"),
                       max     = as.Date("2023-05-07"),
                       value   = as.Date("2020-03-15"),   # lockdown start

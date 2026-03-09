@@ -176,7 +176,7 @@ function(input, output) {
                  color = "firebrick", linewidth = 1.2, linetype = "dashed") +
       annotate("label",
                x = covid_date, y = max(df$`Percent change dollars 1 year`, na.rm = TRUE),
-               label = paste("📍", format(covid_date, "%b %d, %Y")),
+               label = format(covid_date, "%b %d, %Y"),
                color = "firebrick", fill = "white", size = 3.5) +
       
       # Zero reference line
@@ -185,7 +185,7 @@ function(input, output) {
       scale_color_manual(values = c("Before" = "steelblue", "After" = "firebrick")) +
       
       labs(
-        title   = paste("📦", input$category, "Sales —", input$state),
+        title   = paste(input$category, "Sales —", input$state),
         subtitle = "% Change vs. Same Week Last Year",
         x       = "Date",
         y       = "% Change (Year over Year)",
@@ -212,11 +212,11 @@ function(input, output) {
       summarise(avg = mean(`Percent change dollars 1 year`, na.rm = TRUE)) %>%
       pull(avg) %>% round(1)
     
-    direction <- ifelse(after_avg > before_avg, "📈 spiked UP", "📉 dropped DOWN")
+    direction <- ifelse(after_avg > before_avg, "spiked UP", "dropped DOWN")
     diff      <- round(after_avg - before_avg, 1)
     
     wellPanel(
-      h4("📊 Quick Summary"),
+      h4("Quick Summary"),
       p(strong("Before marker:"), paste0("Avg YoY change = ", before_avg, "%")),
       p(strong("After marker:"),  paste0("Avg YoY change = ", after_avg, "%")),
       p(strong("Trend:"), paste(input$category, "in", input$state, direction,
