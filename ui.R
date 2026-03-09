@@ -10,7 +10,8 @@ dashboardPage(
     menuItem("Dollars spent by state per category", tabName = "BarByState"),
     menuItem("The Covid Pantry", tabName = "SalesDuringCovid"),
     menuItem("Recipe Generator", tabName = "Recipes"),
-    menuItem("How Expensive Are My Groceries?", tabName = "UnitPricePerState")
+    menuItem("How Expensive Are My Groceries?", tabName = "UnitPricePerState"),
+    menuItem("Compare Cost of Each Item by State", tabName = "CategoryPricePerState")
     )
   ),
   dashboardBody(
@@ -153,7 +154,25 @@ dashboardPage(
               )
             ),
     ),
-      )
+      ),
+      tabItem(tabName = "CategoryPricePerState",
+              fluidPage(
+                titlePanel("Click each category to examine how unit prices vary by state"),
+                sidebarLayout(
+                  sidebarPanel(
+                    selectInput(
+                      inputId = "category",
+                      label = "Select a Category:",
+                      choices = sort(unique(outputstates$Category)),
+                      selected = "Alcohol"
+                    )
+                  ),
+                  mainPanel(
+                    plotOutput("BarPlot")
+                  )
+                ),
+              ),
+              ),
   )
   )
 )
