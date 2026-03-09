@@ -9,8 +9,8 @@ dashboardPage(
   menuItem("About the project", tabName = "IntroPage"),  
     menuItem("Dollars spent by state per category", tabName = "BarByState"),
     menuItem("The Covid Pantry", tabName = "SalesDuringCovid"),
-    menuItem("Recipe Generator", tabName = "Recipes")
-
+    menuItem("Recipe Generator", tabName = "Recipes"),
+    menuItem("How Expensive Are My Groceries?", tabName = "UnitPricePerState")
     )
   ),
   dashboardBody(
@@ -256,8 +256,23 @@ dashboardPage(
                   )
                 )
               )
+              ),
+      tabItem(tabName = "UnitPricerPerState"),
+              fluidPage(
+                titlePanel("Click Each State to Discover the Average Cost of One Unit Per Category"),
+                sidebarLayout(
+                  sidebarPanel(
+                  selectInput(
+                    inputId  = "state",
+                    label    = "Select a State:",
+                    choices  = sort(unique(outputstates$State)),
+                    selected = "California"
+                )
+              ),
+              mainPanel(
+                plotOutput("BarPlot")
               )
-      
+            ),
     )
   )
 )
