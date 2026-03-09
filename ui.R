@@ -257,7 +257,7 @@ dashboardPage(
                 )
               )
               ),
-      tabItem(tabName = "UnitPricerPerState"),
+      tabItem(tabName = "UnitPricerPerState",
               fluidPage(
                 titlePanel("Click Each State to Discover the Average Cost of One Unit Per Category"),
                 sidebarLayout(
@@ -273,7 +273,8 @@ dashboardPage(
                 plotOutput("BarPlot")
               )
             ),
-    )
+    ),
+      )
   )
   )
 )
