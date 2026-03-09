@@ -59,6 +59,82 @@ dashboardPage(
         font-size: 13px;
         color: #555;
       }
+      .top3-card {
+        background: white;
+        border: 2px solid #f4a261;
+        border-radius: 14px;
+        padding: 18px 14px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        height: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .top3-card:hover {
+        background-color: #fff0e0;
+        border-color: #e76f51;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(231,111,81,0.2);
+      }
+      .top3-card.selected {
+        background-color: #e76f51;
+        border-color: #c0392b;
+        color: white;
+      }
+      .top3-card.selected .card-rank {
+        color: #ffe0d0;
+      }
+      .top3-card.selected .card-dollars {
+        color: #ffe0d0;
+      }
+      .card-rank {
+        font-size: 11px;
+        color: #aaa;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 4px;
+      }
+      .card-category {
+        font-size: 17px;
+        font-weight: bold;
+        color: #e76f51;
+        margin-bottom: 4px;
+      }
+      .top3-card.selected .card-category {
+        color: white;
+      }
+      .card-dollars {
+        font-size: 12px;
+        color: #888;
+      }
+
+      /* ── Explore section ── */
+      .explore-header {
+        font-size: 18px;
+        font-weight: bold;
+        color: #e76f51;
+        margin: 24px 0 10px 0;
+        border-top: 2px dashed #f4a261;
+        padding-top: 18px;
+      }
+      .explore-btn {
+        background-color: white !important;
+        border: 2px solid #f4a261 !important;
+        color: #e76f51 !important;
+        border-radius: 8px !important;
+        margin: 4px !important;
+        font-size: 13px !important;
+      }
+      .explore-btn:hover {
+        background-color: #fff0e0 !important;
+      }
+      .explore-btn.active-explore {
+        background-color: #f4a261 !important;
+        color: white !important;
+      }
     "))),
     tabItems(
       tabItem(tabName = "IntroPage",
@@ -87,35 +163,51 @@ dashboardPage(
               )    
              ),
 
-    tabItem(tabName = "Recipes",
-            fluidPage(
-              titlePanel("Dinner Recipe Generator"),
-              br(),
-              fluidRow(
-                column(4,
-                       wellPanel(
-                         style = "background-color:#fff8f0; border: 2px solid #f4a261; border-radius: 12px;",
-                         h4("Settings", style = "color:#e76f51;"),
-                         selectInput("recipe_state", "Pick a State:",
-                                     choices  = sort(unique(outputstates$State)),
-                                     selected = "California"),
-                         selectInput("recipe_category", "Pick a Category:",
-                                     choices  = c("Fruits", "Vegetables", "Dairy", "Grains",
-                                                  "Meats", "Beverages", "Fats and oils",
-                                                  "Sugar and sweeteners", "Commercially prepared items",
-                                                  "Other"),
-                                     selected = "Meats"),
+      tabItem(tabName = "Recipes",
+              fluidPage(
+                titlePanel("Dinner Recipe Generator"),
+                br(),
+                
+                fluidRow(
+                  # ── Left panel: state picker ──
+                  column(3,
+                         wellPanel(
+                           style = "background-color:#fff8f0; border: 2px solid #f4a261; border-radius: 12px;",
+                           h4("Your State", style = "color:#e76f51;"),
+                           selectInput("recipe_state", NULL,
+                                       choices  = sort(unique(outputstates$State)),
+                                       selected = "California"),
+                           hr(style = "border-color:#f4a261;"),
+                           p(style = "font-size:13px; color:#888;",
+                             "We'll find the top 3 grocery categories in your state and suggest a recipe for each one.")
+                         )
+                  ),
+                  
+                  # ── Middle: top-3 cards + explore ──
+                  column(9,
+                         h4("Top 3 Categories in Your State", style = "color:#e76f51; margin-top:6px;"),
+                         p(style = "font-size:13px; color:#888; margin-bottom:14px;",
+                           "Click a category card to see a recipe inspired by what your state buys most."),
+                         
+                         # The 3 clickable cards are rendered server-side
+                         uiOutput("top3Cards"),
+                         
+                         # ── Explore other recipes ──
+                         div(class = "explore-header",
+                             "🔍 Explore Other Recipes"),
+                         p(style = "font-size:13px; color:#888; margin-bottom:10px;",
+                           "Want to try something different? Pick any category below."),
+                         uiOutput("exploreButtons"),
+                         
                          br(),
-                         actionButton("generateRecipe", "Generate Recipe!",
-                                      class = "generate-btn", width = "100%")
-                       )
-                ),
-                column(8,
-                       uiOutput("recipeOutput")
+                         
+                         # Recipe output area
+                         uiOutput("recipeOutput")
+                  )
                 )
               )
-            )
-        ),
+      ),
+    
 
       tabItem(tabName = "SalesDuringCovid",
               fluidPage(

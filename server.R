@@ -106,49 +106,129 @@ function(input, output) {
   )
   
 
-  recipe_result <- eventReactive(input$generateRecipe, {
-    r <- if (!is.null(recipes[[input$recipe_category]])) {
-      recipes[[input$recipe_category]]
-    } else {
-      recipes[["Other"]]
-    }
-    r
-  })
-  
-  output$recipeOutput <- renderUI({
-    if (input$generateRecipe == 0) {
-      div(
-        style = "text-align:center; padding: 60px; color: #aaa;",
-        h4("Pick a state and category, then click Generate Recipe!", style = "color:#aaa;")
-      )
-    } else {
-      r <- recipe_result()
-      div(class = "recipe-box",
-          div(class = "state-badge", paste0(input$recipe_state, " - ", input$recipe_category)),
-          div(class = "recipe-title", r$name),
-          p(em(r$desc)),
-          h4("Ingredients"),
-          p(style = "white-space:pre-wrap;", r$ingredients),
-          h4("Instructions"),
-          p(style = "white-space:pre-wrap;", r$instructions),
-          hr(),
-          p(style = "color:#e76f51; font-style:italic;", r$fact)
-      )
-    }
-  })
-  
-
-  # ---- DEFINE filtered_data FIRST before anything uses it ----
-  filtered_data <- reactive({
-    outputstates %>%
-      filter(
-        State    == input$state,
-        Category == input$category
-      ) %>%
-      mutate(Date = as.Date(Date)) %>%
-      arrange(Date)
-  })
-  
+  # Rank labels for top-3 cards
+  rank_labels <- c("#1 Most Purchased", "#2 Most Purchased", "#3 Most Purchased")
+    
+    # ── Reactive: top-3 categories for selected state ──────────────────────────
+    top3_data <- reactive({
+      outputstates %>%
+        filter(State == input$recipe_state) %>%
+        group_by(Category) %>%
+        summarise(total_dollars = sum(Dollars, na.rm = TRUE), .groups = "drop") %>%
+        arrange(desc(total_dollars)) %>%
+        slice_head(n = 3)
+    })
+    
+    # ── Track which category is currently selected ─────────────────────────────
+    selected_category <- reactiveVal(NULL)
+    
+    # Reset selection whenever state changes
+    observeEvent(input$recipe_state, {
+      selected_category(NULL)
+    })
+    
+    # ── Render the 3 clickable cards ───────────────────────────────────────────
+    output$top3Cards <- renderUI({
+      top3 <- top3_data()
+      cards <- lapply(seq_len(nrow(top3)), function(i) {
+        cat_name  <- top3$Category[i]
+        dollars   <- scales::dollar(top3$total_dollars[i], scale = 1e-6,
+                                    suffix = "B", accuracy = 0.1)
+        is_sel    <- !is.null(selected_category()) && selected_category() == cat_name
+        card_cls  <- if (is_sel) "top3-card selected" else "top3-card"
+        
+        column(4,
+               div(
+                 class = card_cls,
+                 id    = paste0("card_", i),
+                 div(class = "card-rank",     rank_labels[i]),
+                 div(class = "card-category", cat_name),
+                 div(class = "card-dollars",  paste0("$", round(top3$total_dollars[i] / 1e9, 1), "B total spent")),
+                 # Hidden button that triggers the server-side click
+                 actionButton(
+                   inputId = paste0("card_click_", i),
+                   label   = "",
+                   style   = "position:absolute; opacity:0; width:100%; height:100%; top:0; left:0; cursor:pointer; border:none; background:transparent;"
+                 )
+               ) %>% tagAppendAttributes(style = "position:relative;")
+        )
+      })
+      fluidRow(cards)
+    })
+    
+    # ── Observe card button clicks ─────────────────────────────────────────────
+    observeEvent(input$card_click_1, {
+      selected_category(top3_data()$Category[1])
+    }, ignoreInit = TRUE)
+    
+    observeEvent(input$card_click_2, {
+      selected_category(top3_data()$Category[2])
+    }, ignoreInit = TRUE)
+    
+    observeEvent(input$card_click_3, {
+      selected_category(top3_data()$Category[3])
+    }, ignoreInit = TRUE)
+    
+    # ── Explore buttons (all categories) ──────────────────────────────────────
+    all_categories <- names(recipes)
+    
+    output$exploreButtons <- renderUI({
+      btns <- lapply(all_categories, function(cat) {
+        is_sel  <- !is.null(selected_category()) && selected_category() == cat
+        btn_cls <- if (is_sel) "explore-btn active-explore" else "explore-btn"
+        actionButton(
+          inputId = paste0("explore_", gsub("[^a-zA-Z]", "_", cat)),
+          label   = cat,
+          class   = btn_cls
+        )
+      })
+      div(btns)
+    })
+    
+    # Observe each explore button
+    lapply(all_categories, function(cat) {
+      btn_id <- paste0("explore_", gsub("[^a-zA-Z]", "_", cat))
+      observeEvent(input[[btn_id]], {
+        selected_category(cat)
+      }, ignoreInit = TRUE)
+    })
+    
+    # ── Render the recipe card ─────────────────────────────────────────────────
+    output$recipeOutput <- renderUI({
+      cat <- selected_category()
+      
+      if (is.null(cat)) {
+        div(
+          style = "text-align:center; padding:50px; color:#bbb;",
+          tags$img(src = "https://cdn-icons-png.flaticon.com/512/1830/1830839.png",
+                   height = "60px", style = "opacity:0.3; margin-bottom:12px;"),
+          br(),
+          h4("Click a category card above to get a recipe!", style = "color:#ccc;")
+        )
+      } else {
+        r <- if (!is.null(recipes[[cat]])) recipes[[cat]] else recipes[["Other"]]
+        div(class = "recipe-box",
+            div(class = "state-badge", paste0(input$recipe_state, "  ·  ", cat)),
+            div(class = "recipe-title", r$name),
+            p(em(r$desc)),
+            h4("Ingredients"),
+            p(style = "white-space:pre-wrap;", r$ingredients),
+            h4("Instructions"),
+            p(style = "white-space:pre-wrap;", r$instructions),
+            hr(),
+            p(style = "color:#e76f51; font-style:italic;", r$fact)
+        )
+      }
+    })
+    filtered_data <- reactive({
+      outputstates %>%
+        filter(
+          State    == input$state,
+          Category == input$category
+        ) %>%
+        mutate(Date = as.Date(Date)) %>%
+        arrange(Date)
+    })
   # --- The Covid Pantry ---
   output$CovidPantry <- renderPlot({
     
@@ -226,6 +306,5 @@ function(input, output) {
     )
     
   })
-  
-
 }
+
