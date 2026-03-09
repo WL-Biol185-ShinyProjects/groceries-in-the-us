@@ -242,6 +242,30 @@ function(input, output) {
       theme_minimal() +
       theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
       theme(legend.position = "none")
+    
+    
+  })
+  
+  output$BarByCategory <- renderPlot({
+    req(input$category)
+    
+    outputstates %>%
+      filter(category == input$category) %>%                        # ← was "California"
+      group_by(State) %>%
+      summarise(avg_unit_sales = mean(`Unit price`, na.rm = TRUE)) %>%
+      ggplot(aes(x = reorder(State, avg_unit_sales),
+                 y = avg_unit_sales,
+                 fill = State)) +
+      geom_col() +
+      labs(
+        title = paste("Average Unit Sales per State -", input$category),  # ← dynamic title
+        x = "State",
+        y = "Average Unit Sales"
+      ) +
+      theme_minimal() +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+      theme(legend.position = "none")
+    
   })
 }
 

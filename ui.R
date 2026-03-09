@@ -168,7 +168,7 @@ dashboardPage(
                     )
                   ),
                   mainPanel(
-                    plotOutput("BarPlot")
+                    plotOutput("BarByCategory")
                   )
                 ),
               ),
