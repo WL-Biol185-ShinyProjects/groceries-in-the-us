@@ -9,7 +9,7 @@ dashboardPage(
   menuItem("About the project", tabName = "IntroPage"),  
     menuItem("Dollars spent by state per category", tabName = "BarByState"),
     menuItem("The Covid Pantry", tabName = "SalesDuringCovid"),
-    menuItem("Recipe Generator", tabName = "Recipes", icon = icon("utensils"))
+    menuItem("Recipe Generator", tabName = "Recipes")
 
     )
   ),
