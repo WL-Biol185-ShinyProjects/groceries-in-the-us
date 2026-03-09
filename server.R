@@ -225,7 +225,7 @@ function(input, output) {
     
   })
   
-  output$BarPlot <- renderPlot({
+  output$UnitPrice <- renderPlot({
     outputstates %>%
       filter(State == input$state) %>%                        # ← was "California"
       group_by(State, Category) %>%
