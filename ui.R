@@ -150,7 +150,7 @@ dashboardPage(
                 )
               ),
               mainPanel(
-                plotOutput("BarPlot")
+                plotOutput("UnitPrice")
               )
             ),
     ),
