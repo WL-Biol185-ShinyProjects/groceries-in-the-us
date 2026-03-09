@@ -58,6 +58,10 @@ ggplot(States,
 ```
 
 ```{r}
+States$`Unit price` <- States$Dollars/States$`Unit sales`
+```
+
+```{r}
 library(readr)
 write_csv(States, "outputstates.csv")
 ```
