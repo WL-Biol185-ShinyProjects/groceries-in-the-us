@@ -35,9 +35,7 @@ dashboardPage(
                   style = "background: white; border-radius: 16px; padding: 28px;
                box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 24px;",
                   h4("About the Project", style = "color: #e76f51; font-weight: 600;"),
-                  p("This project utilizes the USDA's Weekly Retail Food Sales dataset, collected
-        from checkout scanners in a representative sample of grocery stores across the US.
-        Data spans October 6, 2019 to May 7, 2023."),
+                  p("Groceries in the US is a project that utilizes the USDA’s Weekly Retail Food Sales data set, which used data collected from checkout scanners in a representative sample of grocery stores. This data was sent to a research firm that aggregated all of the results and organized them by week. Collections began on October 6, 2019 and ended on May 7, 2023. You may notice as you explore the pages of our project that certain states are missing. This is because Alaska, Delaware, Hawaii, Idaho, Iowa, Kansas, Nebraska, New Jersey, North Dakota, Mississippi, Montana, and Washington D.C. because the research firm used by the USDA (Circana) does not collect state-level data in these locations. Additionally, you will notice that grocery items are grouped into various categories. To help understand what items count in each category, we have provided a table below that summarizes the types of product considered under each category as outlined by the USDA, and some potential examples of these products. "),
                   p(style = "color: #888; font-size: 13px;",
                     "Note: Alaska, Delaware, Hawaii, Idaho, Iowa, Kansas, Nebraska, New Jersey,
         North Dakota, Mississippi, Montana, and Washington D.C. are excluded as Circana
@@ -105,25 +103,36 @@ dashboardPage(
       ),
       tabItem(tabName = "BarByState",
               fluidPage(
-                titlePanel("Spending by Category"),
-                sidebarLayout(
-                  sidebarPanel(
-                    selectInput(
-                      inputId  = "state_bar",
-                      label    = "Select a State:",
-                      choices  = sort(unique(outputstates$State)),
-                      selected = "California"
-                    )
-                  ),
-                  mainPanel(
-                    plotOutput("BarPlot")
-                  )
+                div(
+                  style = "background: linear-gradient(135deg, #e76f51, #f4a261);
+               border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
+               color: white;",
+                  h3("Spending by Category", style = "font-weight: 600; margin-bottom: 4px;"),
+                  p("Select a state to see total dollars spent per grocery category.",
+                    style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
                 ),
-                p("Choose a state to view a bar graph displaying the total amount 
-                  of money spent per grocery category over time. Select multiple
-                  states and see how these trends vary geographically.")
-              )    
-             ),
+                fluidRow(
+                  column(3,
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                   border-top: 4px solid #e76f51;",
+                           h5("Settings", style = "color: #e76f51; font-weight: 600; margin-bottom: 16px;"),
+                           selectInput("state_bar", "Select a State:",
+                                       choices  = sort(unique(outputstates$State)),
+                                       selected = "California")
+                         )
+                  ),
+                  column(9,
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
+                           plotOutput("BarPlot", height = "450px")
+                         )
+                  )
+                )
+              )
+      ),
 
       tabItem(tabName = "Recipes",
               fluidPage(
@@ -173,88 +182,116 @@ dashboardPage(
 
       tabItem(tabName = "SalesDuringCovid",
               fluidPage(
-                
-                titlePanel("The COVID Pantry — Before/After Explorer"),
-                
-                sidebarLayout(
-                  sidebarPanel(
-                    
-                    selectInput(
-                      inputId  = "state_covid",
-                      label    = "Select a State:",
-                      choices  = sort(unique(outputstates$State)),
-                      selected = "California"
-                    ),
-                    
-                    selectInput(
-                      inputId  = "category_covid",
-                      label    = "Select a Category:",
-                      choices  = sort(unique(outputstates$Category)),
-                      selected = "Alcohol"
-                    ),
-                    
-                    sliderInput(
-                      inputId = "covid_marker",
-                      label   = "Drag the COVID Marker:",
-                      min     = as.Date("2019-10-06"),
-                      max     = as.Date("2023-05-07"),
-                      value   = as.Date("2020-03-15"),   # lockdown start
-                      step    = 7,                        # weekly steps
-                      timeFormat = "%b %d, %Y",
-                      animate = FALSE
-                    ),
-                    
-                    hr(),
-                    
-                    helpText("Drag the marker to explore how sales changed around COVID lockdowns. 
-                March 15, 2020 marks the start of widespread US lockdowns.")
-                    
+                div(
+                  style = "background: linear-gradient(135deg, #e76f51, #f4a261);
+               border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
+               color: white;",
+                  h3("The COVID Pantry", style = "font-weight: 600; margin-bottom: 4px;"),
+                  p("Explore how grocery spending shifted before and after COVID lockdowns in 2020.",
+                    style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
+                ),
+                fluidRow(
+                  column(3,
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                   border-top: 4px solid #e76f51;",
+                           h5("Settings", style = "color: #e76f51; font-weight: 600; margin-bottom: 16px;"),
+                           selectInput("state_covid", "Select a State:",
+                                       choices  = sort(unique(outputstates$State)),
+                                       selected = "California"),
+                           selectInput("category_covid", "Select a Category:",
+                                       choices  = sort(unique(outputstates$Category)),
+                                       selected = "Alcohol"),
+                           sliderInput("covid_marker", "Drag the COVID Marker:",
+                                       min        = as.Date("2019-10-06"),
+                                       max        = as.Date("2023-05-07"),
+                                       value      = as.Date("2020-03-15"),
+                                       step       = 7,
+                                       timeFormat = "%b %d, %Y",
+                                       animate    = FALSE),
+                           hr(style = "border-color: #f4a261;"),
+                           p("Drag the marker to explore how sales changed around COVID lockdowns.
+            March 15, 2020 marks the start of widespread US lockdowns.",
+                             style = "font-size: 12px; color: #888;")
+                         )
                   ),
-                  
-                  mainPanel(
-                    plotOutput("CovidPantry", height = "500px"),
-                    br(),
-                    uiOutput("summaryBox")
+                  column(9,
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
+                           plotOutput("CovidPantry", height = "450px"),
+                           br(),
+                           uiOutput("summaryBox")
+                         )
                   )
                 )
               )
-              ),
+      ),
       tabItem(tabName = "UnitPricePerState",
               fluidPage(
-                titlePanel("Click Each State to Discover the Average Cost of One Unit Per Category"),
-                sidebarLayout(
-                  sidebarPanel(
-                  selectInput(
-                    inputId  = "state_unit",
-                    label    = "Select a State:",
-                    choices  = sort(unique(outputstates$State)),
-                    selected = "California"
+                div(
+                  style = "background: linear-gradient(135deg, #e76f51, #f4a261);
+               border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
+               color: white;",
+                  h3("Grocery Prices", style = "font-weight: 600; margin-bottom: 4px;"),
+                  p("Select a state to see the average cost per unit across grocery categories.",
+                    style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
+                ),
+                fluidRow(
+                  column(3,
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                   border-top: 4px solid #e76f51;",
+                           h5("Settings", style = "color: #e76f51; font-weight: 600; margin-bottom: 16px;"),
+                           selectInput("state_unit", "Select a State:",
+                                       choices  = sort(unique(outputstates$State)),
+                                       selected = "California")
+                         )
+                  ),
+                  column(9,
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
+                           plotOutput("UnitPrice", height = "450px")
+                         )
+                  )
                 )
-              ),
-              mainPanel(
-                plotOutput("UnitPrice")
               )
-            ),
-    ),
       ),
       tabItem(tabName = "CategoryPricePerState",
               fluidPage(
-                titlePanel("Click each category to examine how unit prices vary by state"),
-                sidebarLayout(
-                  sidebarPanel(
-                    selectInput(
-                      inputId = "category_price",
-                      label = "Select a Category:",
-                      choices = sort(unique(outputstates$Category)),
-                      selected = "Alcohol"
-                    )
-                  ),
-                  mainPanel(
-                    plotOutput("BarByCategory")
-                  )
+                div(
+                  style = "background: linear-gradient(135deg, #e76f51, #f4a261);
+               border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
+               color: white;",
+                  h3("Price by State", style = "font-weight: 600; margin-bottom: 4px;"),
+                  p("Select a category to compare average unit prices across all states.",
+                    style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
                 ),
-              ),
-              ),
+                fluidRow(
+                  column(3,
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                   border-top: 4px solid #e76f51;",
+                           h5("Settings", style = "color: #e76f51; font-weight: 600; margin-bottom: 16px;"),
+                           selectInput("category_price", "Select a Category:",
+                                       choices  = sort(unique(outputstates$Category)),
+                                       selected = "Alcohol")
+                         )
+                  ),
+                  column(9,
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
+                           plotOutput("BarByCategory", height = "450px")
+                         )
+                  )
+                )
+              )
+      ),
     tabItem(tabName = "Quiz",
             h3("Quiz yourself after reviweing our entire site"),
             radioButtons("q1",
