@@ -65,3 +65,5 @@ States$`Unit price` <- States$Dollars/States$`Unit sales`
 library(readr)
 write_csv(States, "outputstates.csv")
 ```
+to import data, we decided to remove 2019 and 2023 from the population data set so that we can more simply average weeks of groceries to make an interactive map per capita
+
