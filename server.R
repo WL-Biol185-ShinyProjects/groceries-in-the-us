@@ -7,7 +7,7 @@ function(input, output) {
   
   output$BarPlot <- renderPlot({
     outputstates %>%
-      filter(State == input$state) %>%                        # ← was "California"
+      filter(State == input$state_bar) %>%                        # ← was "California"
       group_by(Category) %>%
       summarise(total_dollars = sum(Dollars, na.rm = TRUE)) %>%
       ggplot(aes(x = reorder(Category, total_dollars),
@@ -15,7 +15,7 @@ function(input, output) {
                  fill = Category)) +
       geom_col() +
       labs(
-        title = paste("Total Dollars Spent by Category -", input$state),  # ← dynamic title
+        title = paste("Total Dollars Spent by Category -", input$state_bar),  # ← dynamic title
         x = "Category",
         y = "Total Dollars"
       ) +
@@ -141,8 +141,8 @@ function(input, output) {
     filtered_data <- reactive({
       outputstates %>%
         filter(
-          State    == input$state,
-          Category == input$category
+          State    == input$state_covid,
+          Category == input$category_covid
         ) %>%
         mutate(Date = as.Date(Date)) %>%
         arrange(Date)
@@ -185,7 +185,7 @@ function(input, output) {
       scale_color_manual(values = c("Before" = "steelblue", "After" = "firebrick")) +
       
       labs(
-        title   = paste(input$category, "Sales —", input$state),
+        title   = paste(input$category_covid, "Sales —", input$state_covid),
         subtitle = "% Change vs. Same Week Last Year",
         x       = "Date",
         y       = "% Change (Year over Year)",
@@ -219,7 +219,7 @@ function(input, output) {
       h4("Quick Summary"),
       p(strong("Before marker:"), paste0("Avg YoY change = ", before_avg, "%")),
       p(strong("After marker:"),  paste0("Avg YoY change = ", after_avg, "%")),
-      p(strong("Trend:"), paste(input$category, "in", input$state, direction,
+      p(strong("Trend:"), paste(input$category_covid, "in", input$state_covid, direction,
                                 "by", abs(diff), "percentage points after the marker."))
     )
     
@@ -227,7 +227,7 @@ function(input, output) {
   
   output$UnitPrice <- renderPlot({
     outputstates %>%
-      filter(State == input$state) %>%                        # ← was "California"
+      filter(State == input$state_unit) %>%                        # ← was "California"
       group_by(State, Category) %>%
       summarise(avg_unit_sales = mean(`Unit price`, na.rm = TRUE)) %>%
       ggplot(aes(x = reorder(Category, avg_unit_sales),
@@ -235,7 +235,7 @@ function(input, output) {
                  fill = Category)) +
       geom_col() +
       labs(
-        title = paste("Average Unit Sales by Category -", input$state),  # ← dynamic title
+        title = paste("Average Unit Sales by Category -", input$state_unit),  # ← dynamic title
         x = "Category",
         y = "Average Unit Sales"
       ) +
@@ -247,10 +247,10 @@ function(input, output) {
   })
   
   output$BarByCategory <- renderPlot({
-    req(input$Category)
+    req(input$category_covid)
     
     outputstates %>%
-      filter(Category == input$Category) %>%                        # ← was "California"
+      filter(Category == input$category_price) %>%                        # ← was "California"
       group_by(State) %>%
       summarise(avg_unit_sales = mean(`Unit price`, na.rm = TRUE)) %>%
       ggplot(aes(x = reorder(State, avg_unit_sales),
@@ -258,7 +258,7 @@ function(input, output) {
                  fill = State)) +
       geom_col() +
       labs(
-        title = paste("Average Unit Sales per State -", input$Category),  # ← dynamic title
+        title = paste("Average Unit Sales per State -", input$category_price),  # ← dynamic title
         x = "State",
         y = "Average Unit Sales"
       ) +

@@ -28,7 +28,7 @@ dashboardPage(
                 sidebarLayout(
                   sidebarPanel(
                     selectInput(
-                      inputId  = "state",
+                      inputId  = "state_bar",
                       label    = "Select a State:",
                       choices  = sort(unique(outputstates$State)),
                       selected = "California"
@@ -99,14 +99,14 @@ dashboardPage(
                   sidebarPanel(
                     
                     selectInput(
-                      inputId  = "state",
+                      inputId  = "state_covid",
                       label    = "Select a State:",
                       choices  = sort(unique(outputstates$State)),
                       selected = "California"
                     ),
                     
                     selectInput(
-                      inputId  = "category",
+                      inputId  = "category_covid",
                       label    = "Select a Category:",
                       choices  = sort(unique(outputstates$Category)),
                       selected = "Alcohol"
@@ -144,7 +144,7 @@ dashboardPage(
                 sidebarLayout(
                   sidebarPanel(
                   selectInput(
-                    inputId  = "state",
+                    inputId  = "state_unit",
                     label    = "Select a State:",
                     choices  = sort(unique(outputstates$State)),
                     selected = "California"
@@ -162,7 +162,7 @@ dashboardPage(
                 sidebarLayout(
                   sidebarPanel(
                     selectInput(
-                      inputId = "Category",
+                      inputId = "category_price",
                       label = "Select a Category:",
                       choices = sort(unique(outputstates$Category)),
                       selected = "Alcohol"
