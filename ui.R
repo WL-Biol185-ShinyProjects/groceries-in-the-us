@@ -11,7 +11,8 @@ dashboardPage(
     menuItem("The Covid Pantry", tabName = "SalesDuringCovid"),
     menuItem("Recipe Generator", tabName = "Recipes"),
     menuItem("How Expensive Are My Groceries?", tabName = "UnitPricePerState"),
-    menuItem("Compare Cost of Each Item by State", tabName = "CategoryPricePerState")
+    menuItem("Compare Cost of Each Item by State", tabName = "CategoryPricePerState"),
+    menuItem("Quiz Yourself", tabName = "Quiz")
     )
   ),
   dashboardBody(
@@ -172,7 +173,11 @@ dashboardPage(
                   )
                 ),
               ),
-              )
+              ),
+    tabItem(tabName = "Quiz",
+            h2("Quiz Yourself"),
+            p("Quiz")
+    )
   )
   )
 )
