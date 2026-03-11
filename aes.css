@@ -179,3 +179,10 @@ body {
   background-color: #f4a261 !important;
   color: white !important;
 }
+
+.sidebar-menu > li > a {
+  white-space: normal !important;
+  line-height: 1.4 !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
