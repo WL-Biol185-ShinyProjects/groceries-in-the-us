@@ -7,11 +7,11 @@ dashboardPage(
     sidebarMenu(
 
   menuItem("About the project", tabName = "IntroPage"),  
-    menuItem("Dollars spent by state per category", tabName = "BarByState"),
-    menuItem("The Covid Pantry", tabName = "SalesDuringCovid"),
+    menuItem("Spending by Category", tabName = "BarByState"),
+    menuItem("The COVID Pantry", tabName = "SalesDuringCovid"),
     menuItem("Recipe Generator", tabName = "Recipes"),
-    menuItem("How Expensive Are My Groceries?", tabName = "UnitPricePerState"),
-    menuItem("Compare Cost of Each Item by State", tabName = "CategoryPricePerState"),
+    menuItem("Grocery Prices", tabName = "UnitPricePerState"),
+    menuItem("Price by State", tabName = "CategoryPricePerState"),
     menuItem("Quiz Yourself", tabName = "Quiz")
     )
   ),
@@ -105,7 +105,7 @@ dashboardPage(
       ),
       tabItem(tabName = "BarByState",
               fluidPage(
-                titlePanel("Dollars spent by state per category"),
+                titlePanel("Spending by Category"),
                 sidebarLayout(
                   sidebarPanel(
                     selectInput(
