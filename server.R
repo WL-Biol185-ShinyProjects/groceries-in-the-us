@@ -19,14 +19,27 @@ function(input, output) {
         x = "Category",
         y = "Total Dollars"
       ) +
-      theme_minimal() +
-      theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+      grocery_theme +
       theme(legend.position = "none")
   })
   
   # Rank labels for top-3 cards
   rank_labels <- c("#1 Most Purchased", "#2 Most Purchased", "#3 Most Purchased")
     
+  grocery_theme <- theme_minimal(base_size = 14) +
+    theme(
+      plot.background   = element_rect(fill = "#fff9f5", color = NA),
+      panel.background  = element_rect(fill = "#fff9f5", color = NA),
+      plot.title        = element_text(color = "#e76f51", face = "bold", size = 15),
+      plot.subtitle     = element_text(color = "#888888", size = 11),
+      axis.text         = element_text(color = "#555555"),
+      axis.title        = element_text(color = "#555555"),
+      panel.grid.major  = element_line(color = "#f0e6de"),
+      panel.grid.minor  = element_blank(),
+      legend.background = element_rect(fill = "#fff9f5", color = NA),
+      axis.text.x       = element_text(angle = 45, hjust = 1)
+    )
+  
     # ── Reactive: top-3 categories for selected state ──────────────────────────
     top3_data <- reactive({
       outputstates %>%
@@ -191,8 +204,8 @@ function(input, output) {
         y       = "% Change (Year over Year)",
         color   = "Period"
       ) +
-      theme_minimal(base_size = 14) +
-      theme(legend.position = "bottom")
+      grocery_theme +
+      theme(legend.position = "none")
     
   })
   
@@ -239,8 +252,7 @@ function(input, output) {
         x = "Category",
         y = "Average Unit Sales"
       ) +
-      theme_minimal() +
-      theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+      grocery_theme +
       theme(legend.position = "none")
     
     
@@ -262,8 +274,7 @@ function(input, output) {
         x = "State",
         y = "Average Unit Sales"
       ) +
-      theme_minimal() +
-      theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+      grocery_theme +
       theme(legend.position = "none")
     
   })

@@ -186,3 +186,27 @@ body {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
 }
+
+.shiny-plot-output {
+  background-color: #fff9f5;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.selectize-input {
+  border-radius: 8px !important;
+  border-color: #f4a261 !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+.selectize-input.focus {
+  border-color: #e76f51 !important;
+  box-shadow: 0 0 0 2px rgba(231,111,81,0.2) !important;
+}
+.irs-bar, .irs-bar-edge {
+  background-color: #e76f51 !important;
+  border-color: #e76f51 !important;
+}
+.irs-single {
+  background-color: #e76f51 !important;
+}
