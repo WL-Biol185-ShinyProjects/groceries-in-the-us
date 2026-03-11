@@ -278,5 +278,21 @@ function(input, output) {
       theme(legend.position = "none")
     
   })
+  
+  observeEvent(input$submit_quiz, {
+    score <- 0
+    if(input$q1 == "Vermont"){
+      score <- score + 1
+    }
+    if(input$q2 == "Commercially processed items"){
+      score <- score + 1
+    }
+    if(input$q3 == "Alcohol"){
+      score <- score + 1
+    }
+    output$quiz_result <- renderText({
+      paste("Your score:", score, "/3")
+    })
+  })
 }
 

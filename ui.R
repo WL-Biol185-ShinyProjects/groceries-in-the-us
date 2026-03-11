@@ -175,8 +175,18 @@ dashboardPage(
               ),
               ),
     tabItem(tabName = "Quiz",
-            h2("Quiz Yourself"),
-            p("Quiz")
+            h3("Quiz yourself after reviweing our entire site"),
+            radioButtons("q1",
+                         "Which state is the most expensive to buy a vegtable in?",
+                         choices = c("Michigan", "Vermont", "Rhode Island", "New York")),
+            radioButtons("q2",
+                         "What is the food item that is purchased the most in every state?",
+                         choices = c("Commercially processed items", "Fruits", "Fats and oils", "Meats, eggs, and nuts")),
+            radioButtons("q3",
+                         "Which item is typically the most expensive per unit?",
+                         choices = c("Vegtables", "Beverages", "Alcohol", "Meats, eggs, and nuts")),
+            actionButton("submit_quiz", "Submit Quiz"),
+            textOutput("quiz_result")
     )
   )
   )
