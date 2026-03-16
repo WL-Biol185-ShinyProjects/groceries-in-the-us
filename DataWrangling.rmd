@@ -100,10 +100,11 @@ library(readr)
 # Read the data
 data <- read_csv("avg_spending_by_state_year_category.csv")
 
-# Get list of categories
+# Get categories
 categories <- unique(data$Category)
 
-# Loop through each category
+all_tables <- list()
+
 for(cat in categories){
 
   category_table <- data %>%
@@ -112,13 +113,27 @@ for(cat in categories){
     summarize(avg_spending = mean(Avg_Dollars_Spent, na.rm = TRUE)) %>%
     spread(key = Year, value = avg_spending)
 
-  # Save table as a file
-  filename <- paste0("spending_", gsub(" ", "_", cat), ".csv")
-  write_csv(category_table, filename)
+  # Convert wide table back to long format
+  category_long <- category_table %>%
+    gather(key = Year, value = Avg_Dollars_Spent, -State) %>%
+    mutate(Category = cat)
 
-  # Print table in the R Markdown output
-  print(category_table)
+  all_tables[[cat]] <- category_long
 }
+
+# Combine all categories
+final_data <- bind_rows(all_tables)
+
+# Reorder columns
+final_data <- final_data %>%
+  select(State, Year, Category, Avg_Dollars_Spent)
+
+# View result
+final_data
+
+# Save file
+write_csv(final_data, "state_year_category_spending.csv")
 ```
+claude sonnet 4.6 made new data table on 3/16/26 to create new tables for each category that give average dollars spent and state and year. We do not need them for aything as of 3/16 but are keeping code
 
 
