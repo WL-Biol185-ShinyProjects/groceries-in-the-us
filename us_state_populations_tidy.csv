@@ -1,0 +1,1420 @@
+State,Year,Category,Avg_Dollars_Spent
+Alabama,2020,Alcohol,25368933.94
+Arizona,2020,Alcohol,43606223.92
+Arkansas,2020,Alcohol,6610590.69
+California,2020,Alcohol,179493921.27
+Colorado,2020,Alcohol,8592446.17
+Connecticut,2020,Alcohol,2072174.65
+Florida,2020,Alcohol,118800959.71
+Georgia,2020,Alcohol,43473595.12
+Illinois,2020,Alcohol,46779059.12
+Indiana,2020,Alcohol,19783428.42
+Iowa,2020,Alcohol,18951839.35
+Kansas,2020,Alcohol,3686829.67
+Kentucky,2020,Alcohol,14402030.87
+Louisiana,2020,Alcohol,30029287.08
+Maine,2020,Alcohol,11030178.67
+Maryland,2020,Alcohol,5944619.42
+Massachusetts,2020,Alcohol,9601185.25
+Michigan,2020,Alcohol,46483295.44
+Minnesota,2020,Alcohol,6964375.17
+Mississippi,2020,Alcohol,10548174.85
+Missouri,2020,Alcohol,32430832.33
+Nebraska,2020,Alcohol,11494586.73
+Nevada,2020,Alcohol,18607101.52
+New Hampshire,2020,Alcohol,10467832.52
+New Mexico,2020,Alcohol,14033781.02
+New York,2020,Alcohol,52848386.94
+North Carolina,2020,Alcohol,55662719.38
+Ohio,2020,Alcohol,63421124.65
+Oklahoma,2020,Alcohol,15500965.6
+Oregon,2020,Alcohol,24825832.37
+Pennsylvania,2020,Alcohol,12217666.12
+Rhode Island,2020,Alcohol,73199.67
+South Carolina,2020,Alcohol,27770695.73
+South Dakota,2020,Alcohol,5810700.4
+Tennessee,2020,Alcohol,28757603.58
+Texas,2020,Alcohol,152846318.77
+Utah,2020,Alcohol,7145285.52
+Vermont,2020,Alcohol,4770794.17
+Virginia,2020,Alcohol,50935195.73
+Washington,2020,Alcohol,46621644.33
+West Virginia,2020,Alcohol,8942619.6
+Wisconsin,2020,Alcohol,24208030.98
+Wyoming,2020,Alcohol,1979824.73
+Alabama,2021,Alcohol,25267783.13
+Arizona,2021,Alcohol,42939062.67
+Arkansas,2021,Alcohol,6774716.54
+California,2021,Alcohol,172944525.37
+Colorado,2021,Alcohol,9349433.83
+Connecticut,2021,Alcohol,2053356.56
+Florida,2021,Alcohol,120255041.71
+Georgia,2021,Alcohol,42936830.06
+Illinois,2021,Alcohol,45795164.75
+Indiana,2021,Alcohol,18230361.37
+Iowa,2021,Alcohol,19823857.13
+Kansas,2021,Alcohol,3690053.56
+Kentucky,2021,Alcohol,14175433.83
+Louisiana,2021,Alcohol,28668268.71
+Maine,2021,Alcohol,10936345.19
+Maryland,2021,Alcohol,5412048.08
+Massachusetts,2021,Alcohol,9722452.13
+Michigan,2021,Alcohol,43746115.29
+Minnesota,2021,Alcohol,6571312.29
+Mississippi,2021,Alcohol,10354935.71
+Missouri,2021,Alcohol,33243295.31
+Nebraska,2021,Alcohol,11331906.98
+Nevada,2021,Alcohol,18632872.17
+New Hampshire,2021,Alcohol,10417130.02
+New Mexico,2021,Alcohol,13047970.13
+New York,2021,Alcohol,51359531.67
+North Carolina,2021,Alcohol,56784317.5
+Ohio,2021,Alcohol,62074767.1
+Oklahoma,2021,Alcohol,15850664.1
+Oregon,2021,Alcohol,24159036.13
+Pennsylvania,2021,Alcohol,10579498.42
+Rhode Island,2021,Alcohol,77294.56
+South Carolina,2021,Alcohol,28045536.92
+South Dakota,2021,Alcohol,5730104.15
+Tennessee,2021,Alcohol,29436537
+Texas,2021,Alcohol,153480200.19
+Utah,2021,Alcohol,7473911.06
+Vermont,2021,Alcohol,4737550.33
+Virginia,2021,Alcohol,50608444.83
+Washington,2021,Alcohol,45073677.15
+West Virginia,2021,Alcohol,8565178.62
+Wisconsin,2021,Alcohol,23637942.56
+Wyoming,2021,Alcohol,1834550.88
+Alabama,2022,Alcohol,25848301.4
+Arizona,2022,Alcohol,43458400.29
+Arkansas,2022,Alcohol,6768395.56
+California,2022,Alcohol,169361139.33
+Colorado,2022,Alcohol,9895829.5
+Connecticut,2022,Alcohol,2083153.27
+Florida,2022,Alcohol,123379116.19
+Georgia,2022,Alcohol,42809293.17
+Illinois,2022,Alcohol,45610679.37
+Indiana,2022,Alcohol,17405919.08
+Iowa,2022,Alcohol,19643255.56
+Kansas,2022,Alcohol,3817778.5
+Kentucky,2022,Alcohol,14330021.46
+Louisiana,2022,Alcohol,28204092.94
+Maine,2022,Alcohol,11091669.08
+Maryland,2022,Alcohol,4667767.56
+Massachusetts,2022,Alcohol,9688224.37
+Michigan,2022,Alcohol,42415007.08
+Minnesota,2022,Alcohol,4574338.46
+Mississippi,2022,Alcohol,10750116.98
+Missouri,2022,Alcohol,32785372.62
+Nebraska,2022,Alcohol,11672206.69
+Nevada,2022,Alcohol,18620648.48
+New Hampshire,2022,Alcohol,10375968.58
+New Mexico,2022,Alcohol,12792444.75
+New York,2022,Alcohol,51587096.44
+North Carolina,2022,Alcohol,56242898.23
+Ohio,2022,Alcohol,62063545.67
+Oklahoma,2022,Alcohol,15585947
+Oregon,2022,Alcohol,23263348.25
+Pennsylvania,2022,Alcohol,11524294.71
+Rhode Island,2022,Alcohol,74765.27
+South Carolina,2022,Alcohol,29346585.65
+South Dakota,2022,Alcohol,5572052.94
+Tennessee,2022,Alcohol,29816479.15
+Texas,2022,Alcohol,157097433.4
+Utah,2022,Alcohol,7678211.98
+Vermont,2022,Alcohol,4583330.21
+Virginia,2022,Alcohol,50241400.69
+Washington,2022,Alcohol,43585965.08
+West Virginia,2022,Alcohol,8527180.85
+Wisconsin,2022,Alcohol,22991291.29
+Wyoming,2022,Alcohol,1730693.15
+Alabama,2020,Beverages,44949700.58
+Arizona,2020,Beverages,47980203.85
+Arkansas,2020,Beverages,24434620.52
+California,2020,Beverages,197416810.54
+Colorado,2020,Beverages,40234254
+Connecticut,2020,Beverages,20560965.81
+Florida,2020,Beverages,155972317.23
+Georgia,2020,Beverages,83408730.58
+Illinois,2020,Beverages,70928966.19
+Indiana,2020,Beverages,49488865.44
+Iowa,2020,Beverages,25343617.85
+Kansas,2020,Beverages,19990120
+Kentucky,2020,Beverages,37910834.73
+Louisiana,2020,Beverages,39998159
+Maine,2020,Beverages,10749037.58
+Maryland,2020,Beverages,37085385.69
+Massachusetts,2020,Beverages,41883687.79
+Michigan,2020,Beverages,65979611.73
+Minnesota,2020,Beverages,36241668.62
+Mississippi,2020,Beverages,27607551.12
+Missouri,2020,Beverages,43526349.44
+Nebraska,2020,Beverages,13774415.4
+Nevada,2020,Beverages,22191988.4
+New Hampshire,2020,Beverages,12894802.29
+New Mexico,2020,Beverages,16147654.77
+New York,2020,Beverages,98976544.67
+North Carolina,2020,Beverages,78312468.17
+Ohio,2020,Beverages,82618979.44
+Oklahoma,2020,Beverages,32123470.94
+Oregon,2020,Beverages,26026132.81
+Pennsylvania,2020,Beverages,81451694.81
+Rhode Island,2020,Beverages,5969783.08
+South Carolina,2020,Beverages,41481479.23
+South Dakota,2020,Beverages,6558064.29
+Tennessee,2020,Beverages,56133438.02
+Texas,2020,Beverages,200008802.67
+Utah,2020,Beverages,18796289.92
+Vermont,2020,Beverages,4286182.35
+Virginia,2020,Beverages,63408946.02
+Washington,2020,Beverages,43112250.94
+West Virginia,2020,Beverages,16310961.73
+Wisconsin,2020,Beverages,35717804.44
+Wyoming,2020,Beverages,5098184.12
+Alabama,2021,Beverages,50054201.19
+Arizona,2021,Beverages,52745181.73
+Arkansas,2021,Beverages,26658886.65
+California,2021,Beverages,208883093.06
+Colorado,2021,Beverages,43140906.27
+Connecticut,2021,Beverages,21860831.21
+Florida,2021,Beverages,174013485.56
+Georgia,2021,Beverages,92512192.62
+Illinois,2021,Beverages,77431568.06
+Indiana,2021,Beverages,54049543.83
+Iowa,2021,Beverages,27815997.56
+Kansas,2021,Beverages,21595192.69
+Kentucky,2021,Beverages,42378558.92
+Louisiana,2021,Beverages,43344027.35
+Maine,2021,Beverages,11677509.87
+Maryland,2021,Beverages,39902947.13
+Massachusetts,2021,Beverages,44509504.04
+Michigan,2021,Beverages,71467179.4
+Minnesota,2021,Beverages,38540538.75
+Mississippi,2021,Beverages,29760977.63
+Missouri,2021,Beverages,47773577.21
+Nebraska,2021,Beverages,14739695.31
+Nevada,2021,Beverages,24726308.12
+New Hampshire,2021,Beverages,13854609.83
+New Mexico,2021,Beverages,17551084.92
+New York,2021,Beverages,104660015.35
+North Carolina,2021,Beverages,87210486.33
+Ohio,2021,Beverages,90621370.67
+Oklahoma,2021,Beverages,35155732.9
+Oregon,2021,Beverages,28386485.33
+Pennsylvania,2021,Beverages,88541564.69
+Rhode Island,2021,Beverages,6453939.48
+South Carolina,2021,Beverages,46409914.75
+South Dakota,2021,Beverages,7150571
+Tennessee,2021,Beverages,63240723.94
+Texas,2021,Beverages,221426474.73
+Utah,2021,Beverages,20428223.6
+Vermont,2021,Beverages,4596164.08
+Virginia,2021,Beverages,69130348.4
+Washington,2021,Beverages,46452604.35
+West Virginia,2021,Beverages,17669791.23
+Wisconsin,2021,Beverages,38815358.69
+Wyoming,2021,Beverages,5381890.12
+Alabama,2022,Beverages,54872749.6
+Arizona,2022,Beverages,57447210.23
+Arkansas,2022,Beverages,29413272.27
+California,2022,Beverages,228613927.02
+Colorado,2022,Beverages,47451976.67
+Connecticut,2022,Beverages,24036509.37
+Florida,2022,Beverages,195947927.62
+Georgia,2022,Beverages,102210349.13
+Illinois,2022,Beverages,84338132.71
+Indiana,2022,Beverages,59267104.21
+Iowa,2022,Beverages,30249428.71
+Kansas,2022,Beverages,23854653.42
+Kentucky,2022,Beverages,45837579.17
+Louisiana,2022,Beverages,47906264.62
+Maine,2022,Beverages,13109180.65
+Maryland,2022,Beverages,43463818.5
+Massachusetts,2022,Beverages,49615159.27
+Michigan,2022,Beverages,77804321.67
+Minnesota,2022,Beverages,41565320.87
+Mississippi,2022,Beverages,32098031.71
+Missouri,2022,Beverages,52415015.02
+Nebraska,2022,Beverages,16163051.46
+Nevada,2022,Beverages,27306962.73
+New Hampshire,2022,Beverages,15067575.56
+New Mexico,2022,Beverages,19662124.52
+New York,2022,Beverages,116555106.1
+North Carolina,2022,Beverages,96085170.25
+Ohio,2022,Beverages,99691610.69
+Oklahoma,2022,Beverages,39040024.48
+Oregon,2022,Beverages,30341713.5
+Pennsylvania,2022,Beverages,97147805
+Rhode Island,2022,Beverages,7170325.15
+South Carolina,2022,Beverages,52633299.54
+South Dakota,2022,Beverages,7858921.79
+Tennessee,2022,Beverages,69832750.81
+Texas,2022,Beverages,245946362.13
+Utah,2022,Beverages,22064841.62
+Vermont,2022,Beverages,4938873.37
+Virginia,2022,Beverages,76920286.37
+Washington,2022,Beverages,49638415.96
+West Virginia,2022,Beverages,19415905.69
+Wisconsin,2022,Beverages,42053127.92
+Wyoming,2022,Beverages,5755100.92
+Alabama,2020,Commercially prepared items,74704775.12
+Arizona,2020,Commercially prepared items,95577796.5
+Arkansas,2020,Commercially prepared items,45245483.98
+California,2020,Commercially prepared items,398356164.44
+Colorado,2020,Commercially prepared items,84237299.85
+Connecticut,2020,Commercially prepared items,48451641.17
+Florida,2020,Commercially prepared items,318682375
+Georgia,2020,Commercially prepared items,149598050.81
+Illinois,2020,Commercially prepared items,156355700.17
+Indiana,2020,Commercially prepared items,96246585.06
+Iowa,2020,Commercially prepared items,56111430.46
+Kansas,2020,Commercially prepared items,44886039.44
+Kentucky,2020,Commercially prepared items,66799679.62
+Louisiana,2020,Commercially prepared items,67171728.37
+Maine,2020,Commercially prepared items,22978984
+Maryland,2020,Commercially prepared items,82208059.92
+Massachusetts,2020,Commercially prepared items,94883919.48
+Michigan,2020,Commercially prepared items,134495043.77
+Minnesota,2020,Commercially prepared items,79653176.58
+Mississippi,2020,Commercially prepared items,43992030.17
+Missouri,2020,Commercially prepared items,92260890.31
+Nebraska,2020,Commercially prepared items,29299048.1
+Nevada,2020,Commercially prepared items,40477795.71
+New Hampshire,2020,Commercially prepared items,26573790.83
+New Mexico,2020,Commercially prepared items,29255589.92
+New York,2020,Commercially prepared items,210288540.88
+North Carolina,2020,Commercially prepared items,148231001.88
+Ohio,2020,Commercially prepared items,160418558.62
+Oklahoma,2020,Commercially prepared items,57643268.29
+Oregon,2020,Commercially prepared items,54437290.85
+Pennsylvania,2020,Commercially prepared items,178702596.65
+Rhode Island,2020,Commercially prepared items,13001600.62
+South Carolina,2020,Commercially prepared items,76410366.73
+South Dakota,2020,Commercially prepared items,13740701.1
+Tennessee,2020,Commercially prepared items,97542186.12
+Texas,2020,Commercially prepared items,347638872.4
+Utah,2020,Commercially prepared items,39993967.96
+Vermont,2020,Commercially prepared items,9331166.08
+Virginia,2020,Commercially prepared items,126697661.65
+Washington,2020,Commercially prepared items,95145937.58
+West Virginia,2020,Commercially prepared items,28280609.17
+Wisconsin,2020,Commercially prepared items,72514628.1
+Wyoming,2020,Commercially prepared items,9547077.96
+Alabama,2021,Commercially prepared items,81036216.88
+Arizona,2021,Commercially prepared items,101208516.88
+Arkansas,2021,Commercially prepared items,46811202.21
+California,2021,Commercially prepared items,403727522.19
+Colorado,2021,Commercially prepared items,87043335.33
+Connecticut,2021,Commercially prepared items,49193576.04
+Florida,2021,Commercially prepared items,345117122.38
+Georgia,2021,Commercially prepared items,160387158.88
+Illinois,2021,Commercially prepared items,162293920.25
+Indiana,2021,Commercially prepared items,100423346.4
+Iowa,2021,Commercially prepared items,58465087.83
+Kansas,2021,Commercially prepared items,46558986.65
+Kentucky,2021,Commercially prepared items,70969425.1
+Louisiana,2021,Commercially prepared items,70993933.56
+Maine,2021,Commercially prepared items,24050869.42
+Maryland,2021,Commercially prepared items,83767176.25
+Massachusetts,2021,Commercially prepared items,96972631.98
+Michigan,2021,Commercially prepared items,138600855.02
+Minnesota,2021,Commercially prepared items,81527895.35
+Mississippi,2021,Commercially prepared items,46153180.54
+Missouri,2021,Commercially prepared items,95646342.79
+Nebraska,2021,Commercially prepared items,30143330.1
+Nevada,2021,Commercially prepared items,42921512.08
+New Hampshire,2021,Commercially prepared items,27061454.13
+New Mexico,2021,Commercially prepared items,30768852.29
+New York,2021,Commercially prepared items,213221966.77
+North Carolina,2021,Commercially prepared items,158994616.52
+Ohio,2021,Commercially prepared items,168483421.27
+Oklahoma,2021,Commercially prepared items,60705332.44
+Oregon,2021,Commercially prepared items,57378874.46
+Pennsylvania,2021,Commercially prepared items,188011020.06
+Rhode Island,2021,Commercially prepared items,13196161.13
+South Carolina,2021,Commercially prepared items,82367402.77
+South Dakota,2021,Commercially prepared items,14030976.06
+Tennessee,2021,Commercially prepared items,106168587.58
+Texas,2021,Commercially prepared items,370609243.54
+Utah,2021,Commercially prepared items,41240943.35
+Vermont,2021,Commercially prepared items,9565182.75
+Virginia,2021,Commercially prepared items,132628342.9
+Washington,2021,Commercially prepared items,99430313.35
+West Virginia,2021,Commercially prepared items,29629494.92
+Wisconsin,2021,Commercially prepared items,75684945.48
+Wyoming,2021,Commercially prepared items,9775441.25
+Alabama,2022,Commercially prepared items,89836491.06
+Arizona,2022,Commercially prepared items,111703694.85
+Arkansas,2022,Commercially prepared items,51834002.81
+California,2022,Commercially prepared items,448917444.42
+Colorado,2022,Commercially prepared items,97628525.08
+Connecticut,2022,Commercially prepared items,54088592.27
+Florida,2022,Commercially prepared items,388888531.08
+Georgia,2022,Commercially prepared items,183961976.94
+Illinois,2022,Commercially prepared items,179705841.62
+Indiana,2022,Commercially prepared items,111161491.15
+Iowa,2022,Commercially prepared items,63828792.98
+Kansas,2022,Commercially prepared items,51477673.25
+Kentucky,2022,Commercially prepared items,77382291.85
+Louisiana,2022,Commercially prepared items,77852810.46
+Maine,2022,Commercially prepared items,26908094.35
+Maryland,2022,Commercially prepared items,92490036.58
+Massachusetts,2022,Commercially prepared items,107441443.23
+Michigan,2022,Commercially prepared items,152920150.63
+Minnesota,2022,Commercially prepared items,90509398.04
+Mississippi,2022,Commercially prepared items,49658537.9
+Missouri,2022,Commercially prepared items,105528957.19
+Nebraska,2022,Commercially prepared items,33351861.87
+Nevada,2022,Commercially prepared items,48452619.77
+New Hampshire,2022,Commercially prepared items,30053256.13
+New Mexico,2022,Commercially prepared items,34570765.52
+New York,2022,Commercially prepared items,236958774.88
+North Carolina,2022,Commercially prepared items,178962471.58
+Ohio,2022,Commercially prepared items,186741910.79
+Oklahoma,2022,Commercially prepared items,68233965.29
+Oregon,2022,Commercially prepared items,62944686.19
+Pennsylvania,2022,Commercially prepared items,207639520.21
+Rhode Island,2022,Commercially prepared items,14573616.35
+South Carolina,2022,Commercially prepared items,93913033.1
+South Dakota,2022,Commercially prepared items,15486572.46
+Tennessee,2022,Commercially prepared items,118512900.62
+Texas,2022,Commercially prepared items,413374349.21
+Utah,2022,Commercially prepared items,45364636.56
+Vermont,2022,Commercially prepared items,10424939.02
+Virginia,2022,Commercially prepared items,150017601.6
+Washington,2022,Commercially prepared items,110017317.65
+West Virginia,2022,Commercially prepared items,32797751.6
+Wisconsin,2022,Commercially prepared items,83410905.17
+Wyoming,2022,Commercially prepared items,10850766.37
+Alabama,2020,Dairy,15820920
+Arizona,2020,Dairy,25488416.08
+Arkansas,2020,Dairy,10710301.83
+California,2020,Dairy,117386833.73
+Colorado,2020,Dairy,25054848.94
+Connecticut,2020,Dairy,16350018.13
+Florida,2020,Dairy,88704367.13
+Georgia,2020,Dairy,34608793.96
+Illinois,2020,Dairy,39579230.1
+Indiana,2020,Dairy,23527146.42
+Iowa,2020,Dairy,13772968.52
+Kansas,2020,Dairy,11065827.46
+Kentucky,2020,Dairy,14893417.25
+Louisiana,2020,Dairy,14228417.5
+Maine,2020,Dairy,7322672.42
+Maryland,2020,Dairy,21661888.58
+Massachusetts,2020,Dairy,31708032.71
+Michigan,2020,Dairy,35775916.98
+Minnesota,2020,Dairy,22107707.69
+Mississippi,2020,Dairy,8968978.33
+Missouri,2020,Dairy,22078258.13
+Nebraska,2020,Dairy,7747487.48
+Nevada,2020,Dairy,10619856.88
+New Hampshire,2020,Dairy,8726831.23
+New Mexico,2020,Dairy,7643582.92
+New York,2020,Dairy,66950639.87
+North Carolina,2020,Dairy,36328063.54
+Ohio,2020,Dairy,39882512.85
+Oklahoma,2020,Dairy,13180392.5
+Oregon,2020,Dairy,16365574.54
+Pennsylvania,2020,Dairy,51888870.62
+Rhode Island,2020,Dairy,4094769.02
+South Carolina,2020,Dairy,17755973.54
+South Dakota,2020,Dairy,3563217.08
+Tennessee,2020,Dairy,23746267.79
+Texas,2020,Dairy,77114187.27
+Utah,2020,Dairy,11015725.46
+Vermont,2020,Dairy,3126240.81
+Virginia,2020,Dairy,32447388.56
+Washington,2020,Dairy,27511106.48
+West Virginia,2020,Dairy,6654275.96
+Wisconsin,2020,Dairy,19564930.23
+Wyoming,2020,Dairy,2682136.65
+Alabama,2021,Dairy,16216676.15
+Arizona,2021,Dairy,26100417.69
+Arkansas,2021,Dairy,10690670.56
+California,2021,Dairy,114664665.62
+Colorado,2021,Dairy,24692048.88
+Connecticut,2021,Dairy,15897659
+Florida,2021,Dairy,90446136.12
+Georgia,2021,Dairy,34889865.9
+Illinois,2021,Dairy,39266288.5
+Indiana,2021,Dairy,23929494.15
+Iowa,2021,Dairy,13557168.4
+Kansas,2021,Dairy,10933526.58
+Kentucky,2021,Dairy,15230580.92
+Louisiana,2021,Dairy,14062245.9
+Maine,2021,Dairy,7432228.38
+Maryland,2021,Dairy,21081958.6
+Massachusetts,2021,Dairy,31205301.65
+Michigan,2021,Dairy,35522590.94
+Minnesota,2021,Dairy,21585026.88
+Mississippi,2021,Dairy,9052932.75
+Missouri,2021,Dairy,21918108.52
+Nebraska,2021,Dairy,7566121.98
+Nevada,2021,Dairy,10662734.08
+New Hampshire,2021,Dairy,8679242.96
+New Mexico,2021,Dairy,7492838.06
+New York,2021,Dairy,64760525.5
+North Carolina,2021,Dairy,37342437.37
+Ohio,2021,Dairy,40393352.13
+Oklahoma,2021,Dairy,13227857.69
+Oregon,2021,Dairy,16468835.15
+Pennsylvania,2021,Dairy,51389199.56
+Rhode Island,2021,Dairy,3988256.38
+South Carolina,2021,Dairy,18230874.6
+South Dakota,2021,Dairy,3502123.02
+Tennessee,2021,Dairy,24479477.21
+Texas,2021,Dairy,77950329.42
+Utah,2021,Dairy,11143446.23
+Vermont,2021,Dairy,3111520.08
+Virginia,2021,Dairy,32117979.15
+Washington,2021,Dairy,27390795.79
+West Virginia,2021,Dairy,6677193.48
+Wisconsin,2021,Dairy,19529210.46
+Wyoming,2021,Dairy,2645143
+Alabama,2022,Dairy,17944613.65
+Arizona,2022,Dairy,29122006.46
+Arkansas,2022,Dairy,12018720.08
+California,2022,Dairy,123880629.33
+Colorado,2022,Dairy,27102420.23
+Connecticut,2022,Dairy,16945063.79
+Florida,2022,Dairy,100140073.79
+Georgia,2022,Dairy,38821593.58
+Illinois,2022,Dairy,42921081.69
+Indiana,2022,Dairy,26642699.75
+Iowa,2022,Dairy,14699182.21
+Kansas,2022,Dairy,12192982.94
+Kentucky,2022,Dairy,17133983
+Louisiana,2022,Dairy,15407910.94
+Maine,2022,Dairy,8075414.92
+Maryland,2022,Dairy,22456140.96
+Massachusetts,2022,Dairy,33456448.08
+Michigan,2022,Dairy,39287607.75
+Minnesota,2022,Dairy,23339448.79
+Mississippi,2022,Dairy,9920304.71
+Missouri,2022,Dairy,24368025.62
+Nebraska,2022,Dairy,8237285.98
+Nevada,2022,Dairy,11684400.12
+New Hampshire,2022,Dairy,9296236.6
+New Mexico,2022,Dairy,8223008.4
+New York,2022,Dairy,70530339.79
+North Carolina,2022,Dairy,41735339.96
+Ohio,2022,Dairy,44706212.88
+Oklahoma,2022,Dairy,14676037.58
+Oregon,2022,Dairy,17667260.58
+Pennsylvania,2022,Dairy,55617819.38
+Rhode Island,2022,Dairy,4279129.62
+South Carolina,2022,Dairy,20643434.37
+South Dakota,2022,Dairy,3845254.37
+Tennessee,2022,Dairy,27381625.94
+Texas,2022,Dairy,86291745.13
+Utah,2022,Dairy,12177109.73
+Vermont,2022,Dairy,3253443.02
+Virginia,2022,Dairy,35502127.27
+Washington,2022,Dairy,29384734.81
+West Virginia,2022,Dairy,7431867.77
+Wisconsin,2022,Dairy,21427086.62
+Wyoming,2022,Dairy,2902508.94
+Alabama,2020,Fats and oils,2860161.25
+Arizona,2020,Fats and oils,3829728.37
+Arkansas,2020,Fats and oils,1896580.56
+California,2020,Fats and oils,17632845.81
+Colorado,2020,Fats and oils,3706913.33
+Connecticut,2020,Fats and oils,2600960.67
+Florida,2020,Fats and oils,14982871.73
+Georgia,2020,Fats and oils,6502012.23
+Illinois,2020,Fats and oils,6438753.67
+Indiana,2020,Fats and oils,3586334.19
+Iowa,2020,Fats and oils,1950231.19
+Kansas,2020,Fats and oils,1664045.31
+Kentucky,2020,Fats and oils,2404752.08
+Louisiana,2020,Fats and oils,3024528.37
+Maine,2020,Fats and oils,1235379.92
+Maryland,2020,Fats and oils,3748675.48
+Massachusetts,2020,Fats and oils,5267317.9
+Michigan,2020,Fats and oils,5928477.98
+Minnesota,2020,Fats and oils,3305443.23
+Mississippi,2020,Fats and oils,1944460.31
+Missouri,2020,Fats and oils,3355373.73
+Nebraska,2020,Fats and oils,1116535.33
+Nevada,2020,Fats and oils,1648586.19
+New Hampshire,2020,Fats and oils,1476907.25
+New Mexico,2020,Fats and oils,1255933.6
+New York,2020,Fats and oils,11807563.1
+North Carolina,2020,Fats and oils,6444523.5
+Ohio,2020,Fats and oils,6225643.46
+Oklahoma,2020,Fats and oils,2085553.33
+Oregon,2020,Fats and oils,2228850.4
+Pennsylvania,2020,Fats and oils,8008400
+Rhode Island,2020,Fats and oils,664715.77
+South Carolina,2020,Fats and oils,3243945.25
+South Dakota,2020,Fats and oils,556214.92
+Tennessee,2020,Fats and oils,3839660.88
+Texas,2020,Fats and oils,14237778.65
+Utah,2020,Fats and oils,1569400.52
+Vermont,2020,Fats and oils,463532.06
+Virginia,2020,Fats and oils,5281851.73
+Washington,2020,Fats and oils,3720827.81
+West Virginia,2020,Fats and oils,1042966.06
+Wisconsin,2020,Fats and oils,2872403.38
+Wyoming,2020,Fats and oils,406180.69
+Alabama,2021,Fats and oils,2851929.52
+Arizona,2021,Fats and oils,3646738.63
+Arkansas,2021,Fats and oils,1829254.33
+California,2021,Fats and oils,15550387.75
+Colorado,2021,Fats and oils,3447617.94
+Connecticut,2021,Fats and oils,2303931.87
+Florida,2021,Fats and oils,14665905.81
+Georgia,2021,Fats and oils,6390307.37
+Illinois,2021,Fats and oils,5929951.31
+Indiana,2021,Fats and oils,3422059.13
+Iowa,2021,Fats and oils,1780566.63
+Kansas,2021,Fats and oils,1543664.44
+Kentucky,2021,Fats and oils,2324771.62
+Louisiana,2021,Fats and oils,2961071.87
+Maine,2021,Fats and oils,1155294.92
+Maryland,2021,Fats and oils,3452721.81
+Massachusetts,2021,Fats and oils,4789897.85
+Michigan,2021,Fats and oils,5409947.77
+Minnesota,2021,Fats and oils,2966193.52
+Mississippi,2021,Fats and oils,1901924.58
+Missouri,2021,Fats and oils,3157588.92
+Nebraska,2021,Fats and oils,1021274.81
+Nevada,2021,Fats and oils,1515722.27
+New Hampshire,2021,Fats and oils,1358596.87
+New Mexico,2021,Fats and oils,1146386.58
+New York,2021,Fats and oils,10583609.75
+North Carolina,2021,Fats and oils,6472456.46
+Ohio,2021,Fats and oils,5907076.1
+Oklahoma,2021,Fats and oils,2011907.27
+Oregon,2021,Fats and oils,2037104.77
+Pennsylvania,2021,Fats and oils,7453384.96
+Rhode Island,2021,Fats and oils,584029.85
+South Carolina,2021,Fats and oils,3268698.23
+South Dakota,2021,Fats and oils,517090.79
+Tennessee,2021,Fats and oils,3860364.63
+Texas,2021,Fats and oils,13941719.42
+Utah,2021,Fats and oils,1439471.38
+Vermont,2021,Fats and oils,413858.65
+Virginia,2021,Fats and oils,4997644.38
+Washington,2021,Fats and oils,3337137.06
+West Virginia,2021,Fats and oils,984809.5
+Wisconsin,2021,Fats and oils,2636916.58
+Wyoming,2021,Fats and oils,373400.31
+Alabama,2022,Fats and oils,3511739.13
+Arizona,2022,Fats and oils,4426533.4
+Arkansas,2022,Fats and oils,2248865.12
+California,2022,Fats and oils,17938116.12
+Colorado,2022,Fats and oils,4153114.65
+Connecticut,2022,Fats and oils,2671741.73
+Florida,2022,Fats and oils,17869177.08
+Georgia,2022,Fats and oils,7809245.13
+Illinois,2022,Fats and oils,7024061.63
+Indiana,2022,Fats and oils,4169278.12
+Iowa,2022,Fats and oils,2124811.96
+Kansas,2022,Fats and oils,1886629.85
+Kentucky,2022,Fats and oils,2821951.02
+Louisiana,2022,Fats and oils,3572078.69
+Maine,2022,Fats and oils,1367138.94
+Maryland,2022,Fats and oils,4009718.42
+Massachusetts,2022,Fats and oils,5555716.29
+Michigan,2022,Fats and oils,6422908.77
+Minnesota,2022,Fats and oils,3504726.08
+Mississippi,2022,Fats and oils,2287555.92
+Missouri,2022,Fats and oils,3860473.6
+Nebraska,2022,Fats and oils,1234471.79
+Nevada,2022,Fats and oils,1821860.56
+New Hampshire,2022,Fats and oils,1588696.88
+New Mexico,2022,Fats and oils,1412949.4
+New York,2022,Fats and oils,12272967.35
+North Carolina,2022,Fats and oils,7881677
+Ohio,2022,Fats and oils,7140127.96
+Oklahoma,2022,Fats and oils,2498721
+Oregon,2022,Fats and oils,2334036.08
+Pennsylvania,2022,Fats and oils,8823601.02
+Rhode Island,2022,Fats and oils,691745.4
+South Carolina,2022,Fats and oils,4065487
+South Dakota,2022,Fats and oils,629616.6
+Tennessee,2022,Fats and oils,4671293.69
+Texas,2022,Fats and oils,16779294.96
+Utah,2022,Fats and oils,1754694.75
+Vermont,2022,Fats and oils,469514.98
+Virginia,2022,Fats and oils,6048491.44
+Washington,2022,Fats and oils,3904287.62
+West Virginia,2022,Fats and oils,1194878.04
+Wisconsin,2022,Fats and oils,3194567.65
+Wyoming,2022,Fats and oils,454557.94
+Alabama,2020,Fruits,11701331.98
+Arizona,2020,Fruits,19105045.54
+Arkansas,2020,Fruits,6743723.87
+California,2020,Fruits,93391638.79
+Colorado,2020,Fruits,18987071.88
+Connecticut,2020,Fruits,12481462.63
+Florida,2020,Fruits,72944102.27
+Georgia,2020,Fruits,28465745.12
+Illinois,2020,Fruits,29528426.52
+Indiana,2020,Fruits,15239768.63
+Iowa,2020,Fruits,8228106.37
+Kansas,2020,Fruits,7440011.37
+Kentucky,2020,Fruits,9609257.62
+Louisiana,2020,Fruits,10344693.69
+Maine,2020,Fruits,4744441.6
+Maryland,2020,Fruits,18760819.15
+Massachusetts,2020,Fruits,22933760.15
+Michigan,2020,Fruits,24947366.06
+Minnesota,2020,Fruits,15823148.6
+Mississippi,2020,Fruits,6094105.29
+Missouri,2020,Fruits,14245919.5
+Nebraska,2020,Fruits,5010567.44
+Nevada,2020,Fruits,7946748.69
+New Hampshire,2020,Fruits,5288972.4
+New Mexico,2020,Fruits,5858346.19
+New York,2020,Fruits,48510113.13
+North Carolina,2020,Fruits,27541774.15
+Ohio,2020,Fruits,26453024
+Oklahoma,2020,Fruits,7855091.77
+Oregon,2020,Fruits,12064244.23
+Pennsylvania,2020,Fruits,33642960.62
+Rhode Island,2020,Fruits,2997993.81
+South Carolina,2020,Fruits,13327039.65
+South Dakota,2020,Fruits,2383057.27
+Tennessee,2020,Fruits,16020093.12
+Texas,2020,Fruits,62670865.5
+Utah,2020,Fruits,7594285.13
+Vermont,2020,Fruits,2055344.46
+Virginia,2020,Fruits,25176083.73
+Washington,2020,Fruits,21599716.13
+West Virginia,2020,Fruits,3701796.25
+Wisconsin,2020,Fruits,13107086.77
+Wyoming,2020,Fruits,1797700.37
+Alabama,2021,Fruits,12849879.08
+Arizona,2021,Fruits,20785373.6
+Arkansas,2021,Fruits,7165111.6
+California,2021,Fruits,96958295.62
+Colorado,2021,Fruits,19970773.04
+Connecticut,2021,Fruits,12891959.77
+Florida,2021,Fruits,79450705.25
+Georgia,2021,Fruits,30749684.46
+Illinois,2021,Fruits,30801230.63
+Indiana,2021,Fruits,16224065.27
+Iowa,2021,Fruits,8602798.54
+Kansas,2021,Fruits,7838310.52
+Kentucky,2021,Fruits,10337947.9
+Louisiana,2021,Fruits,11088733.44
+Maine,2021,Fruits,5118315.35
+Maryland,2021,Fruits,19651837.35
+Massachusetts,2021,Fruits,23727533.63
+Michigan,2021,Fruits,26346160.38
+Minnesota,2021,Fruits,16369292.35
+Mississippi,2021,Fruits,6540891.29
+Missouri,2021,Fruits,14897199.75
+Nebraska,2021,Fruits,5291599.27
+Nevada,2021,Fruits,8605093.4
+New Hampshire,2021,Fruits,5415963.75
+New Mexico,2021,Fruits,6270047.92
+New York,2021,Fruits,49818973.48
+North Carolina,2021,Fruits,30731161.38
+Ohio,2021,Fruits,28395819.67
+Oklahoma,2021,Fruits,8725461.65
+Oregon,2021,Fruits,13099685.37
+Pennsylvania,2021,Fruits,36204089.1
+Rhode Island,2021,Fruits,3092165.52
+South Carolina,2021,Fruits,14805956.96
+South Dakota,2021,Fruits,2475486.4
+Tennessee,2021,Fruits,17791186.12
+Texas,2021,Fruits,66440665.52
+Utah,2021,Fruits,7994341.23
+Vermont,2021,Fruits,2090332.75
+Virginia,2021,Fruits,26778645.21
+Washington,2021,Fruits,23233800.12
+West Virginia,2021,Fruits,3977948
+Wisconsin,2021,Fruits,13868569.5
+Wyoming,2021,Fruits,1867859.33
+Alabama,2022,Fruits,13822400.63
+Arizona,2022,Fruits,22296464.19
+Arkansas,2022,Fruits,7652045.48
+California,2022,Fruits,104653457
+Colorado,2022,Fruits,21398398.81
+Connecticut,2022,Fruits,13375168.21
+Florida,2022,Fruits,86151280.19
+Georgia,2022,Fruits,33615983.85
+Illinois,2022,Fruits,32762760.12
+Indiana,2022,Fruits,17310475.1
+Iowa,2022,Fruits,9169796.44
+Kansas,2022,Fruits,8299670.92
+Kentucky,2022,Fruits,10930877.73
+Louisiana,2022,Fruits,11863893.21
+Maine,2022,Fruits,5447687.96
+Maryland,2022,Fruits,20487545
+Massachusetts,2022,Fruits,24524676.54
+Michigan,2022,Fruits,27490153.42
+Minnesota,2022,Fruits,16911267.35
+Mississippi,2022,Fruits,6785755.85
+Missouri,2022,Fruits,15766535.48
+Nebraska,2022,Fruits,5601113.75
+Nevada,2022,Fruits,9255959.71
+New Hampshire,2022,Fruits,5716376.46
+New Mexico,2022,Fruits,6635346.48
+New York,2022,Fruits,52290393.02
+North Carolina,2022,Fruits,33575158.94
+Ohio,2022,Fruits,30198142.23
+Oklahoma,2022,Fruits,9705599.17
+Oregon,2022,Fruits,13635990
+Pennsylvania,2022,Fruits,37630406.73
+Rhode Island,2022,Fruits,3130611.5
+South Carolina,2022,Fruits,16385802.87
+South Dakota,2022,Fruits,2604847.02
+Tennessee,2022,Fruits,19167294.73
+Texas,2022,Fruits,70726888.21
+Utah,2022,Fruits,8348105.94
+Vermont,2022,Fruits,2166394.38
+Virginia,2022,Fruits,28735070.33
+Washington,2022,Fruits,24391719.08
+West Virginia,2022,Fruits,4186229.48
+Wisconsin,2022,Fruits,14456941.96
+Wyoming,2022,Fruits,1936655.9
+Alabama,2020,Grains,10037954.21
+Arizona,2020,Grains,15218101.1
+Arkansas,2020,Grains,6234429.5
+California,2020,Grains,68435317.87
+Colorado,2020,Grains,13482048.88
+Connecticut,2020,Grains,9199663.5
+Florida,2020,Grains,50661338.38
+Georgia,2020,Grains,22156289.73
+Illinois,2020,Grains,23140848.15
+Indiana,2020,Grains,12896681
+Iowa,2020,Grains,6924575.46
+Kansas,2020,Grains,6102891.52
+Kentucky,2020,Grains,9054036.52
+Louisiana,2020,Grains,10194850.17
+Maine,2020,Grains,4174595.06
+Maryland,2020,Grains,13407888.04
+Massachusetts,2020,Grains,18110650.46
+Michigan,2020,Grains,19995860.4
+Minnesota,2020,Grains,11744881.85
+Mississippi,2020,Grains,6303539.04
+Missouri,2020,Grains,11702224.48
+Nebraska,2020,Grains,4055358.79
+Nevada,2020,Grains,6102219.35
+New Hampshire,2020,Grains,4952599.23
+New Mexico,2020,Grains,4310033.21
+New York,2020,Grains,39346071.35
+North Carolina,2020,Grains,24147201.71
+Ohio,2020,Grains,22350398.29
+Oklahoma,2020,Grains,7423902.94
+Oregon,2020,Grains,8321768.6
+Pennsylvania,2020,Grains,28018397.83
+Rhode Island,2020,Grains,2291330.15
+South Carolina,2020,Grains,11656278.46
+South Dakota,2020,Grains,1861740.31
+Tennessee,2020,Grains,13674690.15
+Texas,2020,Grains,49865660.48
+Utah,2020,Grains,5689668.21
+Vermont,2020,Grains,1677658.9
+Virginia,2020,Grains,20299968.08
+Washington,2020,Grains,14855579.87
+West Virginia,2020,Grains,4237897.21
+Wisconsin,2020,Grains,9801967.63
+Wyoming,2020,Grains,1323875.96
+Alabama,2021,Grains,9915998.29
+Arizona,2021,Grains,15178282.1
+Arkansas,2021,Grains,6061453.06
+California,2021,Grains,64505183.35
+Colorado,2021,Grains,13025215.06
+Connecticut,2021,Grains,8722614.4
+Florida,2021,Grains,50721581.29
+Georgia,2021,Grains,21762589.37
+Illinois,2021,Grains,22355288.65
+Indiana,2021,Grains,12797739.29
+Iowa,2021,Grains,6646920.44
+Kansas,2021,Grains,5879332.13
+Kentucky,2021,Grains,9017884.73
+Louisiana,2021,Grains,9835775.21
+Maine,2021,Grains,4140229.75
+Maryland,2021,Grains,12706695.63
+Massachusetts,2021,Grains,17352168.31
+Michigan,2021,Grains,19351318.25
+Minnesota,2021,Grains,11250611.83
+Mississippi,2021,Grains,6110413.63
+Missouri,2021,Grains,11370957.29
+Nebraska,2021,Grains,3888935.12
+Nevada,2021,Grains,5969474.71
+New Hampshire,2021,Grains,4760186.06
+New Mexico,2021,Grains,4106687.04
+New York,2021,Grains,36990945.83
+North Carolina,2021,Grains,24091557.92
+Ohio,2021,Grains,22210710
+Oklahoma,2021,Grains,7285392.44
+Oregon,2021,Grains,8283545.52
+Pennsylvania,2021,Grains,27376785.9
+Rhode Island,2021,Grains,2160795.46
+South Carolina,2021,Grains,11640931.17
+South Dakota,2021,Grains,1802315.71
+Tennessee,2021,Grains,13942968.17
+Texas,2021,Grains,48801388.17
+Utah,2021,Grains,5488283.81
+Vermont,2021,Grains,1617194.58
+Virginia,2021,Grains,19679115.9
+Washington,2021,Grains,14543600.4
+West Virginia,2021,Grains,4147176.73
+Wisconsin,2021,Grains,9601076.19
+Wyoming,2021,Grains,1270864.15
+Alabama,2022,Grains,11337885.96
+Arizona,2022,Grains,17265983.37
+Arkansas,2022,Grains,6947727.15
+California,2022,Grains,71654286.98
+Colorado,2022,Grains,14821900.33
+Connecticut,2022,Grains,9718758.67
+Florida,2022,Grains,58982008.87
+Georgia,2022,Grains,25060968.04
+Illinois,2022,Grains,25152475.98
+Indiana,2022,Grains,14717097.13
+Iowa,2022,Grains,7522310.4
+Kansas,2022,Grains,6728706
+Kentucky,2022,Grains,10384732.81
+Louisiana,2022,Grains,11042349.21
+Maine,2022,Grains,4617879.23
+Maryland,2022,Grains,14005625.5
+Massachusetts,2022,Grains,19265038.12
+Michigan,2022,Grains,21818296.38
+Minnesota,2022,Grains,12612245.02
+Mississippi,2022,Grains,6797533.06
+Missouri,2022,Grains,13012276.71
+Nebraska,2022,Grains,4420096.42
+Nevada,2022,Grains,6804586.38
+New Hampshire,2022,Grains,5299270.44
+New Mexico,2022,Grains,4701419.87
+New York,2022,Grains,41396233.25
+North Carolina,2022,Grains,27489760.02
+Ohio,2022,Grains,25558926.71
+Oklahoma,2022,Grains,8317256.52
+Oregon,2022,Grains,9164496.38
+Pennsylvania,2022,Grains,30903028.98
+Rhode Island,2022,Grains,2426345.81
+South Carolina,2022,Grains,13575622.1
+South Dakota,2022,Grains,2059559.73
+Tennessee,2022,Grains,16128647.13
+Texas,2022,Grains,55308204.12
+Utah,2022,Grains,6187056.4
+Vermont,2022,Grains,1751465.69
+Virginia,2022,Grains,22278209.12
+Washington,2022,Grains,16198983.79
+West Virginia,2022,Grains,4739523.98
+Wisconsin,2022,Grains,10904003.87
+Wyoming,2022,Grains,1449405.94
+Alabama,2020,"Meats, eggs, and nuts",38673324.02
+Arizona,2020,"Meats, eggs, and nuts",53699490.67
+Arkansas,2020,"Meats, eggs, and nuts",24128513.25
+California,2020,"Meats, eggs, and nuts",220648460.13
+Colorado,2020,"Meats, eggs, and nuts",47143398.75
+Connecticut,2020,"Meats, eggs, and nuts",30491683.96
+Florida,2020,"Meats, eggs, and nuts",187809887.62
+Georgia,2020,"Meats, eggs, and nuts",80483602.94
+Illinois,2020,"Meats, eggs, and nuts",77054308.06
+Indiana,2020,"Meats, eggs, and nuts",48076963.9
+Iowa,2020,"Meats, eggs, and nuts",24735511.94
+Kansas,2020,"Meats, eggs, and nuts",22206517.37
+Kentucky,2020,"Meats, eggs, and nuts",33973869.44
+Louisiana,2020,"Meats, eggs, and nuts",39211594.13
+Maine,2020,"Meats, eggs, and nuts",13118212.33
+Maryland,2020,"Meats, eggs, and nuts",47704067.17
+Massachusetts,2020,"Meats, eggs, and nuts",54313662.67
+Michigan,2020,"Meats, eggs, and nuts",67806182.98
+Minnesota,2020,"Meats, eggs, and nuts",35538478.9
+Mississippi,2020,"Meats, eggs, and nuts",22683193.77
+Missouri,2020,"Meats, eggs, and nuts",44291445.65
+Nebraska,2020,"Meats, eggs, and nuts",14296067.31
+Nevada,2020,"Meats, eggs, and nuts",21773252.42
+New Hampshire,2020,"Meats, eggs, and nuts",15293020.54
+New Mexico,2020,"Meats, eggs, and nuts",17576322.35
+New York,2020,"Meats, eggs, and nuts",123101296.42
+North Carolina,2020,"Meats, eggs, and nuts",85950060.81
+Ohio,2020,"Meats, eggs, and nuts",81570374.44
+Oklahoma,2020,"Meats, eggs, and nuts",28157627
+Oregon,2020,"Meats, eggs, and nuts",27674653.13
+Pennsylvania,2020,"Meats, eggs, and nuts",93517669.48
+Rhode Island,2020,"Meats, eggs, and nuts",7186128.04
+South Carolina,2020,"Meats, eggs, and nuts",44308688.15
+South Dakota,2020,"Meats, eggs, and nuts",6530461.13
+Tennessee,2020,"Meats, eggs, and nuts",52642002.4
+Texas,2020,"Meats, eggs, and nuts",195415752.79
+Utah,2020,"Meats, eggs, and nuts",16755994.98
+Vermont,2020,"Meats, eggs, and nuts",5245949.56
+Virginia,2020,"Meats, eggs, and nuts",70212352.37
+Washington,2020,"Meats, eggs, and nuts",49001743.83
+West Virginia,2020,"Meats, eggs, and nuts",13612425.19
+Wisconsin,2020,"Meats, eggs, and nuts",35034856.06
+Wyoming,2020,"Meats, eggs, and nuts",5260529.67
+Alabama,2021,"Meats, eggs, and nuts",39518463.71
+Arizona,2021,"Meats, eggs, and nuts",55068871.6
+Arkansas,2021,"Meats, eggs, and nuts",24369662.4
+California,2021,"Meats, eggs, and nuts",217269494.87
+Colorado,2021,"Meats, eggs, and nuts",47240970.31
+Connecticut,2021,"Meats, eggs, and nuts",29538897.98
+Florida,2021,"Meats, eggs, and nuts",191357106.58
+Georgia,2021,"Meats, eggs, and nuts",81750710.25
+Illinois,2021,"Meats, eggs, and nuts",77062868.13
+Indiana,2021,"Meats, eggs, and nuts",48331012.88
+Iowa,2021,"Meats, eggs, and nuts",24904623.63
+Kansas,2021,"Meats, eggs, and nuts",22040947.98
+Kentucky,2021,"Meats, eggs, and nuts",34761417.71
+Louisiana,2021,"Meats, eggs, and nuts",40354998.9
+Maine,2021,"Meats, eggs, and nuts",13534680.6
+Maryland,2021,"Meats, eggs, and nuts",47092442.75
+Massachusetts,2021,"Meats, eggs, and nuts",52115564.69
+Michigan,2021,"Meats, eggs, and nuts",68613839.69
+Minnesota,2021,"Meats, eggs, and nuts",35021105.29
+Mississippi,2021,"Meats, eggs, and nuts",23220928.35
+Missouri,2021,"Meats, eggs, and nuts",44243909.04
+Nebraska,2021,"Meats, eggs, and nuts",14104136.87
+Nevada,2021,"Meats, eggs, and nuts",22437780.73
+New Hampshire,2021,"Meats, eggs, and nuts",14803291.17
+New Mexico,2021,"Meats, eggs, and nuts",17934024.23
+New York,2021,"Meats, eggs, and nuts",119206590.81
+North Carolina,2021,"Meats, eggs, and nuts",91180590.19
+Ohio,2021,"Meats, eggs, and nuts",83297285.87
+Oklahoma,2021,"Meats, eggs, and nuts",28659171.04
+Oregon,2021,"Meats, eggs, and nuts",28565958.52
+Pennsylvania,2021,"Meats, eggs, and nuts",95317032.42
+Rhode Island,2021,"Meats, eggs, and nuts",6869668.12
+South Carolina,2021,"Meats, eggs, and nuts",45597486.87
+South Dakota,2021,"Meats, eggs, and nuts",6363151.58
+Tennessee,2021,"Meats, eggs, and nuts",54829658.87
+Texas,2021,"Meats, eggs, and nuts",196633725.9
+Utah,2021,"Meats, eggs, and nuts",16972268.04
+Vermont,2021,"Meats, eggs, and nuts",5143371.79
+Virginia,2021,"Meats, eggs, and nuts",70732639.15
+Washington,2021,"Meats, eggs, and nuts",48976875.63
+West Virginia,2021,"Meats, eggs, and nuts",14000128.33
+Wisconsin,2021,"Meats, eggs, and nuts",35087451.15
+Wyoming,2021,"Meats, eggs, and nuts",5235961.5
+Alabama,2022,"Meats, eggs, and nuts",42831359.9
+Arizona,2022,"Meats, eggs, and nuts",60077840.87
+Arkansas,2022,"Meats, eggs, and nuts",26171726.9
+California,2022,"Meats, eggs, and nuts",230419648.37
+Colorado,2022,"Meats, eggs, and nuts",50908468.87
+Connecticut,2022,"Meats, eggs, and nuts",30940843.81
+Florida,2022,"Meats, eggs, and nuts",209985025.65
+Georgia,2022,"Meats, eggs, and nuts",89095758.33
+Illinois,2022,"Meats, eggs, and nuts",82335498.71
+Indiana,2022,"Meats, eggs, and nuts",51731877.63
+Iowa,2022,"Meats, eggs, and nuts",27528380.38
+Kansas,2022,"Meats, eggs, and nuts",23497028.27
+Kentucky,2022,"Meats, eggs, and nuts",36672525.85
+Louisiana,2022,"Meats, eggs, and nuts",43147382.54
+Maine,2022,"Meats, eggs, and nuts",14323317.94
+Maryland,2022,"Meats, eggs, and nuts",48751798.48
+Massachusetts,2022,"Meats, eggs, and nuts",54319898.9
+Michigan,2022,"Meats, eggs, and nuts",73731264.29
+Minnesota,2022,"Meats, eggs, and nuts",37538420.04
+Mississippi,2022,"Meats, eggs, and nuts",24494163.1
+Missouri,2022,"Meats, eggs, and nuts",47558540.38
+Nebraska,2022,"Meats, eggs, and nuts",15077499.71
+Nevada,2022,"Meats, eggs, and nuts",24350612.04
+New Hampshire,2022,"Meats, eggs, and nuts",15513652.37
+New Mexico,2022,"Meats, eggs, and nuts",19316682.44
+New York,2022,"Meats, eggs, and nuts",128132491.5
+North Carolina,2022,"Meats, eggs, and nuts",98465154.29
+Ohio,2022,"Meats, eggs, and nuts",88930870.79
+Oklahoma,2022,"Meats, eggs, and nuts",31372086.92
+Oregon,2022,"Meats, eggs, and nuts",29795413.85
+Pennsylvania,2022,"Meats, eggs, and nuts",100223130.21
+Rhode Island,2022,"Meats, eggs, and nuts",7117277.25
+South Carolina,2022,"Meats, eggs, and nuts",50373760.62
+South Dakota,2022,"Meats, eggs, and nuts",6881150.38
+Tennessee,2022,"Meats, eggs, and nuts",59254139.08
+Texas,2022,"Meats, eggs, and nuts",204783654.17
+Utah,2022,"Meats, eggs, and nuts",18532300.21
+Vermont,2022,"Meats, eggs, and nuts",5304924
+Virginia,2022,"Meats, eggs, and nuts",75590653.35
+Washington,2022,"Meats, eggs, and nuts",50680621.27
+West Virginia,2022,"Meats, eggs, and nuts",14965658.65
+Wisconsin,2022,"Meats, eggs, and nuts",37800004.23
+Wyoming,2022,"Meats, eggs, and nuts",5561466.63
+Alabama,2020,Other,9602043.73
+Arizona,2020,Other,12153324.5
+Arkansas,2020,Other,6653053.31
+California,2020,Other,46772470.48
+Colorado,2020,Other,10327044.27
+Connecticut,2020,Other,6470056.58
+Florida,2020,Other,42309528.6
+Georgia,2020,Other,22328428.13
+Illinois,2020,Other,19517345.6
+Indiana,2020,Other,12280249.54
+Iowa,2020,Other,5520898.87
+Kansas,2020,Other,5064410.06
+Kentucky,2020,Other,8637407.19
+Louisiana,2020,Other,10953499.58
+Maine,2020,Other,2416567.85
+Maryland,2020,Other,12827368
+Massachusetts,2020,Other,10286086.9
+Michigan,2020,Other,16519762.5
+Minnesota,2020,Other,9581563.46
+Mississippi,2020,Other,6604363.29
+Missouri,2020,Other,11024032.52
+Nebraska,2020,Other,3498572.85
+Nevada,2020,Other,5354897.4
+New Hampshire,2020,Other,2440106.9
+New Mexico,2020,Other,3822625.94
+New York,2020,Other,28951058.67
+North Carolina,2020,Other,20835776.83
+Ohio,2020,Other,20689852.25
+Oklahoma,2020,Other,6738776.38
+Oregon,2020,Other,5326680.85
+Pennsylvania,2020,Other,23982669.23
+Rhode Island,2020,Other,1504069.5
+South Carolina,2020,Other,10993896.77
+South Dakota,2020,Other,1458839.42
+Tennessee,2020,Other,13327164.23
+Texas,2020,Other,48165521.87
+Utah,2020,Other,4323851.56
+Vermont,2020,Other,1018496.27
+Virginia,2020,Other,17760115.12
+Washington,2020,Other,10071914.48
+West Virginia,2020,Other,3500421.12
+Wisconsin,2020,Other,8372411.15
+Wyoming,2020,Other,1046915.94
+Alabama,2021,Other,10084555.83
+Arizona,2021,Other,12655200.81
+Arkansas,2021,Other,6676880.27
+California,2021,Other,46296764
+Colorado,2021,Other,10381778.83
+Connecticut,2021,Other,6429024.69
+Florida,2021,Other,43743563.31
+Georgia,2021,Other,22701274.44
+Illinois,2021,Other,19900693.29
+Indiana,2021,Other,12578165.56
+Iowa,2021,Other,5464851.92
+Kansas,2021,Other,5097210.54
+Kentucky,2021,Other,8907554.63
+Louisiana,2021,Other,11710038.37
+Maine,2021,Other,2533811.27
+Maryland,2021,Other,12801234.42
+Massachusetts,2021,Other,10317875.4
+Michigan,2021,Other,16698371.25
+Minnesota,2021,Other,9333471.42
+Mississippi,2021,Other,7261772.81
+Missouri,2021,Other,11010743.29
+Nebraska,2021,Other,3474542.35
+Nevada,2021,Other,5512364.29
+New Hampshire,2021,Other,2450611.52
+New Mexico,2021,Other,3958274.33
+New York,2021,Other,28510058.37
+North Carolina,2021,Other,22045285.29
+Ohio,2021,Other,21112697.77
+Oklahoma,2021,Other,7033074.69
+Oregon,2021,Other,5558115.63
+Pennsylvania,2021,Other,24535860.81
+Rhode Island,2021,Other,1496536.17
+South Carolina,2021,Other,11421187.13
+South Dakota,2021,Other,1473252.98
+Tennessee,2021,Other,14099074.19
+Texas,2021,Other,50337864.25
+Utah,2021,Other,4357013.12
+Vermont,2021,Other,1014378.4
+Virginia,2021,Other,17857071.37
+Washington,2021,Other,10183524.6
+West Virginia,2021,Other,3570909.77
+Wisconsin,2021,Other,8605485.9
+Wyoming,2021,Other,1042803.38
+Alabama,2022,Other,10826387.87
+Arizona,2022,Other,13361417.92
+Arkansas,2022,Other,7052728.67
+California,2022,Other,49236348.15
+Colorado,2022,Other,11336629.73
+Connecticut,2022,Other,6633254.9
+Florida,2022,Other,46754899.46
+Georgia,2022,Other,24687336.58
+Illinois,2022,Other,20879329.44
+Indiana,2022,Other,13608787.06
+Iowa,2022,Other,5795902.19
+Kansas,2022,Other,5524387.06
+Kentucky,2022,Other,9332975.77
+Louisiana,2022,Other,12170679.69
+Maine,2022,Other,2749051.69
+Maryland,2022,Other,13176318.73
+Massachusetts,2022,Other,10745161.44
+Michigan,2022,Other,17821156.62
+Minnesota,2022,Other,9854875.48
+Mississippi,2022,Other,7480948.44
+Missouri,2022,Other,11760198.17
+Nebraska,2022,Other,3734612.12
+Nevada,2022,Other,5867329.38
+New Hampshire,2022,Other,2647816.75
+New Mexico,2022,Other,4228123.4
+New York,2022,Other,30000654.02
+North Carolina,2022,Other,23648772.06
+Ohio,2022,Other,22684875.4
+Oklahoma,2022,Other,7892009.62
+Oregon,2022,Other,5921396.27
+Pennsylvania,2022,Other,25656543.58
+Rhode Island,2022,Other,1511140.98
+South Carolina,2022,Other,12398652.5
+South Dakota,2022,Other,1603481.29
+Tennessee,2022,Other,14672642.69
+Texas,2022,Other,53279217.79
+Utah,2022,Other,4697238.52
+Vermont,2022,Other,1049801.62
+Virginia,2022,Other,19270413.29
+Washington,2022,Other,10839525
+West Virginia,2022,Other,3824638.23
+Wisconsin,2022,Other,9078707.17
+Wyoming,2022,Other,1133587.67
+Alabama,2020,Sugar and sweeteners,1361499.46
+Arizona,2020,Sugar and sweeteners,1373784.31
+Arkansas,2020,Sugar and sweeteners,913113.4
+California,2020,Sugar and sweeteners,5913198.54
+Colorado,2020,Sugar and sweeteners,1404990.37
+Connecticut,2020,Sugar and sweeteners,799830.19
+Florida,2020,Sugar and sweeteners,5511697.85
+Georgia,2020,Sugar and sweeteners,2950675.15
+Illinois,2020,Sugar and sweeteners,2327458.44
+Indiana,2020,Sugar and sweeteners,1426653.48
+Iowa,2020,Sugar and sweeteners,651796.48
+Kansas,2020,Sugar and sweeteners,638208.02
+Kentucky,2020,Sugar and sweeteners,1100150.21
+Louisiana,2020,Sugar and sweeteners,1328656.52
+Maine,2020,Sugar and sweeteners,390128.08
+Maryland,2020,Sugar and sweeteners,1469118.85
+Massachusetts,2020,Sugar and sweeteners,1623959.1
+Michigan,2020,Sugar and sweeteners,1833621.17
+Minnesota,2020,Sugar and sweeteners,1046336.9
+Mississippi,2020,Sugar and sweeteners,942409.13
+Missouri,2020,Sugar and sweeteners,1438697.62
+Nebraska,2020,Sugar and sweeteners,395428.27
+Nevada,2020,Sugar and sweeteners,604664.1
+New Hampshire,2020,Sugar and sweeteners,443316.83
+New Mexico,2020,Sugar and sweeteners,528601.31
+New York,2020,Sugar and sweeteners,3763516.1
+North Carolina,2020,Sugar and sweeteners,2848085.94
+Ohio,2020,Sugar and sweeteners,2173472.73
+Oklahoma,2020,Sugar and sweeteners,1010043.4
+Oregon,2020,Sugar and sweeteners,795058.63
+Pennsylvania,2020,Sugar and sweeteners,2761085.75
+Rhode Island,2020,Sugar and sweeteners,205867.98
+South Carolina,2020,Sugar and sweeteners,1445637.13
+South Dakota,2020,Sugar and sweeteners,186973.23
+Tennessee,2020,Sugar and sweeteners,1752282.92
+Texas,2020,Sugar and sweeteners,5892404.96
+Utah,2020,Sugar and sweeteners,638716.62
+Vermont,2020,Sugar and sweeteners,134953.08
+Virginia,2020,Sugar and sweeteners,2121825.67
+Washington,2020,Sugar and sweeteners,1379635.65
+West Virginia,2020,Sugar and sweeteners,444299
+Wisconsin,2020,Sugar and sweeteners,899808.65
+Wyoming,2020,Sugar and sweeteners,145246.04
+Alabama,2021,Sugar and sweeteners,1315175
+Arizona,2021,Sugar and sweeteners,1288140.33
+Arkansas,2021,Sugar and sweeteners,849455.38
+California,2021,Sugar and sweeteners,5251320.44
+Colorado,2021,Sugar and sweeteners,1265786.35
+Connecticut,2021,Sugar and sweeteners,734384.27
+Florida,2021,Sugar and sweeteners,5310590.71
+Georgia,2021,Sugar and sweeteners,2789573.17
+Illinois,2021,Sugar and sweeteners,2113179.12
+Indiana,2021,Sugar and sweeteners,1347730.73
+Iowa,2021,Sugar and sweeteners,608075.19
+Kansas,2021,Sugar and sweeteners,589588.6
+Kentucky,2021,Sugar and sweeteners,1053630.15
+Louisiana,2021,Sugar and sweeteners,1256735.33
+Maine,2021,Sugar and sweeteners,365263.54
+Maryland,2021,Sugar and sweeteners,1338245.58
+Massachusetts,2021,Sugar and sweeteners,1489966.69
+Michigan,2021,Sugar and sweeteners,1697314.54
+Minnesota,2021,Sugar and sweeteners,935017.98
+Mississippi,2021,Sugar and sweeteners,908764.29
+Missouri,2021,Sugar and sweeteners,1334799.81
+Nebraska,2021,Sugar and sweeteners,360686
+Nevada,2021,Sugar and sweeteners,555540.19
+New Hampshire,2021,Sugar and sweeteners,412241.21
+New Mexico,2021,Sugar and sweeteners,468378.04
+New York,2021,Sugar and sweeteners,3416642.21
+North Carolina,2021,Sugar and sweeteners,2712392.6
+Ohio,2021,Sugar and sweeteners,2126960.12
+Oklahoma,2021,Sugar and sweeteners,952487.56
+Oregon,2021,Sugar and sweeteners,721629.42
+Pennsylvania,2021,Sugar and sweeteners,2608406.35
+Rhode Island,2021,Sugar and sweeteners,186370.35
+South Carolina,2021,Sugar and sweeteners,1395886.08
+South Dakota,2021,Sugar and sweeteners,169080.15
+Tennessee,2021,Sugar and sweeteners,1728029.44
+Texas,2021,Sugar and sweeteners,5490996.38
+Utah,2021,Sugar and sweeteners,565705.71
+Vermont,2021,Sugar and sweeteners,122169.79
+Virginia,2021,Sugar and sweeteners,2025563.17
+Washington,2021,Sugar and sweeteners,1242310.23
+West Virginia,2021,Sugar and sweeteners,426210.79
+Wisconsin,2021,Sugar and sweeteners,829933.31
+Wyoming,2021,Sugar and sweeteners,132414.5
+Alabama,2022,Sugar and sweeteners,1434872.12
+Arizona,2022,Sugar and sweeteners,1411905.48
+Arkansas,2022,Sugar and sweeteners,957817.73
+California,2022,Sugar and sweeteners,5741821.17
+Colorado,2022,Sugar and sweeteners,1423522.79
+Connecticut,2022,Sugar and sweeteners,800563.52
+Florida,2022,Sugar and sweeteners,5833330.31
+Georgia,2022,Sugar and sweeteners,3032817.33
+Illinois,2022,Sugar and sweeteners,2286905.56
+Indiana,2022,Sugar and sweeteners,1498861.69
+Iowa,2022,Sugar and sweeteners,671997.38
+Kansas,2022,Sugar and sweeteners,659500.63
+Kentucky,2022,Sugar and sweeteners,1180431.35
+Louisiana,2022,Sugar and sweeteners,1385438.33
+Maine,2022,Sugar and sweeteners,405429.92
+Maryland,2022,Sugar and sweeteners,1454522.37
+Massachusetts,2022,Sugar and sweeteners,1601726.73
+Michigan,2022,Sugar and sweeteners,1888519.56
+Minnesota,2022,Sugar and sweeteners,1027308.33
+Mississippi,2022,Sugar and sweeteners,981415.25
+Missouri,2022,Sugar and sweeteners,1492788.73
+Nebraska,2022,Sugar and sweeteners,400328.9
+Nevada,2022,Sugar and sweeteners,602257.23
+New Hampshire,2022,Sugar and sweeteners,448131.92
+New Mexico,2022,Sugar and sweeteners,509638.65
+New York,2022,Sugar and sweeteners,3661670.38
+North Carolina,2022,Sugar and sweeteners,2999875.33
+Ohio,2022,Sugar and sweeteners,2372269.81
+Oklahoma,2022,Sugar and sweeteners,1037374.56
+Oregon,2022,Sugar and sweeteners,775218.29
+Pennsylvania,2022,Sugar and sweeteners,2869715.67
+Rhode Island,2022,Sugar and sweeteners,202296.92
+South Carolina,2022,Sugar and sweeteners,1565865.71
+South Dakota,2022,Sugar and sweeteners,189857.94
+Tennessee,2022,Sugar and sweeteners,1906688.85
+Texas,2022,Sugar and sweeteners,6029872.77
+Utah,2022,Sugar and sweeteners,598476.79
+Vermont,2022,Sugar and sweeteners,132046.31
+Virginia,2022,Sugar and sweeteners,2229425.79
+Washington,2022,Sugar and sweeteners,1368108.08
+West Virginia,2022,Sugar and sweeteners,465324.15
+Wisconsin,2022,Sugar and sweeteners,904082.5
+Wyoming,2022,Sugar and sweeteners,146543.79
+Alabama,2020,Vegetables,14792868.92
+Arizona,2020,Vegetables,24004107.19
+Arkansas,2020,Vegetables,9907018.04
+California,2020,Vegetables,110657461.5
+Colorado,2020,Vegetables,22761817.27
+Connecticut,2020,Vegetables,15111169
+Florida,2020,Vegetables,82395697.75
+Georgia,2020,Vegetables,34306060.1
+Illinois,2020,Vegetables,34506388.46
+Indiana,2020,Vegetables,20132869.77
+Iowa,2020,Vegetables,10526766.94
+Kansas,2020,Vegetables,9792282.83
+Kentucky,2020,Vegetables,13736332.48
+Louisiana,2020,Vegetables,15003493
+Maine,2020,Vegetables,6472765.48
+Maryland,2020,Vegetables,21331112.94
+Massachusetts,2020,Vegetables,25563058.29
+Michigan,2020,Vegetables,31459660.44
+Minnesota,2020,Vegetables,19662323.65
+Mississippi,2020,Vegetables,8989039.38
+Missouri,2020,Vegetables,19069990.79
+Nebraska,2020,Vegetables,6398584.1
+Nevada,2020,Vegetables,9376428.77
+New Hampshire,2020,Vegetables,6480329.02
+New Mexico,2020,Vegetables,7232366.79
+New York,2020,Vegetables,57811608.37
+North Carolina,2020,Vegetables,36401190.9
+Ohio,2020,Vegetables,34703224.75
+Oklahoma,2020,Vegetables,10934208.87
+Oregon,2020,Vegetables,15204140.73
+Pennsylvania,2020,Vegetables,40798986.06
+Rhode Island,2020,Vegetables,3600094.65
+South Carolina,2020,Vegetables,17731479.98
+South Dakota,2020,Vegetables,2986569.23
+Tennessee,2020,Vegetables,21597089.1
+Texas,2020,Vegetables,70133806.67
+Utah,2020,Vegetables,8758813.1
+Vermont,2020,Vegetables,2779858.33
+Virginia,2020,Vegetables,31168066.81
+Washington,2020,Vegetables,26865300.75
+West Virginia,2020,Vegetables,5635363.62
+Wisconsin,2020,Vegetables,15746260.62
+Wyoming,2020,Vegetables,2262837.19
+Alabama,2021,Vegetables,14671507
+Arizona,2021,Vegetables,23772919.81
+Arkansas,2021,Vegetables,9462865.56
+California,2021,Vegetables,104178491.94
+Colorado,2021,Vegetables,22237129.83
+Connecticut,2021,Vegetables,14189150.65
+Florida,2021,Vegetables,80305791.4
+Georgia,2021,Vegetables,33434856.92
+Illinois,2021,Vegetables,33005069.56
+Indiana,2021,Vegetables,19678926.35
+Iowa,2021,Vegetables,10008168.23
+Kansas,2021,Vegetables,9402017.38
+Kentucky,2021,Vegetables,13430498.17
+Louisiana,2021,Vegetables,14618393.67
+Maine,2021,Vegetables,6482456.48
+Maryland,2021,Vegetables,20171288.92
+Massachusetts,2021,Vegetables,24093858.62
+Michigan,2021,Vegetables,30548237.33
+Minnesota,2021,Vegetables,18869619.25
+Mississippi,2021,Vegetables,8721342.65
+Missouri,2021,Vegetables,18420485.73
+Nebraska,2021,Vegetables,6204424.38
+Nevada,2021,Vegetables,9160334.19
+New Hampshire,2021,Vegetables,6157567.42
+New Mexico,2021,Vegetables,7005728
+New York,2021,Vegetables,54058764.65
+North Carolina,2021,Vegetables,36845727
+Ohio,2021,Vegetables,34054548.15
+Oklahoma,2021,Vegetables,10862253.17
+Oregon,2021,Vegetables,14945418.37
+Pennsylvania,2021,Vegetables,39625842.87
+Rhode Island,2021,Vegetables,3340929.38
+South Carolina,2021,Vegetables,17731849.67
+South Dakota,2021,Vegetables,2891401.71
+Tennessee,2021,Vegetables,21545233.63
+Texas,2021,Vegetables,66671091.98
+Utah,2021,Vegetables,8391915.21
+Vermont,2021,Vegetables,2682998.15
+Virginia,2021,Vegetables,30307802.15
+Washington,2021,Vegetables,25887389.12
+West Virginia,2021,Vegetables,5461343.63
+Wisconsin,2021,Vegetables,15298465.65
+Wyoming,2021,Vegetables,2169705.58
+Alabama,2022,Vegetables,15819770.98
+Arizona,2022,Vegetables,25460216.46
+Arkansas,2022,Vegetables,10192384.1
+California,2022,Vegetables,108966586.44
+Colorado,2022,Vegetables,23612209.71
+Connecticut,2022,Vegetables,14577777.5
+Florida,2022,Vegetables,86571164.4
+Georgia,2022,Vegetables,35803358.06
+Illinois,2022,Vegetables,34594133.92
+Indiana,2022,Vegetables,21058820.33
+Iowa,2022,Vegetables,10715183.08
+Kansas,2022,Vegetables,10043879.06
+Kentucky,2022,Vegetables,14347522.29
+Louisiana,2022,Vegetables,15710958.6
+Maine,2022,Vegetables,6741513.04
+Maryland,2022,Vegetables,20797030.6
+Massachusetts,2022,Vegetables,24367984.96
+Michigan,2022,Vegetables,32245114.02
+Minnesota,2022,Vegetables,19660320.44
+Mississippi,2022,Vegetables,9226648.69
+Missouri,2022,Vegetables,19688743.69
+Nebraska,2022,Vegetables,6634682.17
+Nevada,2022,Vegetables,9703827.17
+New Hampshire,2022,Vegetables,6358828.1
+New Mexico,2022,Vegetables,7479912.6
+New York,2022,Vegetables,56259636.48
+North Carolina,2022,Vegetables,39663295.6
+Ohio,2022,Vegetables,36521150.29
+Oklahoma,2022,Vegetables,11964211.15
+Oregon,2022,Vegetables,15222470.65
+Pennsylvania,2022,Vegetables,41443953
+Rhode Island,2022,Vegetables,3326251.48
+South Carolina,2022,Vegetables,19384353.13
+South Dakota,2022,Vegetables,3073525.42
+Tennessee,2022,Vegetables,23246698.29
+Texas,2022,Vegetables,68848889.69
+Utah,2022,Vegetables,8849915.9
+Vermont,2022,Vegetables,2737085.44
+Virginia,2022,Vegetables,32118356.83
+Washington,2022,Vegetables,27111085.62
+West Virginia,2022,Vegetables,5826204.46
+Wisconsin,2022,Vegetables,16064234.1
+Wyoming,2022,Vegetables,2302131.17
