@@ -80,6 +80,7 @@ us_state_populations_2020_2022 <- us_state_populations_2019_2023
 View(us_state_populations_2020_2022)
 summary(us_state_populations_2020_2022)
 ```
+<<<<<<< HEAD
 
 ``` {r}
 library(tidyr)
@@ -91,3 +92,35 @@ df_wide <- df %>%
 
 print(df_wide)
 ```
+=======
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(readr)
+
+# Read the data
+data <- read_csv("avg_spending_by_state_year_category.csv")
+
+# Get list of categories
+categories <- unique(data$Category)
+
+# Loop through each category
+for(cat in categories){
+
+  category_table <- data %>%
+    filter(Category == cat) %>%
+    group_by(State, Year) %>%
+    summarize(avg_spending = mean(Avg_Dollars_Spent, na.rm = TRUE)) %>%
+    spread(key = Year, value = avg_spending)
+
+  # Save table as a file
+  filename <- paste0("spending_", gsub(" ", "_", cat), ".csv")
+  write_csv(category_table, filename)
+
+  # Print table in the R Markdown output
+  print(category_table)
+}
+```
+
+>>>>>>> c5652133f0898af9e88b85f62377e82d6560016a
