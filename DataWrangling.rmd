@@ -70,12 +70,17 @@ claude sonnet 4.6 extended on 3/11/26 sources data for state population
 claude sonnet 4.6 made new data table on 3/11/26 to average unit prices and dollars spent per year per state
 
 ```{r}
-library(tidyr)
 library(dplyr)
-df <- read.csv("avg_spending_by_state_year_category.csv", check.names = FALSE)
-df_wide <- df %>%
-  select(State, Year, Category, Avg_Dollars_Spent) %>%
-  spread(key = Category, value = Avg_Dollars_Spent)
+library(tidyr)
+library(readr)
 
-print(df_wide)
+# Read the data
+data <- read_csv("avg_spending_by_state_year_category.csv")
+
+# Create table: rows = state, columns = year
+alcohol_table <- data %>%
+  group_by(State, Year) %>%
+  summarize(avg_spending = mean(Avg_Dollars_Spent, na.rm = TRUE)) %>%
+  spread(key = Year, value = avg_spending)
+write_csv(alcohol_table, "alcohol_spending_by_state_year.csv")
 ```
