@@ -79,6 +79,7 @@ us_state_populations_2019_2023 <- us_state_populations_2019_2023[-c(2, 8, 12, 13
 us_state_populations_2020_2022 <- us_state_populations_2019_2023
 View(us_state_populations_2020_2022)
 summary(us_state_populations_2020_2022)
+write.csv(us_state_populations_2020_2022, "us_state_populations_2020_2022.csv", row.names = FALSE)
 ```
 
 ``` {r}
