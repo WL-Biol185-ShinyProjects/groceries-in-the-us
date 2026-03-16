@@ -70,6 +70,7 @@ claude sonnet 4.6 extended on 3/11/26 sources data for state population
 claude sonnet 4.6 made new data table on 3/11/26 to average unit prices and dollars spent per year per state
 
 ```{r}
+<<<<<<< HEAD
 library(readr)
 library(tidyverse)
 us_state_populations_2019_2023 <- read_csv("us_state_populations_2019_2023.csv")
@@ -80,3 +81,14 @@ us_state_populations_2020_2022 <- us_state_populations_2019_2023
 View(us_state_populations_2020_2022)
 summary(us_state_populations_2020_2022)
 ```
+=======
+library(tidyr)
+library(dplyr)
+df <- read.csv("avg_spending_by_state_year_category.csv", check.names = FALSE)
+df_wide <- df %>%
+  select(State, Year, Category, Avg_Dollars_Spent) %>%
+  spread(key = Category, value = Avg_Dollars_Spent)
+
+print(df_wide)
+```
+>>>>>>> 24949781e7e4f036ab5539010d1c106b97f5b4ee
