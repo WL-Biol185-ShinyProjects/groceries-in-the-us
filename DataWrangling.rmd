@@ -80,7 +80,6 @@ us_state_populations_2020_2022 <- us_state_populations_2019_2023
 View(us_state_populations_2020_2022)
 summary(us_state_populations_2020_2022)
 ```
-<<<<<<< HEAD
 
 ``` {r}
 library(tidyr)
@@ -89,10 +88,9 @@ df <- read.csv("avg_spending_by_state_year_category.csv", check.names = FALSE)
 df_wide <- df %>%
   select(State, Year, Category, Avg_Dollars_Spent) %>%
   spread(key = Category, value = Avg_Dollars_Spent)
-
+ 
 print(df_wide)
 ```
-=======
 
 ```{r}
 library(dplyr)
@@ -123,4 +121,4 @@ for(cat in categories){
 }
 ```
 
->>>>>>> c5652133f0898af9e88b85f62377e82d6560016a
+
