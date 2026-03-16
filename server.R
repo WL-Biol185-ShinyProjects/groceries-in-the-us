@@ -127,7 +127,8 @@ function(input, output, session) {
     # ── Render the recipe card ─────────────────────────────────────────────────
     output$recipeOutput <- renderUI({
       cat <- selected_category()
-      
+      if (!is.null(cat) && cat == "Meats, eggs, and nuts") cat <- "Meats"
+    
       if (is.null(cat)) {
         div(
           style = "text-align:center; padding:50px; color:#bbb;",
@@ -137,7 +138,13 @@ function(input, output, session) {
           h4("Click a category card above to get a recipe!", style = "color:#ccc;")
         )
       } else {
-        r <- if (!is.null(recipes[[cat]])) recipes[[cat]] else recipes[["Other"]]
+        r <- if (!is.null(recipes[[cat]][[input$recipe_state]])) {
+          recipes[[cat]][[input$recipe_state]]
+        } else if (!is.null(recipes[[cat]][["default"]])) {
+          recipes[[cat]][["default"]]
+        } else {
+          recipes[["Other"]][["default"]]
+        }
         div(class = "recipe-box",
             div(class = "state-badge", paste0(input$recipe_state, "  ·  ", cat)),
             div(class = "recipe-title", r$name),
