@@ -3,7 +3,7 @@ library(shiny)
 source("CookBook.R")
 outputstates <- read.csv("outputstates.csv", check.names = FALSE)
 # Define server logic required to draw a histogram
-function(input, output) {
+function(input, output, session) {
   
   output$BarPlot <- renderPlot({
     outputstates %>%
@@ -292,6 +292,29 @@ function(input, output) {
     }
     output$quiz_result <- renderText({
       paste("Your score:", score, "/3")
+    })
+  })
+  observeEvent(input$submit_quiz, {
+    score <- 0
+    if (input$q1 == "Vermont")   score <- score + 1
+    if (input$q2 == "Commercially prepared items") score <- score + 1
+    if (input$q3 == "Alcohol")   score <- score + 1
+    
+    output$quiz_result <- renderUI({
+      if (score == 3) {
+        session$sendCustomMessage("confetti", list())
+        div(style = "text-align:center; padding: 20px;",
+            h3("🎉 Perfect Score!", style = "color: #e76f51; font-weight: 600;"),
+            p("You aced it! You really know your groceries.",
+              style = "color: #666;")
+        )
+      } else {
+        div(style = "text-align:center; padding: 20px;",
+            h3(paste0("You got ", score, " out of 3"),
+               style = "color: #e76f51; font-weight: 600;"),
+            p("Review the site and try again!", style = "color: #666;")
+        )
+      }
     })
   })
 }
