@@ -68,3 +68,15 @@ write_csv(States, "outputstates.csv")
 to import data, we decided to remove 2019 and 2023 from the population data set so that we can more simply average weeks of groceries to make an interactive map per capita
 claude sonnet 4.6 extended on 3/11/26 sources data for state population
 claude sonnet 4.6 made new data table on 3/11/26 to average unit prices and dollars spent per year per state
+
+```{r}
+library(readr)
+library(tidyverse)
+us_state_populations_2019_2023 <- read_csv("us_state_populations_2019_2023.csv")
+us_state_populations_2019_2023[6] <- NULL   # remove 6th column first!
+us_state_populations_2019_2023[2] <- NULL   # then 2nd column
+us_state_populations_2019_2023 <- us_state_populations_2019_2023[-c(2, 8, 12, 13, 27, 31, 35), ]
+us_state_populations_2020_2022 <- us_state_populations_2019_2023
+View(us_state_populations_2020_2022)
+summary(us_state_populations_2020_2022)
+```
