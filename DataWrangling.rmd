@@ -70,8 +70,6 @@ claude sonnet 4.6 extended on 3/11/26 sources data for state population
 claude sonnet 4.6 made new data table on 3/11/26 to average unit prices and dollars spent per year per state
 
 ```{r}
-<<<<<<< HEAD
-=======
 library(readr)
 library(tidyverse)
 us_state_populations_2019_2023 <- read_csv("us_state_populations_2019_2023.csv")
@@ -84,8 +82,6 @@ summary(us_state_populations_2020_2022)
 ```
 
 ```{r}
-library(tidyr)
->>>>>>> c95267509069f808b6638ecc6be5afb4489192b8
 library(dplyr)
 library(tidyr)
 library(readr)
@@ -93,11 +89,24 @@ library(readr)
 # Read the data
 data <- read_csv("avg_spending_by_state_year_category.csv")
 
-# Create table: rows = state, columns = year
-alcohol_table <- data %>%
-  group_by(State, Year) %>%
-  summarize(avg_spending = mean(Avg_Dollars_Spent, na.rm = TRUE)) %>%
-  spread(key = Year, value = avg_spending)
-write_csv(alcohol_table, "alcohol_spending_by_state_year.csv")
+# Get list of categories
+categories <- unique(data$Category)
+
+# Loop through each category
+for(cat in categories){
+
+  category_table <- data %>%
+    filter(Category == cat) %>%
+    group_by(State, Year) %>%
+    summarize(avg_spending = mean(Avg_Dollars_Spent, na.rm = TRUE)) %>%
+    spread(key = Year, value = avg_spending)
+
+  # Save table as a file
+  filename <- paste0("spending_", gsub(" ", "_", cat), ".csv")
+  write_csv(category_table, filename)
+
+  # Print table in the R Markdown output
+  print(category_table)
+}
 ```
 
