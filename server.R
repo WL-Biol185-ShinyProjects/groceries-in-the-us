@@ -3,7 +3,7 @@ library(shiny)
 source("CookBook.R")
 outputstates <- read.csv("outputstates.csv", check.names = FALSE)
 # Define server logic required to draw a histogram
-function(input, output) {
+function(input, output, session) {
   
   output$BarPlot <- renderPlot({
     outputstates %>%
@@ -127,7 +127,8 @@ function(input, output) {
     # ── Render the recipe card ─────────────────────────────────────────────────
     output$recipeOutput <- renderUI({
       cat <- selected_category()
-      
+      if (!is.null(cat) && cat == "Meats, eggs, and nuts") cat <- "Meats"
+    
       if (is.null(cat)) {
         div(
           style = "text-align:center; padding:50px; color:#bbb;",
@@ -137,7 +138,13 @@ function(input, output) {
           h4("Click a category card above to get a recipe!", style = "color:#ccc;")
         )
       } else {
-        r <- if (!is.null(recipes[[cat]])) recipes[[cat]] else recipes[["Other"]]
+        r <- if (!is.null(recipes[[cat]][[input$recipe_state]])) {
+          recipes[[cat]][[input$recipe_state]]
+        } else if (!is.null(recipes[[cat]][["default"]])) {
+          recipes[[cat]][["default"]]
+        } else {
+          recipes[["Other"]][["default"]]
+        }
         div(class = "recipe-box",
             div(class = "state-badge", paste0(input$recipe_state, "  ·  ", cat)),
             div(class = "recipe-title", r$name),
@@ -292,6 +299,29 @@ function(input, output) {
     }
     output$quiz_result <- renderText({
       paste("Your score:", score, "/3")
+    })
+  })
+  observeEvent(input$submit_quiz, {
+    score <- 0
+    if (input$q1 == "Vermont")   score <- score + 1
+    if (input$q2 == "Commercially prepared items") score <- score + 1
+    if (input$q3 == "Alcohol")   score <- score + 1
+    
+    output$quiz_result <- renderUI({
+      if (score == 3) {
+        session$sendCustomMessage("confetti", list())
+        div(style = "text-align:center; padding: 20px;",
+            h3("🎉 Perfect Score!", style = "color: #e76f51; font-weight: 600;"),
+            p("You aced it! You really know your groceries.",
+              style = "color: #666;")
+        )
+      } else {
+        div(style = "text-align:center; padding: 20px;",
+            h3(paste0("You got ", score, " out of 3"),
+               style = "color: #e76f51; font-weight: 600;"),
+            p("Review the site and try again!", style = "color: #666;")
+        )
+      }
     })
   })
 }

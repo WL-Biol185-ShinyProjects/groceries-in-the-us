@@ -292,20 +292,50 @@ dashboardPage(
                 )
               )
       ),
-    tabItem(tabName = "Quiz",
-            h3("Quiz yourself after reviweing our entire site"),
-            radioButtons("q1",
-                         "Which state is the most expensive to buy a vegtable in?",
-                         choices = c("Michigan", "Vermont", "Rhode Island", "New York")),
-            radioButtons("q2",
-                         "What is the food item that is purchased the most in every state?",
-                         choices = c("Commercially processed items", "Fruits", "Fats and oils", "Meats, eggs, and nuts")),
-            radioButtons("q3",
-                         "Which item is typically the most expensive per unit?",
-                         choices = c("Vegtables", "Beverages", "Alcohol", "Meats, eggs, and nuts")),
-            actionButton("submit_quiz", "Submit Quiz"),
-            textOutput("quiz_result")
+      tabItem(tabName = "Quiz",
+              fluidPage(
+                tags$head(
+                  tags$script(src = "https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js")
+                ),
+                div(
+                  style = "background: linear-gradient(135deg, #e76f51, #f4a261);
+               border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
+               color: white;",
+                  h3("Quiz Time!", style = "font-weight: 600; margin-bottom: 4px;"),
+                  p("Test your knowledge after exploring the site.",
+                    style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
+                ),
+                div(
+                  style = "background: white; border-radius: 14px; padding: 28px;
+               box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
+                  h5("Question 1", style = "color: #e76f51; font-weight: 600;"),
+                  radioButtons("q1", "Which state is the most expensive to buy a vegetable in?",
+                               choices = c("Michigan", "Vermont", "Rhode Island", "New York")),
+                  hr(style = "border-color: #f4a261;"),
+                  h5("Question 2", style = "color: #e76f51; font-weight: 600;"),
+                  radioButtons("q2", "What is the food category purchased the most in every state?",
+                               choices = c("Commercially prepared items", "Fruits", "Fats and oils", "Meats")),
+                  hr(style = "border-color: #f4a261;"),
+                  h5("Question 3", style = "color: #e76f51; font-weight: 600;"),
+                  radioButtons("q3", "Which item is typically the most expensive per unit?",
+                               choices = c("Vegetables", "Beverages", "Alcohol", "Meats")),
+                  br(),
+                  actionButton("submit_quiz", "Submit Quiz", class = "generate-btn"),
+                  br(), br(),
+                  uiOutput("quiz_result"),
+                  tags$script(HTML("
+        Shiny.addCustomMessageHandler('confetti', function(message) {
+          confetti({
+            particleCount: 200,
+            spread: 90,
+            origin: { y: 0.6 },
+            colors: ['#e76f51', '#f4a261', '#2b2d42', '#ffffff']
+          });
+        });
+      "))
+                )
+              )
+      )
     )
-  )
   )
 )
