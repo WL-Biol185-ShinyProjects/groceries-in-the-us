@@ -68,3 +68,14 @@ write_csv(States, "outputstates.csv")
 to import data, we decided to remove 2019 and 2023 from the population data set so that we can more simply average weeks of groceries to make an interactive map per capita
 claude sonnet 4.6 extended on 3/11/26 sources data for state population
 claude sonnet 4.6 made new data table on 3/11/26 to average unit prices and dollars spent per year per state
+
+```{r}
+library(tidyr)
+library(dplyr)
+df <- read.csv("avg_spending_by_state_year_category.csv", check.names = FALSE)
+df_wide <- df %>%
+  select(State, Year, Category, Avg_Dollars_Spent) %>%
+  spread(key = Category, value = Avg_Dollars_Spent)
+
+print(df_wide)
+```
