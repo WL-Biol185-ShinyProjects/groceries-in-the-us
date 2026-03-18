@@ -149,13 +149,10 @@ avg_spending_by_state_year_category$Year <- as.character(avg_spending_by_state_y
 merged_data <- left_join(avg_spending_by_state_year_category, 
                          tidypopulation, 
                          by = c("State", "Year"))
-write.csv(merged_data, "merged_data.csv", row.names = FALSE)
-```
 
-```{r}
 merged_data$DollarsPerPerson <- merged_data$Avg_Dollars_Spent/merged_data$Population
-```
 
-```{r}
 merged_data$UnitsPerPerson <- merged_data$Avg_Unit_Sales/merged_data$Population
+
+write.csv(merged_data, "merged_data.csv", row.names = FALSE)
 ```
