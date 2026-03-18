@@ -308,6 +308,7 @@ function(input, output, session) {
     q8 = "Which of these states is NOT included in the dataset?"
   )
   
+  
   # ── Progress bar ───────────────────────────────────────────────────────────
   output$quizProgress <- renderUI({
     answered <- sum(c(
@@ -392,22 +393,9 @@ function(input, output, session) {
     updateRadioButtons(session, "q8", selected = character(0))
     output$quiz_result <- renderUI({ NULL })
   }) 
-    output$quiz_result <- renderUI({
-      if (score == 3) {
-        session$sendCustomMessage("confetti", list())
-        div(style = "text-align:center; padding: 20px;",
-            h3("🎉 Perfect Score!", style = "color: #e76f51; font-weight: 600;"),
-            p("You aced it! You really know your groceries.",
-              style = "color: #666;")
-        )
-      } else {
-        div(style = "text-align:center; padding: 20px;",
-            h3(paste0("You got ", score, " out of 3"),
-               style = "color: #e76f51; font-weight: 600;"),
-            p("Review the site and try again!", style = "color: #666;")
-        )
-      }
-    })
+    
+  output$quiz_result <- renderUI({ NULL })
+  
   output$topCategoryCard <- renderUI({
     top <- outputstates %>%
       filter(State == input$state_bar) %>%
