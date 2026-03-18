@@ -142,3 +142,4 @@ library(tidyverse)
 pop <- read_csv("us_state_populations_2020_2022.csv")
 tidypopulation <- gather(pop,key = "Year", value = "Population", 2:4)
 ```
+
