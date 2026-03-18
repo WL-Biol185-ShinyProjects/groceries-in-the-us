@@ -136,3 +136,12 @@ write_csv(final_data, "state_year_category_spending.csv")
 ```
 claude sonnet 4.6 made new data table on 3/16/26 to create new tables for each category that give average dollars spent and state and year. We do not need them for aything as of 3/16 but are keeping code
 
+<<<<<<< HEAD
+=======
+```{r}
+library(tidyverse)
+
+pop <- read_csv("us_state_populations_2020_2022.csv")
+tidypopulation <- gather(pop,key = "Year", value = "Population", 2:4)
+```
+>>>>>>> 30f4871183cf8e10b261ae7503126eb96572e304
