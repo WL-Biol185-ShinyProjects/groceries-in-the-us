@@ -143,3 +143,10 @@ pop <- read_csv("us_state_populations_2020_2022.csv")
 tidypopulation <- gather(pop, key = "Year", value = "Population", 2, 3, 4)
 ```
 
+```{r}
+avg_spending_by_state_year_category$Year <- as.character(avg_spending_by_state_year_category$Year)
+
+merged_data <- left_join(avg_spending_by_state_year_category, 
+                         tidypopulation, 
+                         by = c("State", "Year"))
+```
