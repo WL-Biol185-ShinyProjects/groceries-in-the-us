@@ -286,27 +286,112 @@ function(input, output, session) {
     
   })
   
-  observeEvent(input$submit_quiz, {
-    score <- 0
-    if(input$q1 == "Vermont"){
-      score <- score + 1
-    }
-    if(input$q2 == "Commercially processed items"){
-      score <- score + 1
-    }
-    if(input$q3 == "Alcohol"){
-      score <- score + 1
-    }
-    output$quiz_result <- renderText({
-      paste("Your score:", score, "/3")
-    })
+  correct_answers <- list(
+    q1 = "Vermont",
+    q2 = "Commercially prepared items",
+    q3 = "Alcohol",
+    q4 = "New York",
+    q5 = "Grains",
+    q6 = "Wyoming",
+    q7 = "Circana",
+    q8 = "Montana"
+  )
+  
+  question_text <- list(
+    q1 = "Which state is the most expensive to buy vegetables in?",
+    q2 = "What is the food category purchased the most in every state?",
+    q3 = "Which category is typically the most expensive per unit?",
+    q4 = "Which state had the largest spike in grocery spending at the start of COVID?",
+    q5 = "Which category saw the biggest increase in spending during COVID lockdowns?",
+    q6 = "Which state spends the least on groceries overall?",
+    q7 = "The USDA data was collected by which research firm?",
+    q8 = "Which of these states is NOT included in the dataset?"
+  )
+  
+  # ── Progress bar ───────────────────────────────────────────────────────────
+  output$quizProgress <- renderUI({
+    answered <- sum(c(
+      input$q1 != "", input$q2 != "", input$q3 != "",
+      input$q4 != "", input$q5 != "", input$q6 != "",
+      input$q7 != "", input$q8 != ""
+    ))
+    pct <- round((answered / 8) * 100)
+    div(
+      p(style = "font-size: 13px; color: #888; margin-bottom: 6px;",
+        paste0(answered, " of 8 questions answered")),
+      div(
+        style = "background: #f0e6de; border-radius: 8px; height: 10px; width: 100%;",
+        div(style = paste0("background: #e76f51; border-radius: 8px; height: 10px; width: ",
+                           pct, "%; transition: width 0.3s ease;"))
+      )
+    )
   })
+  
+  # ── Submit ─────────────────────────────────────────────────────────────────
   observeEvent(input$submit_quiz, {
-    score <- 0
-    if (input$q1 == "Vermont")   score <- score + 1
-    if (input$q2 == "Commercially prepared items") score <- score + 1
-    if (input$q3 == "Alcohol")   score <- score + 1
+    user_answers <- list(
+      q1 = input$q1, q2 = input$q2, q3 = input$q3,
+      q4 = input$q4, q5 = input$q5, q6 = input$q6,
+      q7 = input$q7, q8 = input$q8
+    )
     
+    score <- sum(mapply(function(user, correct) user == correct,
+                        user_answers, correct_answers))
+    
+    output$quiz_result <- renderUI({
+      # Score banner
+      banner_color <- if (score == 8) "#e76f51" else if (score >= 5) "#f4a261" else "#aaa"
+      
+      result_rows <- lapply(names(correct_answers), function(q) {
+        user    <- user_answers[[q]]
+        correct <- correct_answers[[q]]
+        is_right <- user == correct
+        div(
+          style = paste0("padding: 12px; border-radius: 10px; margin-bottom: 10px; ",
+                         "background: ", if (is_right) "#f0fff4" else "#fff0f0", ";",
+                         "border-left: 4px solid ", if (is_right) "#55efc4" else "#e76f51", ";"),
+          p(style = "font-size: 13px; color: #555; margin-bottom: 4px;",
+            strong(question_text[[q]])),
+          p(style = paste0("font-size: 13px; margin-bottom: 0; color: ",
+                           if (is_right) "#27ae60" else "#e76f51", ";"),
+            if (is_right) paste0("✅ ", user) else paste0("❌ Your answer: ", user,
+                                                         "  |  ✅ Correct: ", correct))
+        )
+      })
+      
+      div(
+        div(
+          style = paste0("text-align: center; padding: 20px; background: ",
+                         banner_color, "; border-radius: 12px; color: white; margin-bottom: 20px;"),
+          h3(if (score == 8) "🎉 Perfect Score!" else paste0("You got ", score, " out of 8"),
+             style = "font-weight: 600; margin-bottom: 4px;"),
+          p(if (score == 8) "You really know your groceries!"
+            else if (score >= 5) "Nice work! Review the site and try again."
+            else "Keep exploring the site and try again!",
+            style = "margin-bottom: 0; opacity: 0.9;")
+        ),
+        h5("Answer Review", style = "color: #e76f51; font-weight: 600; margin-bottom: 12px;"),
+        tagList(result_rows)
+      )
+    })
+    
+    if (score == 8) {
+      session$sendCustomMessage("confetti", list())
+    }
+  })
+  
+  # ── Retake ─────────────────────────────────────────────────────────────────
+  observeEvent(input$retake_quiz, {
+    updateRadioButtons(session, "q1", selected = character(0))
+    updateRadioButtons(session, "q2", selected = character(0))
+    updateRadioButtons(session, "q3", selected = character(0))
+    updateRadioButtons(session, "q4", selected = character(0))
+    updateRadioButtons(session, "q5", selected = character(0))
+    updateRadioButtons(session, "q6", selected = character(0))
+    updateRadioButtons(session, "q7", selected = character(0))
+    updateRadioButtons(session, "q8", selected = character(0))
+    output$quiz_result <- renderUI({ NULL })
+  }) 
     output$quiz_result <- renderUI({
       if (score == 3) {
         session$sendCustomMessage("confetti", list())
@@ -323,7 +408,6 @@ function(input, output, session) {
         )
       }
     })
-  })
   output$topCategoryCard <- renderUI({
     top <- outputstates %>%
       filter(State == input$state_bar) %>%

@@ -357,21 +357,80 @@ dashboardPage(
                 div(
                   style = "background: white; border-radius: 14px; padding: 28px;
                box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
+                  
+                  # ── Progress bar ──
+                  uiOutput("quizProgress"),
+                  br(),
+                  
+                  # ── Questions ──
                   h5("Question 1", style = "color: #e76f51; font-weight: 600;"),
-                  radioButtons("q1", "Which state is the most expensive to buy a vegetable in?",
-                               choices = c("Michigan", "Vermont", "Rhode Island", "New York")),
+                  radioButtons("q1", "Which state is the most expensive to buy vegetables in?",
+                               choices = c("Michigan", "Vermont", "Rhode Island", "New York"),
+                               selected = character(0)),
                   hr(style = "border-color: #f4a261;"),
+                  
                   h5("Question 2", style = "color: #e76f51; font-weight: 600;"),
                   radioButtons("q2", "What is the food category purchased the most in every state?",
-                               choices = c("Commercially prepared items", "Fruits", "Fats and oils", "Meats")),
+                               choices = c("Commercially prepared items", "Fruits", "Fats and oils", "Meats"),
+                               selected = character(0)),
                   hr(style = "border-color: #f4a261;"),
+                  
                   h5("Question 3", style = "color: #e76f51; font-weight: 600;"),
-                  radioButtons("q3", "Which item is typically the most expensive per unit?",
-                               choices = c("Vegetables", "Beverages", "Alcohol", "Meats")),
+                  radioButtons("q3", "Which category is typically the most expensive per unit?",
+                               choices = c("Vegetables", "Beverages", "Alcohol", "Meats"),
+                               selected = character(0)),
+                  hr(style = "border-color: #f4a261;"),
+                  
+                  h5("Question 4", style = "color: #e76f51; font-weight: 600;"),
+                  radioButtons("q4", "Which state had the largest spike in grocery spending at the start of COVID?",
+                               choices = c("Texas", "California", "New York", "Florida"),
+                               selected = character(0)),
+                  hr(style = "border-color: #f4a261;"),
+                  
+                  h5("Question 5", style = "color: #e76f51; font-weight: 600;"),
+                  radioButtons("q5", "Which category saw the biggest increase in spending during COVID lockdowns?",
+                               choices = c("Alcohol", "Commercially prepared items", "Grains", "Beverages"),
+                               selected = character(0)),
+                  hr(style = "border-color: #f4a261;"),
+                  
+                  h5("Question 6", style = "color: #e76f51; font-weight: 600;"),
+                  radioButtons("q6", "Which state spends the least on groceries overall?",
+                               choices = c("Wyoming", "Vermont", "South Dakota", "Maine"),
+                               selected = character(0)),
+                  hr(style = "border-color: #f4a261;"),
+                  
+                  h5("Question 7", style = "color: #e76f51; font-weight: 600;"),
+                  radioButtons("q7", "The USDA data was collected by which research firm?",
+                               choices = c("Nielsen", "Circana", "Gallup", "IRI"),
+                               selected = character(0)),
+                  hr(style = "border-color: #f4a261;"),
+                  
+                  h5("Question 8", style = "color: #e76f51; font-weight: 600;"),
+                  radioButtons("q8", "Which of these states is NOT included in the dataset?",
+                               choices = c("Vermont", "Wyoming", "Montana", "Arkansas"),
+                               selected = character(0)),
+                  hr(style = "border-color: #f4a261;"),
+                  
                   br(),
-                  actionButton("submit_quiz", "Submit Quiz", class = "generate-btn"),
-                  br(), br(),
+                  fluidRow(
+                    column(6,
+                           actionButton("submit_quiz", "Submit Quiz", class = "generate-btn",
+                                        width = "100%")
+                    ),
+                    column(6,
+                           actionButton("retake_quiz", "Retake Quiz",
+                                        width = "100%",
+                                        style = "background-color: white; color: #e76f51;
+                                border: 2px solid #e76f51; border-radius: 10px;
+                                font-size: 16px; padding: 10px 24px;
+                                font-family: 'Poppins', sans-serif; font-weight: 600;
+                                width: 100%;")
+                    )
+                  ),
+                  
+                  br(),
                   uiOutput("quiz_result"),
+                  
                   tags$script(HTML("
         Shiny.addCustomMessageHandler('confetti', function(message) {
           confetti({
