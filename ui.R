@@ -120,14 +120,25 @@ dashboardPage(
                            h5("Settings", style = "color: #e76f51; font-weight: 600; margin-bottom: 16px;"),
                            selectInput("state_bar", "Select a State:",
                                        choices  = sort(unique(outputstates$State)),
-                                       selected = "California")
+                                       selected = "California"),
+                           hr(style = "border-color: #f4a261;"),
+                           uiOutput("topCategoryCard")
                          )
                   ),
                   column(9,
                          div(
                            style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 16px;",
+                           h5("Total Spending by Category", style = "color: #e76f51; font-weight: 600;"),
+                           plotOutput("BarPlot", height = "350px")
+                         ),
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
-                           plotOutput("BarPlot", height = "450px")
+                           h5("Spending Over Time by Category", style = "color: #e76f51; font-weight: 600;"),
+                           p(style = "font-size: 12px; color: #888; margin-bottom: 8px;",
+                             "How has spending in each category changed week by week?"),
+                           plotOutput("SpendingOverTime", height = "350px")
                          )
                   )
                 )
@@ -253,8 +264,17 @@ dashboardPage(
                   column(9,
                          div(
                            style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 16px;",
+                           h5("Average Unit Price by Category", style = "color: #e76f51; font-weight: 600;"),
+                           plotOutput("UnitPrice", height = "350px")
+                         ),
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
-                           plotOutput("UnitPrice", height = "450px")
+                           h5("State vs. National Average Unit Price", style = "color: #e76f51; font-weight: 600;"),
+                           p(style = "font-size: 12px; color: #888; margin-bottom: 8px;",
+                             "How does this state compare to the national average for each category?"),
+                           plotOutput("UnitPriceVsNational", height = "350px")
                          )
                   )
                 )
@@ -285,8 +305,17 @@ dashboardPage(
                   column(9,
                          div(
                            style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 16px;",
+                           h5("Average Unit Price by State", style = "color: #e76f51; font-weight: 600;"),
+                           plotOutput("BarByCategory", height = "350px")
+                         ),
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
-                           plotOutput("BarByCategory", height = "450px")
+                           h5("Price Over Time", style = "color: #e76f51; font-weight: 600;"),
+                           p(style = "font-size: 12px; color: #888; margin-bottom: 8px;",
+                             "How has the unit price of this category changed over time across states?"),
+                           plotOutput("CategoryPriceOverTime", height = "350px")
                          )
                   )
                 )

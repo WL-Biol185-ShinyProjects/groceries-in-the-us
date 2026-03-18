@@ -324,5 +324,87 @@ function(input, output, session) {
       }
     })
   })
+  output$topCategoryCard <- renderUI({
+    top <- outputstates %>%
+      filter(State == input$state_bar) %>%
+      group_by(Category) %>%
+      summarise(total = sum(Dollars, na.rm = TRUE), .groups = "drop") %>%
+      arrange(desc(total)) %>%
+      slice_head(n = 1)
+    
+    div(
+      style = "background: #fff0e6; border-radius: 10px; padding: 14px;
+             border-left: 4px solid #e76f51; margin-top: 8px;",
+      p(style = "font-size: 11px; color: #aaa; margin-bottom: 4px; text-transform: uppercase;
+               letter-spacing: 1px;", "Top Category"),
+      p(style = "font-size: 16px; font-weight: 600; color: #e76f51; margin-bottom: 4px;",
+        top$Category),
+      p(style = "font-size: 12px; color: #888; margin-bottom: 0;",
+        paste0("$", round(top$total / 1e9, 1), "B total spent"))
+    )
+  })
+  output$SpendingOverTime <- renderPlot({
+    outputstates %>%
+      filter(State == input$state_bar) %>%
+      mutate(Date = as.Date(Date)) %>%
+      group_by(Date, Category) %>%
+      summarise(total = sum(Dollars, na.rm = TRUE), .groups = "drop") %>%
+      ggplot(aes(x = Date, y = total, color = Category)) +
+      geom_line(linewidth = 0.8, alpha = 0.8) +
+      scale_y_continuous(labels = scales::dollar_format(scale = 1e-6, suffix = "M")) +
+      labs(
+        title = paste("Weekly Spending Over Time —", input$state_bar),
+        x = "Date", y = "Dollars (Millions)", color = "Category"
+      ) +
+      grocery_theme +
+      theme(legend.position = "bottom",
+            axis.text.x = element_text(angle = 45, hjust = 1))
+  })
+  output$UnitPriceVsNational <- renderPlot({
+    national_avg <- outputstates %>%
+      group_by(Category) %>%
+      summarise(national_avg = mean(`Unit price`, na.rm = TRUE), .groups = "drop")
+    
+    state_avg <- outputstates %>%
+      filter(State == input$state_unit) %>%
+      group_by(Category) %>%
+      summarise(state_avg = mean(`Unit price`, na.rm = TRUE), .groups = "drop")
+    
+    left_join(state_avg, national_avg, by = "Category") %>%
+      mutate(diff = state_avg - national_avg) %>%
+      ggplot(aes(x = reorder(Category, diff), y = diff,
+                 fill = ifelse(diff > 0, "Above Average", "Below Average"))) +
+      geom_col() +
+      scale_fill_manual(values = c("Above Average" = "#e76f51",
+                                   "Below Average" = "#74b9ff")) +
+      geom_hline(yintercept = 0, linetype = "dashed", color = "#888") +
+      labs(
+        title = paste(input$state_unit, "vs. National Average Unit Price"),
+        x = "Category", y = "Difference ($)", fill = ""
+      ) +
+      grocery_theme +
+      theme(legend.position = "bottom")
+  })
+  output$CategoryPriceOverTime <- renderPlot({
+    top_states <- outputstates %>%
+      filter(Category == input$category_price) %>%
+      group_by(State) %>%
+      summarise(avg = mean(`Unit price`, na.rm = TRUE), .groups = "drop") %>%
+      arrange(desc(avg)) %>%
+      slice_head(n = 5) %>%
+      pull(State)
+    
+    outputstates %>%
+      filter(Category == input$category_price, State %in% top_states) %>%
+      mutate(Date = as.Date(Date)) %>%
+      ggplot(aes(x = Date, y = `Unit price`, color = State)) +
+      geom_line(linewidth = 0.8, alpha = 0.8) +
+      labs(
+        title = paste(input$category_price, "— Unit Price Over Time (Top 5 States)"),
+        x = "Date", y = "Unit Price ($)", color = "State"
+      ) +
+      grocery_theme +
+      theme(legend.position = "bottom")
+  })
 }
 
