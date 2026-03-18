@@ -140,6 +140,6 @@ claude sonnet 4.6 made new data table on 3/16/26 to create new tables for each c
 library(tidyverse)
 
 pop <- read_csv("us_state_populations_2020_2022.csv")
-tidypopulation <- gather(pop,key = "Year", value = "Population", 2:4)
+tidypopulation <- gather(pop, key = "Year", value = "Population", 2, 3, 4)
 ```
 
