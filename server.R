@@ -406,5 +406,42 @@ function(input, output, session) {
       grocery_theme +
       theme(legend.position = "bottom")
   })
+  
+  output$downloadBar <- downloadHandler(
+    filename = function() paste0(input$state_bar, "_spending_by_category.csv"),
+    content  = function(file) {
+      outputstates %>%
+        filter(State == input$state_bar) %>%
+        write.csv(file, row.names = FALSE)
+    }
+  )
+  
+  output$downloadCovid <- downloadHandler(
+    filename = function() paste0(input$state_covid, "_", input$category_covid, "_covid.csv"),
+    content  = function(file) {
+      outputstates %>%
+        filter(State == input$state_covid, Category == input$category_covid) %>%
+        write.csv(file, row.names = FALSE)
+    }
+  )
+  
+  output$downloadUnitPrice <- downloadHandler(
+    filename = function() paste0(input$state_unit, "_unit_prices.csv"),
+    content  = function(file) {
+      outputstates %>%
+        filter(State == input$state_unit) %>%
+        write.csv(file, row.names = FALSE)
+    }
+  )
+  
+  output$downloadCategoryPrice <- downloadHandler(
+    filename = function() paste0(input$category_price, "_price_by_state.csv"),
+    content  = function(file) {
+      outputstates %>%
+        filter(Category == input$category_price) %>%
+        write.csv(file, row.names = FALSE)
+    }
+  )
+  
 }
 

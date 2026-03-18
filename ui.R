@@ -122,7 +122,12 @@ dashboardPage(
                                        choices  = sort(unique(outputstates$State)),
                                        selected = "California"),
                            hr(style = "border-color: #f4a261;"),
-                           uiOutput("topCategoryCard")
+                           uiOutput("topCategoryCard"),
+                           hr(style = "border-color: #f4a261;"),
+                           downloadButton("downloadBar", "Download Data",
+                                          style = "background-color: #f4a261; color: white; border: none;
+                                      border-radius: 8px; width: 100%; padding: 8px;
+                                      font-family: 'Poppins', sans-serif;")
                          )
                   ),
                   column(9,
@@ -224,7 +229,12 @@ dashboardPage(
                            hr(style = "border-color: #f4a261;"),
                            p("Drag the marker to explore how sales changed around COVID lockdowns.
             March 15, 2020 marks the start of widespread US lockdowns.",
-                             style = "font-size: 12px; color: #888;")
+                             style = "font-size: 12px; color: #888;"),
+                           hr(style = "border-color: #f4a261;"),
+                           downloadButton("downloadCovid", "Download Data",
+                                          style = "background-color: #f4a261; color: white; border: none;
+                                      border-radius: 8px; width: 100%; padding: 8px;
+                                      font-family: 'Poppins', sans-serif;")
                          )
                   ),
                   column(9,
@@ -258,7 +268,12 @@ dashboardPage(
                            h5("Settings", style = "color: #e76f51; font-weight: 600; margin-bottom: 16px;"),
                            selectInput("state_unit", "Select a State:",
                                        choices  = sort(unique(outputstates$State)),
-                                       selected = "California")
+                                       selected = "California"),
+                           hr(style = "border-color: #f4a261;"),
+                           downloadButton("downloadUnitPrice", "Download Data",
+                                          style = "background-color: #f4a261; color: white; border: none;
+                                      border-radius: 8px; width: 100%; padding: 8px;
+                                      font-family: 'Poppins', sans-serif;")
                          )
                   ),
                   column(9,
@@ -299,7 +314,12 @@ dashboardPage(
                            h5("Settings", style = "color: #e76f51; font-weight: 600; margin-bottom: 16px;"),
                            selectInput("category_price", "Select a Category:",
                                        choices  = sort(unique(outputstates$Category)),
-                                       selected = "Alcohol")
+                                       selected = "Alcohol"),
+                           hr(style = "border-color: #f4a261;"),
+                           downloadButton("downloadCategoryPrice", "Download Data",
+                                          style = "background-color: #f4a261; color: white; border: none;
+                                      border-radius: 8px; width: 100%; padding: 8px;
+                                      font-family: 'Poppins', sans-serif;")
                          )
                   ),
                   column(9,
