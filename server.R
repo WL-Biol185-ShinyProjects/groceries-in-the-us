@@ -1,6 +1,9 @@
 library(tidyverse)
 library(shiny)
+library(sf)
+library(leaflet)
 source("CookBook.R")
+merged_data <- read.csv("merged_data.csv")
 outputstates <- read.csv("outputstates.csv", check.names = FALSE)
 # Define server logic required to draw a histogram
 function(input, output, session) {
@@ -359,6 +362,16 @@ function(input, output, session) {
       grocery_theme +
       theme(legend.position = "bottom",
             axis.text.x = element_text(angle = 45, hjust = 1))
+  })
+  output$InteractiveMap <- renderLeaflet({ 
+    states <- read_sf("states.geo.json")
+    mapData <- left_join(states, merged_data, by = c("NAME" = "State"))
+    pal <- colorBin("YlOrRd", domain = mapData$DollarsPerPerson)
+    leaflet(mapData) %>% 
+      addPolygons( 
+        fillColor = ~pal(DollarsPerPerson))
+    
+    
   })
   output$UnitPriceVsNational <- renderPlot({
     national_avg <- outputstates %>%

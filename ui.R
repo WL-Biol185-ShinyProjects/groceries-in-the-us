@@ -1,5 +1,6 @@
 library(shinydashboard)
 library(shiny)
+library(leaflet)
 outputstates <- read.csv("outputstates.csv")
 dashboardPage(
   dashboardHeader(title = "Groceries in the US"),
@@ -12,7 +13,8 @@ dashboardPage(
     menuItem("Recipe Generator", tabName = "Recipes"),
     menuItem("Grocery Prices", tabName = "UnitPricePerState"),
     menuItem("Price by State", tabName = "CategoryPricePerState"),
-    menuItem("Quiz Yourself", tabName = "Quiz")
+    menuItem("Quiz Yourself", tabName = "Quiz"),
+    menuItem("InteractiveMap", tabName = "InteractiveMap")
     )
   ),
   dashboardBody(
@@ -101,6 +103,9 @@ dashboardPage(
                 )
               )
       ),
+      tabItem(tabName = "InteractiveMap", 
+              leafletOutput("InteractiveMap")), 
+      
       tabItem(tabName = "BarByState",
               fluidPage(
                 div(
