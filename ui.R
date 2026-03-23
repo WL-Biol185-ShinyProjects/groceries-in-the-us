@@ -124,12 +124,12 @@ dashboardPage(
                 column(6,
                        h3("Dollars Per Person"),
                        leafletOutput("InteractiveMap", height = 500),
-                       p("This map shows")
+                       p("This map shows the average dollars spent per week on the selected item, in the selected year, per state divided by the population of the state in the selected year. It therefore shows the average dollars spent per person on this item, per week and per state in the selected year.")
                 ),
                 column(6,
                        h3("Units Per Person"),
                        leafletOutput("UnitsMap", height = 500),
-                       p("this map shows")
+                       p("This map shows the average units purchased per week on the selected item, in the selected year, per state divided by the population of the state in the selected year. It therefore shows the average units purchased per person on this item, per week and per state in the selected year.")
                 )
               )
       ),
