@@ -1,6 +1,5 @@
 library(tidyverse)
 library(shiny)
-library(plotly)
 library(sf)
 library(leaflet)
 source("CookBook.R")
@@ -9,8 +8,8 @@ outputstates <- read.csv("outputstates.csv", check.names = FALSE)
 # Define server logic required to draw a histogram
 function(input, output, session) {
   
-  output$BarPlot <- renderPlotly({
-    p <- outputstates %>%
+  output$BarPlot <- renderPlot({
+    outputstates %>%
       filter(State == input$state_bar) %>%                        # ← was "California"
       group_by(Category) %>%
       summarise(total_dollars = sum(Dollars, na.rm = TRUE)) %>%
@@ -25,7 +24,6 @@ function(input, output, session) {
       ) +
       grocery_theme +
       theme(legend.position = "none")
-    ggplotly(p)
   })
   
   # Rank labels for top-3 cards
@@ -173,7 +171,7 @@ function(input, output, session) {
         arrange(Date)
     })
   # --- The Covid Pantry ---
-  output$CovidPantry <- renderPlotly({
+  output$CovidPantry <- renderPlot({
     
     df          <- filtered_data()
     covid_date  <- as.Date(input$covid_marker)
@@ -182,7 +180,7 @@ function(input, output, session) {
     df <- df %>%
       mutate(period = ifelse(Date < covid_date, "Before", "After"))
     
-    p <- ggplot(df, aes(x = Date, y = `Percent change dollars 1 year`, color = period)) +
+    ggplot(df, aes(x = Date, y = `Percent change dollars 1 year`, color = period)) +
       geom_line(aes(group = 1), color = "grey80", linewidth = 0.8) +
       geom_point(size = 2) +
       
@@ -218,7 +216,6 @@ function(input, output, session) {
       ) +
       grocery_theme +
       theme(legend.position = "none")
-    ggplotly(p)
   })
   
   # --- Summary stats box below the chart ---
@@ -250,8 +247,8 @@ function(input, output, session) {
     
   })
   
-  output$UnitPrice <- renderPlotly({
-    p <- outputstates %>%
+  output$UnitPrice <- renderPlot({
+   outputstates %>%
       filter(State == input$state_unit) %>%                        # ← was "California"
       group_by(State, Category) %>%
       summarise(avg_unit_sales = mean(`Unit price`, na.rm = TRUE)) %>%
@@ -266,11 +263,10 @@ function(input, output, session) {
       ) +
       grocery_theme +
       theme(legend.position = "none")
-    ggplotly(p)
   })
   
-  output$BarByCategory <- renderPlotly({
-    p <- outputstates %>%
+  output$BarByCategory <- renderPlot({
+   outputstates %>%
       filter(Category == input$category_price) %>%                        # ← was "California"
       group_by(State) %>%
       summarise(avg_unit_sales = mean(`Unit price`, na.rm = TRUE)) %>%
@@ -285,7 +281,6 @@ function(input, output, session) {
       ) +
       grocery_theme +
       theme(legend.position = "none")
-    ggplotly(p) 
   })
   
   correct_answers <- list(
@@ -418,7 +413,7 @@ function(input, output, session) {
     )
   })
   output$SpendingOverTime <- renderPlot({
-    p <- outputstates %>%
+    outputstates %>%
       filter(State == input$state_bar) %>%
       mutate(Date = as.Date(Date)) %>%
       group_by(Date, Category) %>%
@@ -433,7 +428,6 @@ function(input, output, session) {
       grocery_theme +
       theme(legend.position = "bottom",
             axis.text.x = element_text(angle = 45, hjust = 1))
-    ggplotly(p)
   })
   output$InteractiveMap <- renderLeaflet({ 
     states <- read_sf("states.geo.json")
@@ -477,7 +471,7 @@ function(input, output, session) {
         position = "bottomright"
       )
   })
-  output$UnitPriceVsNational <- renderPlotly({
+  output$UnitPriceVsNational <- renderPlot({
     national_avg <- outputstates %>%
       group_by(Category) %>%
       summarise(national_avg = mean(`Unit price`, na.rm = TRUE), .groups = "drop")
@@ -487,7 +481,7 @@ function(input, output, session) {
       group_by(Category) %>%
       summarise(state_avg = mean(`Unit price`, na.rm = TRUE), .groups = "drop")
     
-    p <- left_join(state_avg, national_avg, by = "Category") %>%
+    left_join(state_avg, national_avg, by = "Category") %>%
       mutate(diff = state_avg - national_avg) %>%
       ggplot(aes(x = reorder(Category, diff), y = diff,
                  fill = ifelse(diff > 0, "Above Average", "Below Average"))) +
@@ -501,9 +495,8 @@ function(input, output, session) {
       ) +
       grocery_theme +
       theme(legend.position = "bottom")
-    ggplotly(p)
   })
-  output$CategoryPriceOverTime <- renderPlotly({
+  output$CategoryPriceOverTime <- renderPlot({
     top_states <- outputstates %>%
       filter(Category == input$category_price) %>%
       group_by(State) %>%
@@ -512,7 +505,7 @@ function(input, output, session) {
       slice_head(n = 5) %>%
       pull(State)
     
-    p <- outputstates %>%
+    outputstates %>%
       filter(Category == input$category_price, State %in% top_states) %>%
       mutate(Date = as.Date(Date)) %>%
       ggplot(aes(x = Date, y = `Unit price`, color = State)) +
@@ -523,7 +516,6 @@ function(input, output, session) {
       ) +
       grocery_theme +
       theme(legend.position = "bottom")
-    ggplotly(p)
   })
   
   output$downloadBar <- downloadHandler(

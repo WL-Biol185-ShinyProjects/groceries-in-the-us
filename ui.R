@@ -155,7 +155,7 @@ dashboardPage(
                            style = "background: white; border-radius: 14px; padding: 20px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 16px;",
                            h5("Total Spending by Category", style = "color: #e76f51; font-weight: 600;"),
-                           plotlyOutput("BarPlot", height = "350px")
+                           plotOutput("BarPlot", height = "350px")
                          ),
                          div(
                            style = "background: white; border-radius: 14px; padding: 20px;
@@ -163,7 +163,7 @@ dashboardPage(
                            h5("Spending Over Time by Category", style = "color: #e76f51; font-weight: 600;"),
                            p(style = "font-size: 12px; color: #888; margin-bottom: 8px;",
                              "How has spending in each category changed week by week?"),
-                           plotlyOutput("SpendingOverTime", height = "350px")
+                           plotOutput("SpendingOverTime", height = "350px")
                          )
                   )
                 )
@@ -261,7 +261,7 @@ dashboardPage(
                          div(
                            style = "background: white; border-radius: 14px; padding: 20px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
-                           plotlyOutput("CovidPantry", height = "450px"),
+                           plotOutput("CovidPantry", height = "450px"),
                            br(),
                            uiOutput("summaryBox")
                          )
@@ -301,7 +301,7 @@ dashboardPage(
                            style = "background: white; border-radius: 14px; padding: 20px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 16px;",
                            h5("Average Unit Price by Category", style = "color: #e76f51; font-weight: 600;"),
-                           plotlyOutput("UnitPrice", height = "350px")
+                           plotOutput("UnitPrice", height = "350px")
                          ),
                          div(
                            style = "background: white; border-radius: 14px; padding: 20px;
@@ -309,7 +309,7 @@ dashboardPage(
                            h5("State vs. National Average Unit Price", style = "color: #e76f51; font-weight: 600;"),
                            p(style = "font-size: 12px; color: #888; margin-bottom: 8px;",
                              "How does this state compare to the national average for each category?"),
-                           plotlyOutput("UnitPriceVsNational", height = "350px")
+                           plotOutput("UnitPriceVsNational", height = "350px")
                          )
                   )
                 )
@@ -347,7 +347,7 @@ dashboardPage(
                            style = "background: white; border-radius: 14px; padding: 20px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 16px;",
                            h5("Average Unit Price by State", style = "color: #e76f51; font-weight: 600;"),
-                           plotlyOutput("BarByCategory", height = "350px")
+                           plotOutput("BarByCategory", height = "350px")
                          ),
                          div(
                            style = "background: white; border-radius: 14px; padding: 20px;
@@ -355,7 +355,7 @@ dashboardPage(
                            h5("Price Over Time", style = "color: #e76f51; font-weight: 600;"),
                            p(style = "font-size: 12px; color: #888; margin-bottom: 8px;",
                              "How has the unit price of this category changed over time across states?"),
-                           plotlyOutput("CategoryPriceOverTime", height = "350px")
+                           plotOutput("CategoryPriceOverTime", height = "350px")
                          )
                   )
                 )
