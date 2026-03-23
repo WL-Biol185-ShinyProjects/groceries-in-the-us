@@ -104,7 +104,15 @@ dashboardPage(
               )
       ),
       tabItem(tabName = "InteractiveMap", 
-              leafletOutput("InteractiveMap")), 
+              leafletOutput("InteractiveMap"),
+              selectInput("yearInput", "Select Year:",
+                          choices = sort(unique(merged_data$Year)),
+                          selected = max(merged_data$Year)),
+              
+              selectInput("categoryInput", "Select Category:",
+                          choices = unique(merged_data$Category),
+                          selected = unique(merged_data$Category)[1])
+              ), 
       
       tabItem(tabName = "BarByState",
               fluidPage(

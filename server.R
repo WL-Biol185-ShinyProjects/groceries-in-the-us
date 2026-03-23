@@ -436,14 +436,25 @@ function(input, output, session) {
             axis.text.x = element_text(angle = 45, hjust = 1))
   })
   output$InteractiveMap <- renderLeaflet({ 
+    filtered_data <- reactive({
+      merged_data %>%
+        filter(Year == input$yearInput,
+               Category == input$categoryInput)
+    })
     states <- read_sf("states.geo.json")
-    mapData <- left_join(states, merged_data, by = c("NAME" = "State"))
+    
+    mapData <- left_join(states, filtered_data(), 
+                         by = c("NAME" = "State"))
+    
     pal <- colorBin("YlOrRd", domain = mapData$DollarsPerPerson)
+    
     leaflet(mapData) %>% 
-      addPolygons( 
-        fillColor = ~pal(DollarsPerPerson))
-    
-    
+      addPolygons(
+        fillColor = ~pal(DollarsPerPerson),
+        fillOpacity = 0.7,
+        color = "white",
+        weight = 1
+      )
   })
   output$UnitPriceVsNational <- renderPlot({
     national_avg <- outputstates %>%
