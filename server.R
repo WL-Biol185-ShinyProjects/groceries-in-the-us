@@ -435,11 +435,6 @@ function(input, output, session) {
       theme(legend.position = "bottom",
             axis.text.x = element_text(angle = 45, hjust = 1))
   })
-  filtered_data <- reactive({
-    merged_data %>%
-      filter(Year == input$yearInput,
-             Category == input$categoryInput)
-  })
   output$InteractiveMap <- renderLeaflet({ 
     states <- read_sf("states.geo.json")
     mapData <- left_join(states, filtered_data(), 
