@@ -15,7 +15,7 @@ dashboardPage(
     menuItem("Grocery Prices", tabName = "UnitPricePerState"),
     menuItem("Price by State", tabName = "CategoryPricePerState"),
     menuItem("Quiz Yourself", tabName = "Quiz"),
-    menuItem("InteractiveMap", tabName = "InteractiveMap")
+    menuItem("Interactive Map", tabName = "InteractiveMap")
     )
   ),
   dashboardBody(
