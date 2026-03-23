@@ -105,7 +105,14 @@ dashboardPage(
                          )
                   )
                 ),
-                
+                # ── Surprise button ──
+                div(
+                  style = "text-align: center; margin: 10px 0;",
+                  actionButton("surprise", "🎉",
+                               style = "background: transparent; border: none; font-size: 11px;
+             color: #ddd; cursor: pointer; padding: 4px 8px;
+             font-family: 'Poppins', sans-serif;")
+                ),
                 # ── Data source footer ──
                 div(
                   style = "text-align: center; padding: 16px; color: #aaa; font-size: 12px;",

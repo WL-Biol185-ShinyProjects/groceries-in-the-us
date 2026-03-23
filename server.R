@@ -559,6 +559,8 @@ function(input, output, session) {
         write.csv(file, row.names = FALSE)
     }
   )
-  
+  observeEvent(input$surprise, {
+    session$sendCustomMessage("confetti", list())
+  })
 }
 
