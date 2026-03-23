@@ -436,24 +436,45 @@ function(input, output, session) {
     ggplotly(p)
   })
   output$InteractiveMap <- renderLeaflet({ 
-    filtered_data <- reactive({
-      merged_data %>%
-        filter(Year == input$yearInput,
-               Category == input$categoryInput)
-    })
     states <- read_sf("states.geo.json")
-    
     mapData <- left_join(states, filtered_data(), 
                          by = c("NAME" = "State"))
-    
     pal <- colorBin("YlOrRd", domain = mapData$DollarsPerPerson)
-    
     leaflet(mapData) %>% 
+      setView(lng = -98, lat = 39, zoom = 4) %>%   # zoom in
       addPolygons(
         fillColor = ~pal(DollarsPerPerson),
         fillOpacity = 0.7,
         color = "white",
-        weight = 1
+        weight = 1,
+        label = ~paste(NAME, ": ", round(DollarsPerPerson, 2))
+      ) %>%
+      addLegend(
+        pal = pal,
+        values = ~DollarsPerPerson,
+        title = "Dollars per Person",
+        position = "bottomright"
+      )
+  })
+  output$UnitsMap <- renderLeaflet({ 
+    states <- read_sf("states.geo.json")
+    mapData <- left_join(states, filtered_data(), 
+                         by = c("NAME" = "State"))
+    pal <- colorBin("Blues", domain = mapData$UnitsPerPerson)
+    leaflet(mapData) %>% 
+      setView(lng = -98, lat = 39, zoom = 4) %>%   # zoom in
+      addPolygons(
+        fillColor = ~pal(UnitsPerPerson),
+        fillOpacity = 0.7,
+        color = "white",
+        weight = 1,
+        label = ~paste(NAME, ": ", round(UnitsPerPerson, 2))
+      ) %>%
+      addLegend(
+        pal = pal,
+        values = ~UnitsPerPerson,
+        title = "Units per Person",
+        position = "bottomright"
       )
   })
   output$UnitPriceVsNational <- renderPlotly({
