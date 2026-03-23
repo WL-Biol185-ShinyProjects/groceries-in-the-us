@@ -94,6 +94,15 @@ dashboardPage(
                              p(style = "font-size: 13px; color: #666;",
                                "Compare how the price of each grocery category varies across states.")
                          )
+                  ),
+                  column(4,
+                         div(style = "background: white; border-radius: 14px; padding: 20px;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                    border-top: 4px solid #f4a261; margin-bottom: 16px;",
+                             h5("Interactive Map", style = "color: #e76f51; font-weight: 600;"),
+                             p(style = "font-size: 13px; color: #666;",
+                               "Explore grocery spending per person across states on an interactive map.")
+                         )
                   )
                 ),
                 
