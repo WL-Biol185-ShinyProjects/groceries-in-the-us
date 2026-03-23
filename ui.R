@@ -123,11 +123,13 @@ dashboardPage(
               fluidRow(
                 column(6,
                        h3("Dollars Per Person"),
-                       leafletOutput("InteractiveMap", height = 500)
+                       leafletOutput("InteractiveMap", height = 500),
+                       p("This map shows")
                 ),
                 column(6,
                        h3("Units Per Person"),
-                       leafletOutput("UnitsMap", height = 500)
+                       leafletOutput("UnitsMap", height = 500),
+                       p("this map shows")
                 )
               )
       ),
