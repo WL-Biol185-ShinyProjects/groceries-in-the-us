@@ -2,6 +2,7 @@ library(shinydashboard)
 library(shiny)
 library(leaflet)
 outputstates <- read.csv("outputstates.csv")
+merged_data <- read.csv("merged_data.csv")
 dashboardPage(
   dashboardHeader(title = "Groceries in the US"),
   dashboardSidebar(

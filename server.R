@@ -8,6 +8,20 @@ outputstates <- read.csv("outputstates.csv", check.names = FALSE)
 # Define server logic required to draw a histogram
 function(input, output, session) {
   
+  grocery_theme <- theme_minimal(base_size = 14) +
+    theme(
+      plot.background   = element_rect(fill = "#fff9f5", color = NA),
+      panel.background  = element_rect(fill = "#fff9f5", color = NA),
+      plot.title        = element_text(color = "#e76f51", face = "bold", size = 15),
+      plot.subtitle     = element_text(color = "#888888", size = 11),
+      axis.text         = element_text(color = "#555555"),
+      axis.title        = element_text(color = "#555555"),
+      panel.grid.major  = element_line(color = "#f0e6de"),
+      panel.grid.minor  = element_blank(),
+      legend.background = element_rect(fill = "#fff9f5", color = NA),
+      axis.text.x       = element_text(angle = 45, hjust = 1)
+    )
+  
   output$BarPlot <- renderPlot({
     outputstates %>%
       filter(State == input$state_bar) %>%                        # ← was "California"
@@ -28,20 +42,6 @@ function(input, output, session) {
   
   # Rank labels for top-3 cards
   rank_labels <- c("#1 Most Purchased", "#2 Most Purchased", "#3 Most Purchased")
-    
-  grocery_theme <- theme_minimal(base_size = 14) +
-    theme(
-      plot.background   = element_rect(fill = "#fff9f5", color = NA),
-      panel.background  = element_rect(fill = "#fff9f5", color = NA),
-      plot.title        = element_text(color = "#e76f51", face = "bold", size = 15),
-      plot.subtitle     = element_text(color = "#888888", size = 11),
-      axis.text         = element_text(color = "#555555"),
-      axis.title        = element_text(color = "#555555"),
-      panel.grid.major  = element_line(color = "#f0e6de"),
-      panel.grid.minor  = element_blank(),
-      legend.background = element_rect(fill = "#fff9f5", color = NA),
-      axis.text.x       = element_text(angle = 45, hjust = 1)
-    )
   
     # ── Reactive: top-3 categories for selected state ──────────────────────────
     top3_data <- reactive({
@@ -431,7 +431,10 @@ function(input, output, session) {
   })
   output$InteractiveMap <- renderLeaflet({ 
     states <- read_sf("states.geo.json")
-    mapData <- left_join(states, filtered_data(), 
+    mapData <- left_join(states, 
+                         merged_data %>% 
+                           filter(Year == input$yearInput,
+                                  Category == input$categoryInput),
                          by = c("NAME" = "State"))
     pal <- colorBin("YlOrRd", domain = mapData$DollarsPerPerson)
     leaflet(mapData) %>% 
@@ -452,7 +455,10 @@ function(input, output, session) {
   })
   output$UnitsMap <- renderLeaflet({ 
     states <- read_sf("states.geo.json")
-    mapData <- left_join(states, filtered_data(), 
+    mapData <- left_join(states, 
+                         merged_data %>% 
+                           filter(Year == input$yearInput,
+                                  Category == input$categoryInput),
                          by = c("NAME" = "State"))
     pal <- colorBin("Blues", domain = mapData$UnitsPerPerson)
     leaflet(mapData) %>% 
