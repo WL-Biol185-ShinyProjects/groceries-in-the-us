@@ -9,11 +9,11 @@ dashboardPage(
     sidebarMenu(
 
   menuItem("About the project", tabName = "IntroPage"),  
-    menuItem("Spending by Category", tabName = "BarByState"),
+    menuItem("Total Dollars Spent by State", tabName = "BarByState"),
     menuItem("The COVID Pantry", tabName = "SalesDuringCovid"),
     menuItem("Recipe Generator", tabName = "Recipes"),
-    menuItem("Grocery Prices", tabName = "UnitPricePerState"),
-    menuItem("Price by State", tabName = "CategoryPricePerState"),
+    menuItem("Costs of Each Unit by State", tabName = "UnitPricePerState"),
+    menuItem("Costs of Each Unit by Category", tabName = "CategoryPricePerState"),
     menuItem("Quiz Yourself", tabName = "Quiz"),
     menuItem("Interactive Map", tabName = "InteractiveMap")
     )
