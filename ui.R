@@ -7,7 +7,6 @@ dashboardPage(
   dashboardHeader(title = "Groceries in the US"),
   dashboardSidebar(
     sidebarMenu(
-
     menuItem("About the project", tabName = "IntroPage"), 
     menuItem("Interactive Map", tabName = "InteractiveMap"),
     menuItem("Total Dollars Spent by State", tabName = "BarByState"),
