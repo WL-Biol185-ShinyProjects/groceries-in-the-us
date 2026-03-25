@@ -6,12 +6,7 @@ merged_data <- read.csv("merged_data.csv")
 dashboardPage(
   dashboardHeader(title = "Groceries in the US"),
   dashboardSidebar(
-<<<<<<< HEAD
     sidebarMenu(id = "tabs",
-
-=======
-    sidebarMenu(
->>>>>>> e4eb7150d716f5afffd354ebcb134dbb8da23ea2
     menuItem("About the project", tabName = "IntroPage"), 
     menuItem("Interactive Map", tabName = "InteractiveMap"),
     menuItem("Total Dollars Spent by State", tabName = "BarByState"),
