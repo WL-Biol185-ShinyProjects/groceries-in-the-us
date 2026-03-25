@@ -8,14 +8,14 @@ dashboardPage(
   dashboardSidebar(
     sidebarMenu(
 
-  menuItem("About the project", tabName = "IntroPage"),  
+    menuItem("About the project", tabName = "IntroPage"), 
+    menuItem("Interactive Map", tabName = "InteractiveMap"),
     menuItem("Total Dollars Spent by State", tabName = "BarByState"),
-    menuItem("The COVID Pantry", tabName = "SalesDuringCovid"),
-    menuItem("Recipe Generator", tabName = "Recipes"),
     menuItem("Costs of Each Unit by State", tabName = "UnitPricePerState"),
     menuItem("Costs of Each Unit by Category", tabName = "CategoryPricePerState"),
-    menuItem("Quiz Yourself", tabName = "Quiz"),
-    menuItem("Interactive Map", tabName = "InteractiveMap")
+    menuItem("The COVID Pantry", tabName = "SalesDuringCovid"),
+    menuItem("Recipe Generator", tabName = "Recipes"),
+    menuItem("Quiz Yourself", tabName = "Quiz")
     )
   ),
   dashboardBody(
