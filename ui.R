@@ -319,7 +319,6 @@ dashboardPage(
                          div(
                            style = "background: white; border-radius: 14px; padding: 20px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 16px;",
-                           h5("Average Unit Price by Category", style = "color: #e76f51; font-weight: 600;"),
                            plotOutput("UnitPrice", height = "350px")
                          ),
                          div(
