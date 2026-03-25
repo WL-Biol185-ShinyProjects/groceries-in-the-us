@@ -202,23 +202,52 @@ dashboardPage(
                 )
               )
       ),
-      tabItem(tabName = "InteractiveMap", 
-              selectInput("yearInput", "Select Year:",
-                          choices = sort(unique(merged_data$Year)),
-                          selected = max(merged_data$Year)),
-              selectInput("categoryInput", "Select Category:",
-                          choices = unique(merged_data$Category),
-                          selected = unique(merged_data$Category)[1]),
-              fluidRow(
-                column(6,
-                       h3("Dollars Per Person"),
-                       leafletOutput("InteractiveMap", height = 500),
-                       p("This map shows the average dollars spent per week on the selected item, in the selected year, per state divided by the population of the state in the selected year. It therefore shows the average dollars spent per person on this item, per week and per state in the selected year.")
+      tabItem(tabName = "InteractiveMap",
+              fluidPage(
+                div(
+                  style = "background: linear-gradient(135deg, #e76f51, #f4a261);
+               border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
+               color: white;",
+                  h3("Interactive Map", style = "font-weight: 600; margin-bottom: 4px;"),
+                  p("Explore grocery spending and units purchased per person across the US.",
+                    style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
                 ),
-                column(6,
-                       h3("Units Per Person"),
-                       leafletOutput("UnitsMap", height = 500),
-                       p("This map shows the average units purchased per week on the selected item, in the selected year, per state divided by the population of the state in the selected year. It therefore shows the average units purchased per person on this item, per week and per state in the selected year.")
+                fluidRow(
+                  column(3,
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                   border-top: 4px solid #e76f51;",
+                           h5("Settings", style = "color: #e76f51; font-weight: 600; margin-bottom: 16px;"),
+                           selectInput("yearInput", "Select Year:",
+                                       choices  = sort(unique(merged_data$Year)),
+                                       selected = max(merged_data$Year)),
+                           selectInput("categoryInput", "Select Category:",
+                                       choices  = unique(merged_data$Category),
+                                       selected = unique(merged_data$Category)[1]),
+                           hr(style = "border-color: #f4a261;"),
+                           p(style = "font-size: 12px; color: #888;",
+                             "Spending and units are averaged per week within the selected year, then divided by state population.")
+                         )
+                  ),
+                  column(9,
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 16px;",
+                           h5("Dollars Per Person", style = "color: #e76f51; font-weight: 600;"),
+                           p(style = "font-size: 12px; color: #888; margin-bottom: 12px;",
+                             "Average dollars spent per person per week on the selected category in the selected year."),
+                           leafletOutput("InteractiveMap", height = 450)
+                         ),
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
+                           h5("Units Per Person", style = "color: #e76f51; font-weight: 600;"),
+                           p(style = "font-size: 12px; color: #888; margin-bottom: 12px;",
+                             "Average units purchased per person per week on the selected category in the selected year."),
+                           leafletOutput("UnitsMap", height = 450)
+                         )
+                  )
                 )
               )
       ),
