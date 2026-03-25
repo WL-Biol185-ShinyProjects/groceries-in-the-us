@@ -7,18 +7,18 @@ dashboardPage(
   dashboardHeader(title = "Groceries in the US"),
   dashboardSidebar(
     sidebarMenu(id = "tabs",
-    menuItem("About the project", tabName = "IntroPage"), 
-    menuItem("Interactive Map", tabName = "InteractiveMap"),
-    menuItem("Total Dollars Spent by State", tabName = "BarByState"),
-    menuItem("Costs of Each Unit by State", tabName = "UnitPricePerState"),
-    menuItem("Costs of Each Unit by Category", tabName = "CategoryPricePerState"),
-    menuItem("The COVID Pantry", tabName = "SalesDuringCovid"),
-    menuItem("Recipe Generator", tabName = "Recipes"),
-    menuItem("Quiz Yourself", tabName = "Quiz")
+                menuItem("About the project", tabName = "IntroPage"), 
+                menuItem("Interactive Map", tabName = "InteractiveMap"),
+                menuItem("Total Dollars Spent by State", tabName = "BarByState"),
+                menuItem("Costs of Each Unit by State", tabName = "UnitPricePerState"),
+                menuItem("Costs of Each Unit by Category", tabName = "CategoryPricePerState"),
+                menuItem("The COVID Pantry", tabName = "SalesDuringCovid"),
+                menuItem("Recipe Generator", tabName = "Recipes"),
+                menuItem("Quiz Yourself", tabName = "Quiz")
     )
   ),
   dashboardBody(
-      tags$head(includeCSS("aes.css")),
+    tags$head(includeCSS("aes.css")),
     tabItems(
       tabItem(tabName = "IntroPage",
               fluidPage(
@@ -37,7 +37,7 @@ dashboardPage(
                   style = "background: white; border-radius: 16px; padding: 28px;
                box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 24px;",
                   h4("About the Project", style = "color: #e76f51; font-weight: 600;"),
-                  p("Groceries in the US is a project that utilizes the USDA’s Weekly Retail Food Sales data set, which used data collected from checkout scanners in a representative sample of grocery stores. This data was sent to a research firm that aggregated all of the results and organized them by week. Collections began on October 6, 2019 and ended on May 7, 2023. Additionally, you will notice that grocery items are grouped into various categories. To help understand what items count in each category, we have provided a table below that summarizes the types of product considered under each category as outlined by the USDA, and some potential examples of these products. "),
+                  p("Groceries in the US is a project that utilizes the USDA's Weekly Retail Food Sales data set, which used data collected from checkout scanners in a representative sample of grocery stores. This data was sent to a research firm that aggregated all of the results and organized them by week. Collections began on October 6, 2019 and ended on May 7, 2023. Additionally, you will notice that grocery items are grouped into various categories. To help understand what items count in each category, we have provided a table below that summarizes the types of product considered under each category as outlined by the USDA, and some potential examples of these products. "),
                   p(style = "color: #888; font-size: 13px;",
                     "Note: Alaska, Delaware, Hawaii, Idaho, Iowa, Kansas, Nebraska, New Jersey,
         North Dakota, Mississippi, Montana, and Washington D.C. are excluded as Circana
@@ -270,102 +270,6 @@ dashboardPage(
                 )
               )
       ),
-
-      tabItem(tabName = "Recipes",
-              fluidPage(
-                titlePanel("Dinner Recipe Generator"),
-                br(),
-                
-                fluidRow(
-                  column(3,
-                         wellPanel(
-                           style = "background-color:#fff8f0; border: 2px solid #f4a261; border-radius: 12px;",
-                           h4("Your State", style = "color:#e76f51;"),
-                           selectInput("recipe_state", NULL,
-                                       choices  = sort(unique(outputstates$State)),
-                                       selected = "California"),
-                           hr(style = "border-color:#f4a261;"),
-                           p(style = "font-size:13px; color:#888;",
-                             "We'll find the top 3 grocery categories in your state and suggest a recipe for each one.")
-                         )
-                  ),
-                  
-                  column(9,
-                         h4("Top 3 Categories in Your State", style = "color:#e76f51; margin-top:6px;"),
-                         p(style = "font-size:13px; color:#888; margin-bottom:14px;",
-                           "Click a category card to see a recipe inspired by what your state buys most."),
-                         
-                         uiOutput("top3Cards"),
-                         
-                         # ── Explore other recipes ──
-                         div(class = "explore-header",
-                             "🔍 Explore Other Recipes"),
-                         p(style = "font-size:13px; color:#888; margin-bottom:10px;",
-                           "Want to try something different? Pick any category below."),
-                         uiOutput("exploreButtons"),
-                         
-                         br(),
-                         
-                         uiOutput("recipeOutput")
-                  )
-                )
-              )
-      ),
-    
-
-      tabItem(tabName = "SalesDuringCovid",
-              fluidPage(
-                div(
-                  style = "background: linear-gradient(135deg, #e76f51, #f4a261);
-               border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
-               color: white;",
-                  h3("The COVID Pantry", style = "font-weight: 600; margin-bottom: 4px;"),
-                  p("Explore how grocery spending shifted before and after COVID lockdowns in 2020.",
-                    style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
-                ),
-                fluidRow(
-                  column(3,
-                         div(
-                           style = "background: white; border-radius: 14px; padding: 20px;
-                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-                   border-top: 4px solid #e76f51;",
-                           h5("Settings", style = "color: #e76f51; font-weight: 600; margin-bottom: 16px;"),
-                           selectInput("state_covid", "Select a State:",
-                                       choices  = sort(unique(outputstates$State)),
-                                       selected = "California"),
-                           selectInput("category_covid", "Select a Category:",
-                                       choices  = sort(unique(outputstates$Category)),
-                                       selected = "Alcohol"),
-                           sliderInput("covid_marker", "Drag the COVID Marker:",
-                                       min        = as.Date("2019-10-06"),
-                                       max        = as.Date("2023-05-07"),
-                                       value      = as.Date("2020-03-15"),
-                                       step       = 7,
-                                       timeFormat = "%b %d, %Y",
-                                       animate    = FALSE),
-                           hr(style = "border-color: #f4a261;"),
-                           p("Drag the marker to explore how sales changed around COVID lockdowns.
-            March 15, 2020 marks the start of widespread US lockdowns.",
-                             style = "font-size: 12px; color: #888;"),
-                           hr(style = "border-color: #f4a261;"),
-                           downloadButton("downloadCovid", "Download Data",
-                                          style = "background-color: #f4a261; color: white; border: none;
-                                      border-radius: 8px; width: 100%; padding: 8px;
-                                      font-family: 'Poppins', sans-serif;")
-                         )
-                  ),
-                  column(9,
-                         div(
-                           style = "background: white; border-radius: 14px; padding: 20px;
-                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
-                           plotOutput("CovidPantry", height = "450px"),
-                           br(),
-                           uiOutput("summaryBox")
-                         )
-                  )
-                )
-              )
-      ),
       tabItem(tabName = "UnitPricePerState",
               fluidPage(
                 div(
@@ -452,6 +356,98 @@ dashboardPage(
                              "How has the unit price of this category changed over time across states?"),
                            plotOutput("CategoryPriceOverTime", height = "350px")
                          )
+                  )
+                )
+              )
+      ),
+      tabItem(tabName = "SalesDuringCovid",
+              fluidPage(
+                div(
+                  style = "background: linear-gradient(135deg, #e76f51, #f4a261);
+               border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
+               color: white;",
+                  h3("The COVID Pantry", style = "font-weight: 600; margin-bottom: 4px;"),
+                  p("Explore how grocery spending shifted before and after COVID lockdowns in 2020.",
+                    style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
+                ),
+                fluidRow(
+                  column(3,
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                   border-top: 4px solid #e76f51;",
+                           h5("Settings", style = "color: #e76f51; font-weight: 600; margin-bottom: 16px;"),
+                           selectInput("state_covid", "Select a State:",
+                                       choices  = sort(unique(outputstates$State)),
+                                       selected = "California"),
+                           selectInput("category_covid", "Select a Category:",
+                                       choices  = sort(unique(outputstates$Category)),
+                                       selected = "Alcohol"),
+                           sliderInput("covid_marker", "Drag the COVID Marker:",
+                                       min        = as.Date("2019-10-06"),
+                                       max        = as.Date("2023-05-07"),
+                                       value      = as.Date("2020-03-15"),
+                                       step       = 7,
+                                       timeFormat = "%b %d, %Y",
+                                       animate    = FALSE),
+                           hr(style = "border-color: #f4a261;"),
+                           p("Drag the marker to explore how sales changed around COVID lockdowns.
+            March 15, 2020 marks the start of widespread US lockdowns.",
+                             style = "font-size: 12px; color: #888;"),
+                           hr(style = "border-color: #f4a261;"),
+                           downloadButton("downloadCovid", "Download Data",
+                                          style = "background-color: #f4a261; color: white; border: none;
+                                      border-radius: 8px; width: 100%; padding: 8px;
+                                      font-family: 'Poppins', sans-serif;")
+                         )
+                  ),
+                  column(9,
+                         div(
+                           style = "background: white; border-radius: 14px; padding: 20px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
+                           plotOutput("CovidPantry", height = "450px"),
+                           br(),
+                           uiOutput("summaryBox")
+                         )
+                  )
+                )
+              )
+      ),
+      tabItem(tabName = "Recipes",
+              fluidPage(
+                titlePanel("Dinner Recipe Generator"),
+                br(),
+                
+                fluidRow(
+                  column(3,
+                         wellPanel(
+                           style = "background-color:#fff8f0; border: 2px solid #f4a261; border-radius: 12px;",
+                           h4("Your State", style = "color:#e76f51;"),
+                           selectInput("recipe_state", NULL,
+                                       choices  = sort(unique(outputstates$State)),
+                                       selected = "California"),
+                           hr(style = "border-color:#f4a261;"),
+                           p(style = "font-size:13px; color:#888;",
+                             "We'll find the top 3 grocery categories in your state and suggest a recipe for each one.")
+                         )
+                  ),
+                  
+                  column(9,
+                         h4("Top 3 Categories in Your State", style = "color:#e76f51; margin-top:6px;"),
+                         p(style = "font-size:13px; color:#888; margin-bottom:14px;",
+                           "Click a category card to see a recipe inspired by what your state buys most."),
+                         
+                         uiOutput("top3Cards"),
+                         
+                         div(class = "explore-header",
+                             "Explore Other Recipes"),
+                         p(style = "font-size:13px; color:#888; margin-bottom:10px;",
+                           "Want to try something different? Pick any category below."),
+                         uiOutput("exploreButtons"),
+                         
+                         br(),
+                         
+                         uiOutput("recipeOutput")
                   )
                 )
               )
