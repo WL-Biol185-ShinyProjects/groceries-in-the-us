@@ -38,11 +38,66 @@ dashboardPage(
                   style = "background: white; border-radius: 16px; padding: 28px;
                box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 24px;",
                   h4("About the Project", style = "color: #e76f51; font-weight: 600;"),
-                  p("Groceries in the US is a project that utilizes the USDA’s Weekly Retail Food Sales data set, which used data collected from checkout scanners in a representative sample of grocery stores. This data was sent to a research firm that aggregated all of the results and organized them by week. Collections began on October 6, 2019 and ended on May 7, 2023. You may notice as you explore the pages of our project that certain states are missing. This is because Alaska, Delaware, Hawaii, Idaho, Iowa, Kansas, Nebraska, New Jersey, North Dakota, Mississippi, Montana, and Washington D.C. because the research firm used by the USDA (Circana) does not collect state-level data in these locations. Additionally, you will notice that grocery items are grouped into various categories. To help understand what items count in each category, we have provided a table below that summarizes the types of product considered under each category as outlined by the USDA, and some potential examples of these products. "),
+                  p("Groceries in the US is a project that utilizes the USDA’s Weekly Retail Food Sales data set, which used data collected from checkout scanners in a representative sample of grocery stores. This data was sent to a research firm that aggregated all of the results and organized them by week. Collections began on October 6, 2019 and ended on May 7, 2023. Additionally, you will notice that grocery items are grouped into various categories. To help understand what items count in each category, we have provided a table below that summarizes the types of product considered under each category as outlined by the USDA, and some potential examples of these products. "),
                   p(style = "color: #888; font-size: 13px;",
                     "Note: Alaska, Delaware, Hawaii, Idaho, Iowa, Kansas, Nebraska, New Jersey,
         North Dakota, Mississippi, Montana, and Washington D.C. are excluded as Circana
         does not collect state-level data in these locations.")
+                ),
+                
+                hr(style = "border-color: #f4a261; margin: 20px 0;"),
+                h4("Grocery Category Guide", style = "color: #e76f51; font-weight: 600; margin-bottom: 16px;"),
+                p(style = "font-size: 13px; color: #888; margin-bottom: 16px;",
+                  "Food items are aggregated using the classification system developed for the Quarterly Food-at-Home Price Database, which distinguishes categories by their role in the Dietary Guidelines for Americans."),
+                
+                fluidRow(
+                  column(6,
+                         div(style = "background: #fff9f5; border-radius: 12px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #e76f51;",
+                             h6("Alcohol", style = "color: #e76f51; font-weight: 600; margin-bottom: 6px;"),
+                             p(style = "font-size: 12px; color: #666; margin-bottom: 0;", "Beer, wine, spirits and other alcoholic beverages.")
+                         ),
+                         div(style = "background: #fff9f5; border-radius: 12px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #e76f51;",
+                             h6("Beverages", style = "color: #e76f51; font-weight: 600; margin-bottom: 6px;"),
+                             p(style = "font-size: 12px; color: #666; margin-bottom: 0;", "Water, carbonated non-alcoholic drinks, fruit drinks, non-carbonated sugary drinks, and other beverages.")
+                         ),
+                         div(style = "background: #fff9f5; border-radius: 12px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #e76f51;",
+                             h6("Commercially Prepared Items", style = "color: #e76f51; font-weight: 600; margin-bottom: 6px;"),
+                             p(style = "font-size: 12px; color: #666; margin-bottom: 0;", "Canned soups and sauces, frozen pizzas and entrees, packaged meals, snacks, deli items, ice cream, baked goods, cookies, and candy.")
+                         ),
+                         div(style = "background: #fff9f5; border-radius: 12px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #e76f51;",
+                             h6("Dairy", style = "color: #e76f51; font-weight: 600; margin-bottom: 6px;"),
+                             p(style = "font-size: 12px; color: #666; margin-bottom: 0;", "Cheese, low-fat milk, regular-fat milk, yogurt, and other dairy products.")
+                         ),
+                         div(style = "background: #fff9f5; border-radius: 12px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #e76f51;",
+                             h6("Fats and Oils", style = "color: #e76f51; font-weight: 600; margin-bottom: 6px;"),
+                             p(style = "font-size: 12px; color: #666; margin-bottom: 0;", "Cooking oils and solid fats such as butter, margarine, and shortening.")
+                         )
+                  ),
+                  column(6,
+                         div(style = "background: #fff9f5; border-radius: 12px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #f4a261;",
+                             h6("Fruits", style = "color: #e76f51; font-weight: 600; margin-bottom: 6px;"),
+                             p(style = "font-size: 12px; color: #666; margin-bottom: 0;", "Fruit juice, whole canned fruit, and whole fresh or frozen fruit.")
+                         ),
+                         div(style = "background: #fff9f5; border-radius: 12px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #f4a261;",
+                             h6("Grains", style = "color: #e76f51; font-weight: 600; margin-bottom: 6px;"),
+                             p(style = "font-size: 12px; color: #666; margin-bottom: 0;", "Packaged bread, rolls, tortillas, rice, pasta, cereal, flour, mixes, frozen grains, and other grain products.")
+                         ),
+                         div(style = "background: #fff9f5; border-radius: 12px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #f4a261;",
+                             h6("Meats, Eggs, and Nuts", style = "color: #e76f51; font-weight: 600; margin-bottom: 6px;"),
+                             p(style = "font-size: 12px; color: #666; margin-bottom: 0;", "Poultry, beef and pork (fresh, frozen, and canned), eggs, fish (fresh, frozen, and canned), nuts, seeds, nut butters, and other protein foods.")
+                         ),
+                         div(style = "background: #fff9f5; border-radius: 12px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #f4a261;",
+                             h6("Sugar and Sweeteners", style = "color: #e76f51; font-weight: 600; margin-bottom: 6px;"),
+                             p(style = "font-size: 12px; color: #666; margin-bottom: 0;", "Sugar, honey, syrup, artificial sweeteners, and other sweetening products.")
+                         ),
+                         div(style = "background: #fff9f5; border-radius: 12px; padding: 16px; margin-bottom: 12px; border-left: 4px solid #f4a261;",
+                             h6("Vegetables", style = "color: #e76f51; font-weight: 600; margin-bottom: 6px;"),
+                             p(style = "font-size: 12px; color: #666; margin-bottom: 0;", "Dark green, orange, starchy, legumes, and other vegetables — all available fresh, frozen, or canned.")
+                         )
+                  )
+                ),
+                p(style = "font-size: 11px; color: #bbb; margin-top: 8px;",
+                  "Source: USDA Quarterly Food-at-Home Price Database classification system."
                 ),
                 
                 # ── Feature cards ──
