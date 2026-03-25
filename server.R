@@ -257,9 +257,9 @@ function(input, output, session) {
                  fill = Category)) +
       geom_col() +
       labs(
-        title = paste("Average Unit Sales by Category -", input$state_unit),  # ← dynamic title
+        title = paste("Average Unit Price By Category -", input$state_unit),  # ← dynamic title
         x = "Category",
-        y = "Average Unit Sales"
+        y = "Average Unit Price"
       ) +
       grocery_theme +
       theme(legend.position = "none")
