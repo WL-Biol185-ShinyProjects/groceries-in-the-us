@@ -6,7 +6,7 @@ merged_data <- read.csv("merged_data.csv")
 dashboardPage(
   dashboardHeader(title = "Groceries in the US"),
   dashboardSidebar(
-    sidebarMenu(
+    sidebarMenu(id = "tabs",
 
     menuItem("About the project", tabName = "IntroPage"), 
     menuItem("Interactive Map", tabName = "InteractiveMap"),
@@ -109,58 +109,82 @@ dashboardPage(
                 fluidRow(
                   column(4,
                          div(style = "background: white; border-radius: 14px; padding: 20px;
-                     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-                     border-top: 4px solid #e76f51; margin-bottom: 16px;",
-                             h5("Spending by Category", style = "color: #e76f51; font-weight: 600;"),
+                 box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                 border-top: 4px solid #e76f51; margin-bottom: 16px;",
+                             h5("Interactive Map", style = "color: #e76f51; font-weight: 600;"),
                              p(style = "font-size: 13px; color: #666;",
-                               "See how much each state spends across grocery categories over the full dataset.")
+                               "Explore grocery spending per person across states on an interactive map."),
+                             actionButton("nav_map", "Explore →",
+                                          style = "background-color: #f4a261; color: white; border: none;
+                 border-radius: 8px; padding: 6px 14px; font-size: 12px;
+                 font-family: 'Poppins', sans-serif; margin-top: 8px;")
                          )
                   ),
                   column(4,
                          div(style = "background: white; border-radius: 14px; padding: 20px;
-                     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-                     border-top: 4px solid #f4a261; margin-bottom: 16px;",
-                             h5("The COVID Pantry", style = "color: #e76f51; font-weight: 600;"),
+                 box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                 border-top: 4px solid #f4a261; margin-bottom: 16px;",
+                             h5("Total Dollars Spent by State", style = "color: #e76f51; font-weight: 600;"),
                              p(style = "font-size: 13px; color: #666;",
-                               "Explore how grocery spending shifted before and after COVID lockdowns in 2020.")
+                               "See how much each state spends across grocery categories over the full dataset."),
+                             actionButton("nav_spending", "Explore →",
+                                          style = "background-color: #f4a261; color: white; border: none;
+                 border-radius: 8px; padding: 6px 14px; font-size: 12px;
+                 font-family: 'Poppins', sans-serif; margin-top: 8px;")
                          )
                   ),
                   column(4,
                          div(style = "background: white; border-radius: 14px; padding: 20px;
-                     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-                     border-top: 4px solid #e76f51; margin-bottom: 16px;",
-                             h5("Recipe Generator", style = "color: #e76f51; font-weight: 600;"),
+                 box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                 border-top: 4px solid #e76f51; margin-bottom: 16px;",
+                             h5("Costs of Each Unit by State", style = "color: #e76f51; font-weight: 600;"),
                              p(style = "font-size: 13px; color: #666;",
-                               "Pick your state and discover recipes inspired by what your state buys most.")
+                               "Discover the average cost per unit of each grocery category by state."),
+                             actionButton("nav_prices", "Explore →",
+                                          style = "background-color: #f4a261; color: white; border: none;
+                 border-radius: 8px; padding: 6px 14px; font-size: 12px;
+                 font-family: 'Poppins', sans-serif; margin-top: 8px;")
                          )
                   )
                 ),
                 fluidRow(
                   column(4,
                          div(style = "background: white; border-radius: 14px; padding: 20px;
-                     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-                     border-top: 4px solid #f4a261; margin-bottom: 16px;",
-                             h5("Grocery Prices", style = "color: #e76f51; font-weight: 600;"),
+                 box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                 border-top: 4px solid #f4a261; margin-bottom: 16px;",
+                             h5("Costs of Each Unit by Category", style = "color: #e76f51; font-weight: 600;"),
                              p(style = "font-size: 13px; color: #666;",
-                               "Discover the average cost per unit of each grocery category by state.")
+                               "Compare how the price of each grocery category varies across states."),
+                             actionButton("nav_pricestate", "Explore →",
+                                          style = "background-color: #f4a261; color: white; border: none;
+                 border-radius: 8px; padding: 6px 14px; font-size: 12px;
+                 font-family: 'Poppins', sans-serif; margin-top: 8px;")
                          )
                   ),
                   column(4,
                          div(style = "background: white; border-radius: 14px; padding: 20px;
-                     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-                     border-top: 4px solid #e76f51; margin-bottom: 16px;",
-                             h5("Price by State", style = "color: #e76f51; font-weight: 600;"),
+                 box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                 border-top: 4px solid #e76f51; margin-bottom: 16px;",
+                             h5("The COVID Pantry", style = "color: #e76f51; font-weight: 600;"),
                              p(style = "font-size: 13px; color: #666;",
-                               "Compare how the price of each grocery category varies across states.")
+                               "Explore how grocery spending shifted before and after COVID lockdowns in 2020."),
+                             actionButton("nav_covid", "Explore →",
+                                          style = "background-color: #f4a261; color: white; border: none;
+                 border-radius: 8px; padding: 6px 14px; font-size: 12px;
+                 font-family: 'Poppins', sans-serif; margin-top: 8px;")
                          )
                   ),
                   column(4,
                          div(style = "background: white; border-radius: 14px; padding: 20px;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-                    border-top: 4px solid #f4a261; margin-bottom: 16px;",
-                             h5("Interactive Map", style = "color: #e76f51; font-weight: 600;"),
+                 box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+                 border-top: 4px solid #f4a261; margin-bottom: 16px;",
+                             h5("Recipe Generator", style = "color: #e76f51; font-weight: 600;"),
                              p(style = "font-size: 13px; color: #666;",
-                               "Explore grocery spending per person across states on an interactive map.")
+                               "Pick your state and discover recipes inspired by what your state buys most."),
+                             actionButton("nav_recipes", "Explore →",
+                                          style = "background-color: #f4a261; color: white; border: none;
+                 border-radius: 8px; padding: 6px 14px; font-size: 12px;
+                 font-family: 'Poppins', sans-serif; margin-top: 8px;")
                          )
                   )
                 ),

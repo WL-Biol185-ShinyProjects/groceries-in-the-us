@@ -562,5 +562,12 @@ function(input, output, session) {
   observeEvent(input$surprise, {
     session$sendCustomMessage("confetti", list())
   })
+  
+  observeEvent(input$nav_map,        { updateTabItems(session, "tabs", "InteractiveMap") })
+  observeEvent(input$nav_spending,   { updateTabItems(session, "tabs", "BarByState") })
+  observeEvent(input$nav_prices,     { updateTabItems(session, "tabs", "UnitPricePerState") })
+  observeEvent(input$nav_pricestate, { updateTabItems(session, "tabs", "CategoryPricePerState") })
+  observeEvent(input$nav_covid,      { updateTabItems(session, "tabs", "SalesDuringCovid") })
+  observeEvent(input$nav_recipes,    { updateTabItems(session, "tabs", "Recipes") })
 }
 
