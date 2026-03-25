@@ -5,7 +5,7 @@ library(leaflet)
 source("CookBook.R")
 merged_data <- read.csv("merged_data.csv")
 outputstates <- read.csv("outputstates.csv", check.names = FALSE)
-# Define server logic required to draw a histogram
+
 function(input, output, session) {
   
   grocery_theme <- theme_minimal(base_size = 14) +
@@ -40,10 +40,10 @@ function(input, output, session) {
       theme(legend.position = "none")
   })
   
-  # Rank labels for top-3 cards
+
   rank_labels <- c("#1 Most Purchased", "#2 Most Purchased", "#3 Most Purchased")
   
-    # ── Reactive: top-3 categories for selected state ──────────────────────────
+
     top3_data <- reactive({
       outputstates %>%
         filter(State == input$recipe_state) %>%
@@ -53,15 +53,15 @@ function(input, output, session) {
         slice_head(n = 3)
     })
     
-    # ── Track which category is currently selected ─────────────────────────────
+
     selected_category <- reactiveVal(NULL)
     
-    # Reset selection whenever state changes
+
     observeEvent(input$recipe_state, {
       selected_category(NULL)
     })
     
-    # ── Render the 3 clickable cards ───────────────────────────────────────────
+
     output$top3Cards <- renderUI({
       top3 <- top3_data()
       cards <- lapply(seq_len(nrow(top3)), function(i) {
@@ -78,7 +78,7 @@ function(input, output, session) {
                  div(class = "card-rank",     rank_labels[i]),
                  div(class = "card-category", cat_name),
                  div(class = "card-dollars",  paste0("$", round(top3$total_dollars[i] / 1e9, 1), "B total spent")),
-                 # Hidden button that triggers the server-side click
+                
                  actionButton(
                    inputId = paste0("card_click_", i),
                    label   = "",
@@ -90,7 +90,7 @@ function(input, output, session) {
       fluidRow(cards)
     })
     
-    # ── Observe card button clicks ─────────────────────────────────────────────
+
     observeEvent(input$card_click_1, {
       selected_category(top3_data()$Category[1])
     }, ignoreInit = TRUE)
@@ -103,7 +103,7 @@ function(input, output, session) {
       selected_category(top3_data()$Category[3])
     }, ignoreInit = TRUE)
     
-    # ── Explore buttons (all categories) ──────────────────────────────────────
+
     all_categories <- names(recipes)
     
     output$exploreButtons <- renderUI({
@@ -119,7 +119,7 @@ function(input, output, session) {
       div(btns)
     })
     
-    # Observe each explore button
+
     lapply(all_categories, function(cat) {
       btn_id <- paste0("explore_", gsub("[^a-zA-Z]", "_", cat))
       observeEvent(input[[btn_id]], {
@@ -127,7 +127,7 @@ function(input, output, session) {
       }, ignoreInit = TRUE)
     })
     
-    # ── Render the recipe card ─────────────────────────────────────────────────
+
     output$recipeOutput <- renderUI({
       cat <- selected_category()
       if (!is.null(cat) && cat == "Meats, eggs, and nuts") cat <- "Meats"
@@ -170,13 +170,13 @@ function(input, output, session) {
         mutate(Date = as.Date(Date)) %>%
         arrange(Date)
     })
-  # --- The Covid Pantry ---
+
   output$CovidPantry <- renderPlot({
     
     df          <- filtered_data()
     covid_date  <- as.Date(input$covid_marker)
     
-    # Label the periods
+
     df <- df %>%
       mutate(period = ifelse(Date < covid_date, "Before", "After"))
     
@@ -184,7 +184,7 @@ function(input, output, session) {
       geom_line(aes(group = 1), color = "grey80", linewidth = 0.8) +
       geom_point(size = 2) +
       
-      # Shaded regions
+
       annotate("rect",
                xmin = min(df$Date), xmax = covid_date,
                ymin = -Inf, ymax = Inf,
@@ -194,7 +194,7 @@ function(input, output, session) {
                ymin = -Inf, ymax = Inf,
                fill = "firebrick", alpha = 0.07) +
       
-      # COVID marker line
+
       geom_vline(xintercept = covid_date,
                  color = "firebrick", linewidth = 1.2, linetype = "dashed") +
       annotate("label",
@@ -202,7 +202,7 @@ function(input, output, session) {
                label = format(covid_date, "%b %d, %Y"),
                color = "firebrick", fill = "white", size = 3.5) +
       
-      # Zero reference line
+
       geom_hline(yintercept = 0, linetype = "dotted", color = "grey50") +
       
       scale_color_manual(values = c("Before" = "steelblue", "After" = "firebrick")) +
@@ -218,7 +218,7 @@ function(input, output, session) {
       theme(legend.position = "none")
   })
   
-  # --- Summary stats box below the chart ---
+
   output$summaryBox <- renderUI({
     
     df         <- filtered_data()
@@ -249,7 +249,7 @@ function(input, output, session) {
   
   output$UnitPrice <- renderPlot({
    outputstates %>%
-      filter(State == input$state_unit) %>%                        # ← was "California"
+      filter(State == input$state_unit) %>%                        
       group_by(State, Category) %>%
       summarise(avg_unit_sales = mean(`Unit price`, na.rm = TRUE)) %>%
       ggplot(aes(x = reorder(Category, avg_unit_sales),
@@ -257,7 +257,7 @@ function(input, output, session) {
                  fill = Category)) +
       geom_col() +
       labs(
-        title = paste("Average Unit Price By Category -", input$state_unit),  # ← dynamic title
+        title = paste("Average Unit Price By Category -", input$state_unit),  
         x = "Category",
         y = "Average Unit Price"
       ) +
@@ -267,7 +267,7 @@ function(input, output, session) {
   
   output$BarByCategory <- renderPlot({
    outputstates %>%
-      filter(Category == input$category_price) %>%                        # ← was "California"
+      filter(Category == input$category_price) %>%                        
       group_by(State) %>%
       summarise(avg_unit_sales = mean(`Unit price`, na.rm = TRUE)) %>%
       ggplot(aes(x = reorder(State, avg_unit_sales),
@@ -275,7 +275,7 @@ function(input, output, session) {
                  fill = State)) +
       geom_col() +
       labs(
-        title = paste("Average Unit Price per State -", input$category_price),  # ← dynamic title
+        title = paste("Average Unit Price per State -", input$category_price),  
         x = "State",
         y = "Average Unit Price"
       ) +
@@ -306,7 +306,7 @@ function(input, output, session) {
   )
   
   
-  # ── Progress bar ───────────────────────────────────────────────────────────
+  
   output$quizProgress <- renderUI({
     answered <- sum(c(
       input$q1 != "", input$q2 != "", input$q3 != "",
@@ -325,7 +325,7 @@ function(input, output, session) {
     )
   })
   
-  # ── Submit ─────────────────────────────────────────────────────────────────
+  
   observeEvent(input$submit_quiz, {
     user_answers <- list(
       q1 = input$q1, q2 = input$q2, q3 = input$q3,
@@ -337,7 +337,7 @@ function(input, output, session) {
                         user_answers, correct_answers))
     
     output$quiz_result <- renderUI({
-      # Score banner
+      
       banner_color <- if (score == 8) "#e76f51" else if (score >= 5) "#f4a261" else "#aaa"
       
       result_rows <- lapply(names(correct_answers), function(q) {
@@ -378,7 +378,7 @@ function(input, output, session) {
     }
   })
   
-  # ── Retake ─────────────────────────────────────────────────────────────────
+  
   observeEvent(input$retake_quiz, {
     updateRadioButtons(session, "q1", selected = character(0))
     updateRadioButtons(session, "q2", selected = character(0))
@@ -438,7 +438,7 @@ function(input, output, session) {
                          by = c("NAME" = "State"))
     pal <- colorBin("YlOrRd", domain = mapData$DollarsPerPerson)
     leaflet(mapData) %>% 
-      setView(lng = -98, lat = 39, zoom = 4) %>%   # zoom in
+      setView(lng = -98, lat = 39, zoom = 4) %>%   
       addPolygons(
         fillColor = ~pal(DollarsPerPerson),
         fillOpacity = 0.7,
@@ -462,7 +462,7 @@ function(input, output, session) {
                          by = c("NAME" = "State"))
     pal <- colorBin("Blues", domain = mapData$UnitsPerPerson)
     leaflet(mapData) %>% 
-      setView(lng = -98, lat = 39, zoom = 4) %>%   # zoom in
+      setView(lng = -98, lat = 39, zoom = 4) %>%   
       addPolygons(
         fillColor = ~pal(UnitsPerPerson),
         fillOpacity = 0.7,
