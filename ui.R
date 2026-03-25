@@ -97,7 +97,11 @@ dashboardPage(
                   )
                 ),
                 p(style = "font-size: 11px; color: #bbb; margin-top: 8px;",
-                  "Source: USDA Quarterly Food-at-Home Price Database classification system."
+                  "Source: ",
+                  tags$a("USDA Weekly Retail Food Sales Documentation",
+                         href = "https://www.ers.usda.gov/data-products/weekly-retail-food-sales/documentation",
+                         target = "_blank",
+                         style = "color: #f4a261;")
                 ),
                 
                 # ── Feature cards ──
