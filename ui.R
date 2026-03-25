@@ -23,7 +23,7 @@ dashboardPage(
     tabItems(
       tabItem(tabName = "IntroPage",
               fluidPage(
-                # ── Hero section ──
+                
                 div(
                   style = "background: linear-gradient(135deg, #e76f51, #f4a261);
                border-radius: 16px; padding: 40px; margin-bottom: 24px;
@@ -33,7 +33,7 @@ dashboardPage(
                     style = "font-size: 16px; opacity: 0.9; margin-bottom: 0;")
                 ),
                 
-                # ── About text ──
+                
                 div(
                   style = "background: white; border-radius: 16px; padding: 28px;
                box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 24px;",
@@ -104,7 +104,7 @@ dashboardPage(
                          style = "color: #f4a261;")
                 ),
                 
-                # ── Feature cards ──
+                
                 h4("Explore the Data", style = "color: #e76f51; font-weight: 600; margin-bottom: 16px;"),
                 fluidRow(
                   column(4,
@@ -164,7 +164,7 @@ dashboardPage(
                          )
                   )
                 ),
-                # ── Surprise button ──
+                
                 div(
                   style = "text-align: center; margin: 10px 0;",
                   actionButton("surprise", "🎉",
@@ -172,7 +172,7 @@ dashboardPage(
              color: #ddd; cursor: pointer; padding: 4px 8px;
              font-family: 'Poppins', sans-serif;")
                 ),
-                # ── Data source footer ──
+                
                 div(
                   style = "text-align: center; padding: 16px; color: #aaa; font-size: 12px;",
                   p("Data source: USDA Weekly Retail Food Sales | Collected by Circana")
@@ -254,7 +254,6 @@ dashboardPage(
                 br(),
                 
                 fluidRow(
-                  # ── Left panel: state picker ──
                   column(3,
                          wellPanel(
                            style = "background-color:#fff8f0; border: 2px solid #f4a261; border-radius: 12px;",
@@ -268,13 +267,11 @@ dashboardPage(
                          )
                   ),
                   
-                  # ── Middle: top-3 cards + explore ──
                   column(9,
                          h4("Top 3 Categories in Your State", style = "color:#e76f51; margin-top:6px;"),
                          p(style = "font-size:13px; color:#888; margin-bottom:14px;",
                            "Click a category card to see a recipe inspired by what your state buys most."),
                          
-                         # The 3 clickable cards are rendered server-side
                          uiOutput("top3Cards"),
                          
                          # ── Explore other recipes ──
@@ -286,7 +283,6 @@ dashboardPage(
                          
                          br(),
                          
-                         # Recipe output area
                          uiOutput("recipeOutput")
                   )
                 )
@@ -454,11 +450,9 @@ dashboardPage(
                   style = "background: white; border-radius: 14px; padding: 28px;
                box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
                   
-                  # ── Progress bar ──
                   uiOutput("quizProgress"),
                   br(),
                   
-                  # ── Questions ──
                   h5("Question 1", style = "color: #e76f51; font-weight: 600;"),
                   radioButtons("q1", "Which state is the most expensive to buy vegetables in?",
                                choices = c("Michigan", "Vermont", "Rhode Island", "New York"),
