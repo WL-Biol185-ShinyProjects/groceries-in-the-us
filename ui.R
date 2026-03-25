@@ -536,7 +536,7 @@ dashboardPage(
             colors: ['#e76f51', '#f4a261', '#2b2d42', '#ffffff']
           });
         });
-      "))
+                "))
                 )
               )
       )
