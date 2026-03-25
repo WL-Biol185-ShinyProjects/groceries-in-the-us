@@ -1,4 +1,3 @@
-library(tidyverse)
 library(shiny)
 library(sf)
 library(leaflet)
