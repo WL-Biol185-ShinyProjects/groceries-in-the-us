@@ -210,3 +210,6 @@ body {
 .irs-single {
   background-color: #e76f51 !important;
 }
+.sidebar-menu > li > a {
+  padding: 10px 15px !important;
+}
