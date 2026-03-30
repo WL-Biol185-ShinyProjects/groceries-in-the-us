@@ -24,7 +24,7 @@ function(input, output, session) {
   
   output$BarPlot <- renderPlot({
     outputstates %>%
-      filter(State == input$state_bar) %>%                        # ← was "California"
+      filter(State == input$state_bar) %>%                        
       group_by(Category) %>%
       summarise(total_dollars = sum(Dollars, na.rm = TRUE)) %>%
       ggplot(aes(x = reorder(Category, total_dollars),
@@ -32,7 +32,7 @@ function(input, output, session) {
                  fill = Category)) +
       geom_col() +
       labs(
-        title = paste("Total Dollars Spent by Category -", input$state_bar),  # ← dynamic title
+        title = paste("Total Dollars Spent by Category -", input$state_bar),  
         x = "Category",
         y = "Total Dollars"
       ) +
