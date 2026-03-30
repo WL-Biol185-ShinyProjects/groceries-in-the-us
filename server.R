@@ -352,8 +352,8 @@ function(input, output, session) {
             strong(question_text[[q]])),
           p(style = paste0("font-size: 13px; margin-bottom: 0; color: ",
                            if (is_right) "#27ae60" else "#e76f51", ";"),
-            if (is_right) paste0("✅ ", user) else paste0("❌ Your answer: ", user,
-                                                         "  |  ✅ Correct: ", correct))
+            if (is_right) paste0(" ", user) else paste0("Your answer: ", user,
+                                                         "  |  Correct: ", correct))
         )
       })
       
