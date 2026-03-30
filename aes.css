@@ -213,3 +213,10 @@ body {
 .sidebar-menu > li > a {
   padding: 10px 15px !important;
 }
+.content {
+  padding: 20px 24px !important;
+}
+
+.tab-content {
+  padding-top: 8px;
+}
