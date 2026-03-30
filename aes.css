@@ -559,6 +559,7 @@ body.dark-mode {
 body.dark-mode .content-wrapper {
   background-color: #13131f !important;
 }
+<<<<<<< HEAD
  
 body.dark-mode .content {
   background-color: #13131f !important;
@@ -625,4 +626,13 @@ body.dark-mode .recipe-box {
  
 body.dark-mode .shiny-plot-output {
   background: #1e1e2e !important;
+=======
+
+.tab-content {
+  padding-top: 8px;
+}
+
+body {
+    cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAvUlEQVRYR+2XwQ2CMBBFz+gR2KXoAk3MEc0EcgJOgJHQB+4CjAASJwB2vGJtcytBtvF7Gg0XEBERERERORXwH4KmSgZ/MZsYKiRr9LBb0N7aDg5UgozUibxhtM0oF+VZ0RA7YCTg0Ri8Sxz1FQxMKk9r1l8Co6Cymr27DANw2YFvYOgHl4tFXn0k9BeVfvIk6R6e7bEGnsZ+IBW1yEKYq1utA2B1EGv0DPQnpsm2hzAywAAAABJRU5ErkJggg==') 16 16, auto;
+>>>>>>> 522c7436669952521457bef150a1d77e3e10fa70
 }
