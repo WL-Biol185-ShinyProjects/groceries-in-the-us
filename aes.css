@@ -10,7 +10,7 @@ body::before {
   content: '';
   display: block;
   height: 4px;
-  background: linear-gradient(90deg, #e63946, #f4a261, #ffd166, #06d6a0, #118ab2, #c77dff);
+  background: linear-gradient(90deg, #FF7F50, #FFA500, #FFB347, #FFC966, #FFD580);
   position: fixed;
   top: 0;
   left: 0;
@@ -341,7 +341,7 @@ p {
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #e63946, #f4a261, #ffd166, #06d6a0, #118ab2);
+  background: linear-gradient(90deg, #FF7F50, #FFA500, #FFB347, #FFC966, #FFD580);
 }
  
 .recipe-title {
