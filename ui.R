@@ -655,7 +655,7 @@ dashboardPage(
                        border: 4px solid #f4a261;"),
                            h4("Nate Shriner", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
                            p(style = "font-size: 13px; color: #666;",
-                             "Nate Shriner is a junior at Washington and Lee studying neuroscience with the aspiration of becoming a doctor one day. 
+                             "Nate Shriner is a junior at Washington & Lee studying Neuroscience with the aspiration of becoming a doctor one day. 
                              He believes the best medicine is nutrition and fitness. His favorite groccery store is H-E-B, and his favorite groccery category is meats, eggs, and nuts.")
                          )
                   ),
