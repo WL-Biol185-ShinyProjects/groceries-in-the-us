@@ -263,10 +263,9 @@ dashboardPage(
                            tags$ul(
                              style = "font-size: 13px; color: #555; padding-left: 20px; margin-bottom: 0;",
                              tags$li(style = "margin-bottom: 6px;",
-                                     strong("Tourism and seasonal population: "),
-                                     "Both states attract large numbers of tourists and seasonal residents,
-             especially in summer. Visitors shop at local grocery stores,
-             inflating per-capita spending relative to the permanent population."),
+                                     strong("Harsh Winters:"),
+                                     "Long cold winters mean people stock up heavily on shelf-stable goods like grains, canned goods, 
+                                     and fats and oils for months at a time."),
                              tags$li(style = "margin-bottom: 6px;",
                                      strong("Cross-border shopping: "),
                                      "New Hampshire has no sales tax, making it a popular destination
