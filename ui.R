@@ -637,7 +637,7 @@ dashboardPage(
                            img(src = "IMG_4562.jpg", height = "150px", width = "150px",
                                style = "border-radius: 50%; object-fit: cover; margin-bottom: 16px;
                        border: 4px solid #f4a261;"),
-                           h4("Author One", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
+                           h4("Kate Scott", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
                            p(style = "font-size: 13px; color: #666;",
                              "Bio coming soon.")
                          )
@@ -649,7 +649,7 @@ dashboardPage(
                            img(src = "IMG_4563.jpg", height = "150px", width = "150px",
                                style = "border-radius: 50%; object-fit: cover; margin-bottom: 16px;
                        border: 4px solid #f4a261;"),
-                           h4("Author Two", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
+                           h4("Nate Shriner", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
                            p(style = "font-size: 13px; color: #666;",
                              "Bio coming soon.")
                          )
@@ -661,7 +661,7 @@ dashboardPage(
                            img(src = "IMG_4564.jpg", height = "150px", width = "150px",
                                style = "border-radius: 50%; object-fit: cover; margin-bottom: 16px;
                        border: 4px solid #f4a261;"),
-                           h4("Author Three", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
+                           h4("Elaina Bellone", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
                            p(style = "font-size: 13px; color: #666;",
                              "Bio coming soon.")
                          )
