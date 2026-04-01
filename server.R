@@ -569,5 +569,11 @@ function(input, output, session) {
   observeEvent(input$nav_pricestate, { updateTabItems(session, "tabs", "CategoryPricePerState") })
   observeEvent(input$nav_covid,      { updateTabItems(session, "tabs", "SalesDuringCovid") })
   observeEvent(input$nav_recipes,    { updateTabItems(session, "tabs", "Recipes") })
+
+  observeEvent(input$tabs, {
+    if (input$tabs == "AboutAuthors") {
+      session$sendCustomMessage("confetti", list())
+    }
+  })
 }
 

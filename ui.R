@@ -189,7 +189,12 @@ dashboardPage(
                          )
                   )
                 ),
-                
+                div(
+                  style = "background: #fff9f5; border-radius: 12px; padding: 16px;
+           border-left: 4px solid #f4a261; margin-top: 24px;",
+                  p(style = "font-size: 12px; color: #888; margin-bottom: 0;",
+                    "Disclosure: Portions of the code used to build this website were generated with the guidance of AI tools such as Claude and ChatGPT.")
+                ),
                 div(
                   style = "text-align: center; margin: 10px 0;",
                   actionButton("surprise", "🎉",
@@ -263,10 +268,9 @@ dashboardPage(
                            tags$ul(
                              style = "font-size: 13px; color: #555; padding-left: 20px; margin-bottom: 0;",
                              tags$li(style = "margin-bottom: 6px;",
-                                     strong("Tourism and seasonal population: "),
-                                     "Both states attract large numbers of tourists and seasonal residents,
-             especially in summer. Visitors shop at local grocery stores,
-             inflating per-capita spending relative to the permanent population."),
+                                     strong("Harsh Winters:"),
+                                     "Long cold winters mean people stock up heavily on shelf-stable goods like grains, canned goods, 
+                                     and fats and oils for months at a time."),
                              tags$li(style = "margin-bottom: 6px;",
                                      strong("Cross-border shopping: "),
                                      "New Hampshire has no sales tax, making it a popular destination
@@ -639,7 +643,11 @@ dashboardPage(
                        border: 4px solid #f4a261;"),
                            h4("Kate Scott", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
                            p(style = "font-size: 13px; color: #666;",
+<<<<<<< HEAD
                              "Kate Scott is a junior at Washington & Lee University studying Neuroscience and Film, on the pre-medical track. Her favorite grocery store is Kroger, and she loves to bake and cook with friends. In her free time, Kate enjoys hiking, rappelling, running, and playing guitar. She hopes that Groceries in the US serves as a useful tool for users to explore and analyze food related data. ")
+=======
+                             "Kate Scott is a junior at Washington & Lee studying Neuroscience and Film on the pre-medical track. Her favorite grocery store is Kroger, and she loves baking and cooking with friends. In her free time, Kate enjoys hiking, rappelling, running, and playing guitar. She hopes that Groceries in the US serves as a useful tool for users to explore and analyze food related data. ")
+>>>>>>> 243ff5a6f7e9c0cc407c5d7f2b95bf4fb74f35b4
                          )
                   ),
                   column(4,
@@ -651,7 +659,8 @@ dashboardPage(
                        border: 4px solid #f4a261;"),
                            h4("Nate Shriner", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
                            p(style = "font-size: 13px; color: #666;",
-                             "Bio coming soon.")
+                             "Nate Shriner is a junior at Washington and Lee studying neuroscience with the aspiration of becoming a doctor one day. 
+                             He believes the best medicine is nutrition and fitness. His favorite groccery store is H-E-B, and his favorite groccery category is meats, eggs, and nuts.")
                          )
                   ),
                   column(4,
