@@ -73,8 +73,8 @@ claude sonnet 4.6 made new data table on 3/11/26 to average unit prices and doll
 library(readr)
 library(tidyverse)
 us_state_populations_2019_2023 <- read_csv("us_state_populations_2019_2023.csv")
-us_state_populations_2019_2023[6] <- NULL   # remove 6th column first!
-us_state_populations_2019_2023[2] <- NULL   # then 2nd column
+us_state_populations_2019_2023[6] <- NULL   
+us_state_populations_2019_2023[2] <- NULL   
 us_state_populations_2019_2023 <- us_state_populations_2019_2023[-c(2, 8, 12, 13, 27, 31, 35), ]
 us_state_populations_2020_2022 <- us_state_populations_2019_2023
 View(us_state_populations_2020_2022)
@@ -97,10 +97,8 @@ library(dplyr)
 library(tidyr)
 library(readr)
 
-# Read the data
 data <- read_csv("avg_spending_by_state_year_category.csv")
 
-# Get categories
 categories <- unique(data$Category)
 
 all_tables <- list()
@@ -113,7 +111,6 @@ for(cat in categories){
     summarize(avg_spending = mean(Avg_Dollars_Spent, na.rm = TRUE)) %>%
     spread(key = Year, value = avg_spending)
 
-  # Convert wide table back to long format
   category_long <- category_table %>%
     gather(key = Year, value = Avg_Dollars_Spent, -State) %>%
     mutate(Category = cat)
@@ -121,17 +118,13 @@ for(cat in categories){
   all_tables[[cat]] <- category_long
 }
 
-# Combine all categories
 final_data <- bind_rows(all_tables)
 
-# Reorder columns
 final_data <- final_data %>%
   select(State, Year, Category, Avg_Dollars_Spent)
 
-# View result
 final_data
 
-# Save file
 write_csv(final_data, "state_year_category_spending.csv")
 ```
 claude sonnet 4.6 made new data table on 3/16/26 to create new tables for each category that give average dollars spent and state and year. We do not need them for aything as of 3/16 but are keeping code
