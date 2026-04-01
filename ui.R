@@ -268,10 +268,9 @@ dashboardPage(
                            tags$ul(
                              style = "font-size: 13px; color: #555; padding-left: 20px; margin-bottom: 0;",
                              tags$li(style = "margin-bottom: 6px;",
-                                     strong("Tourism and seasonal population: "),
-                                     "Both states attract large numbers of tourists and seasonal residents,
-             especially in summer. Visitors shop at local grocery stores,
-             inflating per-capita spending relative to the permanent population."),
+                                     strong("Harsh Winters:"),
+                                     "Long cold winters mean people stock up heavily on shelf-stable goods like grains, canned goods, 
+                                     and fats and oils for months at a time."),
                              tags$li(style = "margin-bottom: 6px;",
                                      strong("Cross-border shopping: "),
                                      "New Hampshire has no sales tax, making it a popular destination
@@ -656,7 +655,8 @@ dashboardPage(
                        border: 4px solid #f4a261;"),
                            h4("Nate Shriner", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
                            p(style = "font-size: 13px; color: #666;",
-                             "Bio coming soon.")
+                             "Nate Shriner is a junior at Washington and Lee studying neuroscience with the aspiration of becoming a doctor one day. 
+                             He believes the best medicine is nutrition and fitness. His favorite groccery store is H-E-B, and his favorite groccery category is meats, eggs, and nuts.")
                          )
                   ),
                   column(4,
