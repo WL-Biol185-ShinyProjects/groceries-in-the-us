@@ -247,6 +247,42 @@ dashboardPage(
                            p(style = "font-size: 12px; color: #888; margin-bottom: 12px;",
                              "Average units purchased per person per week on the selected category in the selected year."),
                            leafletOutput("UnitsMap", height = 450)
+                         ), 
+                         
+                         # ADD this after the UnitsMap div, still inside column(9):
+                         div(
+                           style = "background: linear-gradient(135deg, #fff9f5, #fff3ec);
+           border-radius: 14px; padding: 20px 24px; margin-top: 16px;
+           border-left: 4px solid #e76f51;
+           box-shadow: 0 2px 8px rgba(0,0,0,0.06);",
+                           h5("Why are Maine and New Hampshire so high?",
+                              style = "color: #e76f51; font-weight: 600; margin-bottom: 10px;"),
+                           p(style = "font-size: 13px; color: #555; margin-bottom: 6px;",
+                             "Maine and New Hampshire consistently rank among the highest states for
+     grocery spending per person. There are a few likely reasons for this:"),
+                           tags$ul(
+                             style = "font-size: 13px; color: #555; padding-left: 20px; margin-bottom: 0;",
+                             tags$li(style = "margin-bottom: 6px;",
+                                     strong("Tourism and seasonal population: "),
+                                     "Both states attract large numbers of tourists and seasonal residents,
+             especially in summer. Visitors shop at local grocery stores,
+             inflating per-capita spending relative to the permanent population."),
+                             tags$li(style = "margin-bottom: 6px;",
+                                     strong("Cross-border shopping: "),
+                                     "New Hampshire has no sales tax, making it a popular destination
+             for shoppers from neighboring Massachusetts, Vermont, and Maine
+             who cross state lines specifically to buy groceries."),
+                             tags$li(style = "margin-bottom: 6px;",
+                                     strong("Rural and self-sufficient culture: "),
+                                     "These states have strong traditions of home cooking, canning,
+             and food preparation from scratch, meaning residents tend to
+             buy more raw ingredients than pre-made meals."),
+                             tags$li(style = "margin-bottom: 0;",
+                                     strong("Higher cost of living: "),
+                                     "Grocery prices in the Northeast tend to be higher than the
+             national average, which pushes up dollar spending even if
+             the number of units purchased is similar to other states.")
+                           )
                          )
                   )
                 )
