@@ -635,7 +635,7 @@ dashboardPage(
                          div(
                            style = "background: white; border-radius: 16px; padding: 28px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center;",
-                           img(src = "author1.jpg", height = "150px", width = "150px",
+                           img(src = "IMG_4562.jpg", height = "150px", width = "150px",
                                style = "border-radius: 50%; object-fit: cover; margin-bottom: 16px;
                        border: 4px solid #f4a261;"),
                            h4("Author One", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
@@ -647,7 +647,7 @@ dashboardPage(
                          div(
                            style = "background: white; border-radius: 16px; padding: 28px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center;",
-                           img(src = "author2.jpg", height = "150px", width = "150px",
+                           img(src = "IMG_4563.jpg", height = "150px", width = "150px",
                                style = "border-radius: 50%; object-fit: cover; margin-bottom: 16px;
                        border: 4px solid #f4a261;"),
                            h4("Author Two", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
@@ -659,7 +659,7 @@ dashboardPage(
                          div(
                            style = "background: white; border-radius: 16px; padding: 28px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center;",
-                           img(src = "author3.jpg", height = "150px", width = "150px",
+                           img(src = "IMG_4564.jpg", height = "150px", width = "150px",
                                style = "border-radius: 50%; object-fit: cover; margin-bottom: 16px;
                        border: 4px solid #f4a261;"),
                            h4("Author Three", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
