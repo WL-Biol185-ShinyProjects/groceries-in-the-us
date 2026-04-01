@@ -250,7 +250,6 @@ dashboardPage(
                            leafletOutput("UnitsMap", height = 450)
                          ), 
                          
-                         # ADD this after the UnitsMap div, still inside column(9):
                          div(
                            style = "background: linear-gradient(135deg, #fff9f5, #fff3ec);
            border-radius: 14px; padding: 20px 24px; margin-top: 16px;
