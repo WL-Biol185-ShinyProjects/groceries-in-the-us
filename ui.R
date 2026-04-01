@@ -639,7 +639,7 @@ dashboardPage(
                        border: 4px solid #f4a261;"),
                            h4("Kate Scott", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
                            p(style = "font-size: 13px; color: #666;",
-                             "Kate Scott is a junior at Washington and Lee studying Neuroscience and Film, on the pre-medical track. Her favorite grocery store is Kroger, and she loves to bake and cook with friends. In her free time, Kate enjoys hiking, rappelling, running, and playing guitar. She hopes that Groceries in the US serves as a useful tool for users to explore and analyze food related data. ")
+                             "Kate Scott is a junior at Washington & Lee University studying Neuroscience and Film, on the pre-medical track. Her favorite grocery store is Kroger, and she loves to bake and cook with friends. In her free time, Kate enjoys hiking, rappelling, running, and playing guitar. She hopes that Groceries in the US serves as a useful tool for users to explore and analyze food related data. ")
                          )
                   ),
                   column(4,
