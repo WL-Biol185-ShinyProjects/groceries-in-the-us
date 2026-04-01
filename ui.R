@@ -189,7 +189,12 @@ dashboardPage(
                          )
                   )
                 ),
-                
+                div(
+                  style = "background: #fff9f5; border-radius: 12px; padding: 16px;
+           border-left: 4px solid #f4a261; margin-top: 24px;",
+                  p(style = "font-size: 12px; color: #888; margin-bottom: 0;",
+                    "Disclosure: Portions of the code used to build this website were generated with the guidance of AI tools such as Claude and ChatGPT.")
+                ),
                 div(
                   style = "text-align: center; margin: 10px 0;",
                   actionButton("surprise", "🎉",
@@ -294,7 +299,7 @@ dashboardPage(
                border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
                color: white;",
                   h3("Spending by Category", style = "font-weight: 600; margin-bottom: 4px;"),
-                  p("Select a state to see total dollars spent per grocery category.",
+                  p("Select a state to see total dollars spent per grocery category over the 182 weeks of data collection.",
                     style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
                 ),
                 fluidRow(
@@ -342,7 +347,7 @@ dashboardPage(
                border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
                color: white;",
                   h3("Grocery Prices", style = "font-weight: 600; margin-bottom: 4px;"),
-                  p("Select a state to see the average cost per unit across grocery categories.",
+                  p("Select a state to see the average cost per unit across grocery categories, calculated using data from all 182 weeks of data collection.",
                     style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
                 ),
                 fluidRow(
@@ -387,7 +392,7 @@ dashboardPage(
                border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
                color: white;",
                   h3("Price by State", style = "font-weight: 600; margin-bottom: 4px;"),
-                  p("Select a category to compare average unit prices across all states.",
+                  p("Select a category to compare average unit prices across all states, calculated using data from all 182 weeks of data collection.",
                     style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
                 ),
                 fluidRow(
@@ -638,7 +643,7 @@ dashboardPage(
                        border: 4px solid #f4a261;"),
                            h4("Kate Scott", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
                            p(style = "font-size: 13px; color: #666;",
-                             "Bio coming soon.")
+                             "Kate Scott is a junior at Washington & Lee studying Neuroscience and Film on the pre-medical track. Her favorite grocery store is Kroger, and she loves baking and cooking with friends. In her free time, Kate enjoys hiking, rappelling, running, and playing guitar. She hopes that Groceries in the US serves as a useful tool for users to explore and analyze food related data. ")
                          )
                   ),
                   column(4,
