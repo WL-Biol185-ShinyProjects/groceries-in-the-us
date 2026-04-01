@@ -15,7 +15,8 @@ dashboardPage(
                 menuItem("Costs of Each Unit by Category", tabName = "CategoryPricePerState"),
                 menuItem("The COVID Pantry", tabName = "SalesDuringCovid"),
                 menuItem("Recipe Generator", tabName = "Recipes"),
-                menuItem("Quiz Yourself", tabName = "Quiz")
+                menuItem("Quiz Yourself", tabName = "Quiz"),
+                menuItem("About the Authors", tabName = "AboutAuthors")
     )
   ),
   dashboardBody(
@@ -580,6 +581,56 @@ dashboardPage(
           });
         });
                 "))
+                )
+              )
+      ),
+      tabItem(tabName = "AboutAuthors",
+              fluidPage(
+                div(
+                  style = "background: linear-gradient(135deg, #e76f51, #f4a261);
+               border-radius: 16px; padding: 40px; margin-bottom: 24px;
+               color: white; text-align: center;",
+                  h1("About the Authors", style = "font-weight: 600; font-size: 36px;"),
+                  p("Meet the team behind Groceries in the US.",
+                    style = "font-size: 16px; opacity: 0.9; margin-bottom: 0;")
+                ),
+                fluidRow(
+                  column(4,
+                         div(
+                           style = "background: white; border-radius: 16px; padding: 28px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center;",
+                           img(src = "author1.jpg", height = "150px", width = "150px",
+                               style = "border-radius: 50%; object-fit: cover; margin-bottom: 16px;
+                       border: 4px solid #f4a261;"),
+                           h4("Author One", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
+                           p(style = "font-size: 13px; color: #666;",
+                             "Bio coming soon.")
+                         )
+                  ),
+                  column(4,
+                         div(
+                           style = "background: white; border-radius: 16px; padding: 28px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center;",
+                           img(src = "author2.jpg", height = "150px", width = "150px",
+                               style = "border-radius: 50%; object-fit: cover; margin-bottom: 16px;
+                       border: 4px solid #f4a261;"),
+                           h4("Author Two", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
+                           p(style = "font-size: 13px; color: #666;",
+                             "Bio coming soon.")
+                         )
+                  ),
+                  column(4,
+                         div(
+                           style = "background: white; border-radius: 16px; padding: 28px;
+                   box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center;",
+                           img(src = "author3.jpg", height = "150px", width = "150px",
+                               style = "border-radius: 50%; object-fit: cover; margin-bottom: 16px;
+                       border: 4px solid #f4a261;"),
+                           h4("Author Three", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
+                           p(style = "font-size: 13px; color: #666;",
+                             "Bio coming soon.")
+                         )
+                  )
                 )
               )
       )
