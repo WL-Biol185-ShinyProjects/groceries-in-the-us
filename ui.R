@@ -295,7 +295,7 @@ dashboardPage(
                border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
                color: white;",
                   h3("Spending by Category", style = "font-weight: 600; margin-bottom: 4px;"),
-                  p("Select a state to see total dollars spent per grocery category.",
+                  p("Select a state to see total dollars spent per grocery category over the 182 weeks of data collection.",
                     style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
                 ),
                 fluidRow(
@@ -343,7 +343,7 @@ dashboardPage(
                border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
                color: white;",
                   h3("Grocery Prices", style = "font-weight: 600; margin-bottom: 4px;"),
-                  p("Select a state to see the average cost per unit across grocery categories.",
+                  p("Select a state to see the average cost per unit across grocery categories, calculated using data from all 182 weeks of data collection.",
                     style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
                 ),
                 fluidRow(
@@ -388,7 +388,7 @@ dashboardPage(
                border-radius: 16px; padding: 24px 32px; margin-bottom: 20px;
                color: white;",
                   h3("Price by State", style = "font-weight: 600; margin-bottom: 4px;"),
-                  p("Select a category to compare average unit prices across all states.",
+                  p("Select a category to compare average unit prices across all states, calculated using data from all 182 weeks of data collection.",
                     style = "opacity: 0.9; margin-bottom: 0; font-size: 14px;")
                 ),
                 fluidRow(
