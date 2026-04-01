@@ -633,10 +633,10 @@ dashboardPage(
                          div(
                            style = "background: white; border-radius: 16px; padding: 28px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center;",
-                           img(src = "author1.jpg", height = "150px", width = "150px",
+                           img(src = "IMG_4562.jpg", height = "150px", width = "150px",
                                style = "border-radius: 50%; object-fit: cover; margin-bottom: 16px;
                        border: 4px solid #f4a261;"),
-                           h4("Author One", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
+                           h4("Kate Scott", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
                            p(style = "font-size: 13px; color: #666;",
                              "Bio coming soon.")
                          )
@@ -645,10 +645,10 @@ dashboardPage(
                          div(
                            style = "background: white; border-radius: 16px; padding: 28px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center;",
-                           img(src = "author2.jpg", height = "150px", width = "150px",
+                           img(src = "NATE.jpeg", height = "150px", width = "150px",
                                style = "border-radius: 50%; object-fit: cover; margin-bottom: 16px;
                        border: 4px solid #f4a261;"),
-                           h4("Author Two", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
+                           h4("Nate Shriner", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
                            p(style = "font-size: 13px; color: #666;",
                              "Bio coming soon.")
                          )
@@ -657,12 +657,12 @@ dashboardPage(
                          div(
                            style = "background: white; border-radius: 16px; padding: 28px;
                    box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center;",
-                           img(src = "author3.jpg", height = "150px", width = "150px",
+                           img(src = "IMG_4564.jpg", height = "150px", width = "150px",
                                style = "border-radius: 50%; object-fit: cover; margin-bottom: 16px;
                        border: 4px solid #f4a261;"),
-                           h4("Author Three", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
+                           h4("Elaina Bellone", style = "color: #e76f51; font-weight: 600; margin-bottom: 8px;"),
                            p(style = "font-size: 13px; color: #666;",
-                             "Bio coming soon.")
+                             "Elaina Bellone is a junior at Washington & Lee University studying Biology and Education, with the intention of attending medical school. She has a passion for cooking with healthy, clean ingredients and believes that food is medicine. In her free time, Elaina enjoys playing field hockey and reading, and her favorite grocery store is Whole Foods. She hopes that Groceries in the US will help you explore the differences in cost and consumption across states, giving you a better idea of how access to groceries might vary across regions and by category.")
                          )
                   )
                 )
