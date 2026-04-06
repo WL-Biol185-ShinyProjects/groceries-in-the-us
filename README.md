@@ -46,7 +46,7 @@ Meet the team behind Groceries in the US.
 - USDA Economic Research Service (2023) — Weekly Retail Food Sales
   [https://www.ers.usda.gov/data-products/weekly-retail-food-sales/](https://www.ers.usda.gov/data-products/weekly-retail-food-sales/)
 - US Census Bureau — State Population Estimates
-  [https://www.census.gov/programs-surveys/popest.html](https://www.census.gov/programs-surveys/popest.html)
+  [https://www.census.gov/data/tables/time-series/demo/popest/2020s-state-total.html](https://www.census.gov/data/tables/time-series/demo/popest/2020s-state-total.html)
 
 ### AI Usage
 - Claude (Anthropic) — portions of the code for this app were generated with the assistance of AI.

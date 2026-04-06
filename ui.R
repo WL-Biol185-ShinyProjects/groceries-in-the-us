@@ -287,6 +287,15 @@ dashboardPage(
              national average, which pushes up dollar spending even if
              the number of units purchased is similar to other states.")
                            )
+                         ),
+                         div(
+                           style = "text-align: center; padding: 16px; color: #aaa; font-size: 12px;",
+                           p("Population data: US Census Bureau — State Population Estimates | ",
+                             tags$a("census.gov/programs-surveys/popest",
+                                    href = "https://www.census.gov/data/tables/time-series/demo/popest/2020s-state-total.html",
+                                    target = "_blank",
+                                    style = "color: #f4a261;")
+                           )
                          )
                   )
                 )
