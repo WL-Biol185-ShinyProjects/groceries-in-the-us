@@ -2,7 +2,7 @@ GROCERIES-IN-THE-US
 An interactive Shiny app that explores grocery spending patterns across the United States using data from the USDA's Weekly Retail Food Sales dataset. This app was designed and built using data collected from October 2019 to May 2023. Users are able to explore total spending by state and category, examine how grocery habits shifted during COVID-19, compare unit prices across states, view per-capita spending on an interactive map, generate state-specific dinner recipes, and test their knowledge with a quiz.
 
 Members
-Kate Scott, [Author Two], [Author Three]
+Kate Scott, Elaina Bellone, Nate Shriner
 
 Tab Overview
 About the Project:
