@@ -33,6 +33,9 @@ https://www.census.gov/programs-surveys/popest.html
 AI Usage:
 Claude (Anthropic) — portions of the code for this app were generated with the assistance of AI.
 https://claude.ai
+ChatGPT (OpenAI) — portions of the code for this app were generated with the assistance of AI.
+https://chatgpt.com
+
 R Packages:
 
 Shiny — https://shiny.posit.co
